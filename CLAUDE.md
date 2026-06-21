@@ -38,6 +38,45 @@ This is a **pnpm monorepo** with two workspaces: `app/` (the Probot GitHub App) 
 
 All commands run through the **Makefile** at the repo root (`make help` to list them). The root `package.json` scripts are thin wrappers — prefer `make`. Tooling files at root: `Makefile`, `.nvmrc` (Node version), `.npmrc` (`engine-strict=true`), `pnpm-workspace.yaml`.
 
+### Project tree
+
+```
+gitbuddy-bot/
+├── app/
+│   ├── src/
+│   │   ├── core/                 # Interfaces, types, error hierarchy (zero framework deps)
+│   │   ├── handlers/             # 7 domain handlers extending BaseHandler
+│   │   ├── commands/             # Slash commands + CommandRouter
+│   │   ├── services/             # Pure business logic (stateless, no framework deps)
+│   │   ├── middleware/           # Context enricher, rate limiter, error handler
+│   │   └── infrastructure/       # Octokit, YAML config, memory cache, logger adapters
+│   ├── tests/
+│   │   ├── unit/
+│   │   │   ├── handlers/
+│   │   │   └── services/
+│   │   └── integration/
+│   ├── app.yml                   # GitHub App manifest (permissions, events)
+│   ├── tsconfig.json
+│   ├── jest.config.cjs
+│   └── package.json
+├── docs/                         # Docusaurus documentation site
+│   ├── docs/
+│   │   ├── api/
+│   │   ├── architecture/
+│   │   ├── commands/
+│   │   ├── configuration/
+│   │   ├── contributing/
+│   │   └── self-hosting/
+│   ├── docusaurus.config.ts
+│   └── package.json
+├── .github/                      # CI workflows, PR template, CODEOWNERS
+├── .nvmrc                        # Pinned Node version
+├── .npmrc                        # engine-strict=true
+├── Makefile                      # All commands: build, test, lint, docs
+├── pnpm-workspace.yaml
+└── package.json                  # Root workspace scripts + engines
+```
+
 ### Dependency Inversion (the backbone)
 
 Every domain concept depends on **interfaces** (`app/src/core/interfaces.ts`), never concrete implementations. The interfaces and types in `app/src/core/` have **zero framework imports** — no Probot, no Octokit. This is the D in SOLID.

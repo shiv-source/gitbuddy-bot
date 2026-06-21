@@ -169,17 +169,55 @@ app/src/
 
 ```
 gitbuddy-bot/
-  app/                  The Probot GitHub App
-  docs/                 Docusaurus documentation site
-  .github/              CI workflows, issue/PR templates, CODEOWNERS
-  Makefile              Build, test, lint, docs — all via make
-  pnpm-workspace.yaml   pnpm workspace config (app + docs)
-  .nvmrc                Pins Node version (24)
-  .npmrc                engine-strict=true, pnpm config
-  CLAUDE.md             Guidance for Claude Code
+├── app/                          # Probot GitHub App
+│   ├── src/
+│   │   ├── core/                 # Interfaces, types, error hierarchy
+│   │   ├── handlers/             # 7 domain handlers
+│   │   ├── commands/             # Slash commands + CommandRouter
+│   │   ├── services/             # Pure business logic
+│   │   ├── middleware/           # Context enricher, rate limiter, error handler
+│   │   └── infrastructure/       # Octokit, YAML, cache, logger adapters
+│   ├── tests/
+│   │   ├── unit/
+│   │   │   ├── handlers/
+│   │   │   └── services/
+│   │   └── integration/
+│   ├── app.yml                   # GitHub App manifest
+│   ├── tsconfig.json
+│   ├── jest.config.cjs
+│   └── package.json
+├── docs/                         # Docusaurus documentation site
+│   ├── docs/
+│   │   ├── api/                  # GitHub events, interfaces, REST API reference
+│   │   ├── architecture/         # DI, handlers, middleware, services
+│   │   ├── commands/             # Slash command docs
+│   │   ├── configuration/        # Per-domain config reference
+│   │   ├── contributing/         # Setup, code style, testing, workflow
+│   │   └── self-hosting/         # Deployment, env vars, GitHub App setup
+│   ├── docusaurus.config.ts
+│   ├── sidebars.ts
+│   └── package.json
+├── .github/
+│   ├── workflows/                # CI (docs-deploy)
+│   ├── ISSUE_TEMPLATE/
+│   ├── pull_request_template.md
+│   └── CODEOWNERS
+├── .nvmrc                        # Node version (24)
+├── .npmrc                        # engine-strict=true, pnpm config
+├── .gitignore
+├── Makefile                      # All commands: build, test, lint, docs
+├── pnpm-workspace.yaml           # pnpm workspace (app + docs)
+├── pnpm-lock.yaml
+├── package.json                  # Root — workspace scripts + engines
+├── CLAUDE.md                     # Guidance for Claude Code
+├── README.md
+├── LICENSE
+├── CODE_OF_CONDUCT.md
+├── CONTRIBUTING.md
+└── SECURITY.md
 ```
 
-All commands run via `make` from the repo root — see `make help` for the full list. Under the hood it's a **pnpm workspace** — `make install` runs `pnpm install` for both packages.
+All commands run via `make` from the repo root — see `make help` for the full list.
 
 ---
 
