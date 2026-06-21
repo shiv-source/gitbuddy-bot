@@ -1,0 +1,20 @@
+{
+  "mcpServers": {
+    "graphify": {
+      "command": "/Users/shivkumar/.local/bin/graphify-mcp",
+      "args": [
+        "graphify-out/graph.json"
+      ],
+      "type": "stdio"
+    },
+    "code-review-graph": {
+      "command": "uvx",
+      "args": [
+        "code-review-graph",
+        "serve"
+      ],
+      "cwd": "/Users/shivkumar/gitbuddy-bot-projects/gitbuddy-bot",
+      "type": "stdio"
+    }
+  }
+}
