@@ -38,16 +38,25 @@ All behavior is driven by a single [`.github/gitbuddy.yml`](https://shiv-source.
 ### Prerequisites
 
 - **Node.js** >= 24
-- **pnpm** (install via `corepack enable` or `npm i -g pnpm`)
+- **pnpm** >= 11
+- **uv** (optional — installed automatically by `make setup`)
 
-### Install & Run
+### One-command setup (recommended)
 
 ```bash
 git clone https://github.com/shiv-source/gitbuddy-bot.git
 cd gitbuddy-bot
-make install
-make build
-make start
+make setup          # Installs uv, graphify, code-review-graph, MCP servers, pnpm deps, git hooks
+```
+
+`make setup` handles everything: Python toolchain, knowledge graphs, Claude Code MCP servers, project dependencies, and Husky git hooks. Use `make setup-ci` for CI environments (skips MCP registration).
+
+### Manual install
+
+```bash
+make install        # Install workspace dependencies (pnpm)
+make build          # Compile TypeScript (tsc)
+make start          # Run the app (node dist/index.js)
 ```
 
 ### Development
@@ -59,6 +68,15 @@ make test-unit      # Unit tests only
 make lint           # ESLint
 make typecheck      # TypeScript type checking (noEmit)
 make clean          # Remove dist/ and coverage/
+```
+
+### Knowledge Graphs
+
+```bash
+make graph-update   # Incremental graphify rebuild (code-only, no LLM)
+make graph-rebuild  # Full rebuild of both graphs (graphify + code-review-graph)
+make mcp-check      # Verify MCP server connections
+make mcp-register   # Register MCP servers with Claude Code
 ```
 
 ### Docs Site
@@ -197,18 +215,34 @@ gitbuddy-bot/
 │   ├── docusaurus.config.ts
 │   ├── sidebars.ts
 │   └── package.json
+├── scripts/                      # Automation and setup scripts
+│   ├── setup.sh                  # One-command team onboarding
+│   ├── graphify-pre-commit.sh    # Pre-commit hook: rebuild + stage graph
+│   └── graphify-post-checkout.sh # Post-checkout hook: rebuild on branch switch
+├── .husky/                       # Husky-managed git hooks (portable)
+│   ├── _/                        # Husky internal shim
+│   ├── pre-commit                # → scripts/graphify-pre-commit.sh
+│   └── post-checkout             # → scripts/graphify-post-checkout.sh
 ├── .github/
 │   ├── workflows/                # CI (docs-deploy)
 │   ├── ISSUE_TEMPLATE/
 │   ├── pull_request_template.md
 │   └── CODEOWNERS
+├── graphify-out/                 # Graphify knowledge graph (tracked in git)
+│   ├── graph.json                # Knowledge graph data
+│   ├── graph.html                # Interactive visualization
+│   ├── GRAPH_REPORT.md           # Human-readable architecture report
+│   └── wiki/                     # Per-community wiki pages
+├── .code-review-graph/           # Code-review-graph data
+├── .claude/                      # Claude Code project settings
+│   └── settings.json             # Hooks, MCP server config
 ├── .nvmrc                        # Node version (24)
 ├── .npmrc                        # engine-strict=true, pnpm config
 ├── .gitignore
-├── Makefile                      # All commands: build, test, lint, docs
+├── Makefile                      # All commands: setup, build, test, lint, docs, graphs
 ├── pnpm-workspace.yaml           # pnpm workspace (app + docs)
 ├── pnpm-lock.yaml
-├── package.json                  # Root — workspace scripts + engines
+├── package.json                  # Root — workspace scripts + husky + engines
 ├── CLAUDE.md                     # Guidance for Claude Code
 ├── README.md
 ├── LICENSE
@@ -217,7 +251,7 @@ gitbuddy-bot/
 └── SECURITY.md
 ```
 
-All commands run via `make` from the repo root — see `make help` for the full list.
+All commands run via `make` from the repo root — see `make help` for the full list. Git hooks (pre-commit, post-checkout) auto-rebuild both knowledge graphs and are activated automatically by `make setup` or `pnpm install`.
 
 ---
 
@@ -226,10 +260,13 @@ All commands run via `make` from the repo root — see `make help` for the full 
 Contributions are welcome! See the [Contributing Guide](https://shiv-source.github.io/gitbuddy-bot/docs/contributing) for setup instructions, coding conventions, and how to add a new domain handler.
 
 1. Fork the repo
-2. Create a feature branch (`git checkout -b feat/my-feature`)
-3. Make your changes
-4. Run `make test && make lint`
-5. Open a PR
+2. Clone and run `make setup` (one-command onboarding)
+3. Create a feature branch (`git checkout -b feat/my-feature`)
+4. Make your changes
+5. Run `make test && make lint`
+6. Open a PR
+
+The pre-commit hook auto-rebuilds the knowledge graph on every commit — no manual step needed.
 
 New domain handlers follow a consistent pattern — implement `IEventHandler`, extend `BaseHandler`, and register in the composition root at `app/src/index.ts`.
 
