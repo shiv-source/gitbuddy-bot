@@ -4,3 +4,9 @@ coverage/
 *.tsbuildinfo
 .env
 .env.local
+
+# Graphify out
+.graphify_root
+.graphify_python
+graphify-out/cache/
+graphify-out/cost.json
