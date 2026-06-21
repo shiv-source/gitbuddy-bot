@@ -1,19 +1,34 @@
+# Dependencies
 node_modules/
+app/node_modules/
+docs/node_modules/
+
+# Build output
 dist/
-coverage/
 *.tsbuildinfo
+
+# Test coverage
+coverage/
+
+# Environment
 .env
 .env.local
 
 # macOS
 .DS_Store
 
+# IDE / editors
+.vscode/
+.idea/
+*.swp
+*.swo
+
 # Docusaurus
 docs/.docusaurus/
 docs/build/
 docs/.docusaurus.env
 
-# Graphify out
+# Graphify
 .graphify_root
 .graphify_python
 graphify-out/cache/

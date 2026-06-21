@@ -1,50 +1,65 @@
 .PHONY: install build dev start test test-unit test-integration test-watch lint typecheck clean
+.PHONY: docs-dev docs-build docs-deploy
 .PHONY: graph-update graph-query graph-html graph-wiki
 
 # ── Project ───────────────────────────────────────────────────────
-# GitBuddy Bot — Probot GitHub App. Node ≥24, pnpm, TypeScript ESM.
+# GitBuddy Bot — pnpm workspace monorepo. Node ≥24, TypeScript ESM.
+#
+#   app/    Probot GitHub App
+#   docs/   Docusaurus site
 
 install:
 	pnpm install
 
 build:
-	pnpm run build
+	pnpm --filter ./appbuild
 
 dev:
-	pnpm run dev
+	pnpm --filter ./appdev
 
 start:
-	pnpm start
+	pnpm --filter ./appstart
 
 test:
-	pnpm test
+	pnpm --filter ./apptest
 
 test-unit:
-	pnpm run test:unit
+	pnpm --filter ./apptest:unit
 
 test-integration:
-	pnpm run test:integration
+	pnpm --filter ./apptest:integration
 
 test-watch:
-	pnpm run test:watch
+	pnpm --filter ./apptest:watch
 
 lint:
-	pnpm run lint
+	pnpm --filter ./applint
 
 typecheck:
-	pnpm run typecheck
+	pnpm --filter ./apptypecheck
 
 clean:
-	pnpm run clean
+	pnpm --filter ./appclean
+
+# ── Docs ──────────────────────────────────────────────────────────
+
+docs-dev:
+	pnpm --filter ./docsstart
+
+docs-build:
+	pnpm --filter ./docsbuild
+
+docs-deploy:
+	pnpm --filter ./docsdeploy
 
 # ── Graphify ──────────────────────────────────────────────────────
-# graphify-out/ is checked in — clone and query immediately.
+# graphify-out/ is in the repo root.
 #
 # After code changes:
 #   make graph-update         ← AST-only incremental (zero API cost)
 #
 # After doc changes or new features:
-#   /graphify . --update      ← full incremental (AST + semantic) — only
+#   /graphify app/ --update   ← full incremental (AST + semantic) — only
 #                               changed files hit the LLM
 #
 # Query examples:
@@ -53,11 +68,11 @@ clean:
 
 graph-update:
 	@command -v graphify >/dev/null 2>&1 || { echo "Install: uv tool install graphifyy"; exit 1; }
-	graphify update .
+	graphify update app/
 
 graph-query:
 	@command -v graphify >/dev/null 2>&1 || { echo "Install: uv tool install graphifyy"; exit 1; }
-	@test -f graphify-out/graph.json || { echo "No graph. Build with: /graphify ."; exit 1; }
+	@test -f graphify-out/graph.json || { echo "No graph. Build with: /graphify app/"; exit 1; }
 	graphify query "$(Q)"
 
 graph-html:

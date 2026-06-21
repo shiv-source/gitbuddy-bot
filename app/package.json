@@ -1,0 +1,41 @@
+{
+  "name": "gitbuddy-bot",
+  "private": true,
+  "version": "0.0.0",
+  "description": "GitHub App — org-wide governance, PR/issue automation, security scanning, cross-repo orchestration, DORA insights, and AI copilot integration",
+  "type": "module",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "start": "node dist/index.js",
+    "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js --coverage",
+    "test:watch": "node --experimental-vm-modules node_modules/jest/bin/jest.js --watch",
+    "test:unit": "node --experimental-vm-modules node_modules/jest/bin/jest.js tests/unit",
+    "test:integration": "node --experimental-vm-modules node_modules/jest/bin/jest.js tests/integration",
+    "lint": "eslint src/ tests/ --ext .ts",
+    "typecheck": "tsc --noEmit",
+    "clean": "rm -rf dist/ coverage/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/shiv-source/github-actions-platform.git"
+  },
+  "author": "shiv-source",
+  "license": "MIT",
+  "engines": {
+    "node": ">=24"
+  },
+  "dependencies": {
+    "probot": "^14.3.2",
+    "octokit": "^5.0.5",
+    "yaml": "^2.9.0"
+  },
+  "devDependencies": {
+    "@types/jest": "^30.0.0",
+    "@types/node": "^26.0.0",
+    "jest": "^29.7.0",
+    "ts-jest": "^29.4.11",
+    "typescript": "^6.0.3"
+  }
+}
