@@ -60,6 +60,8 @@ const sidebars: SidebarsConfig = {
       link: {type: 'doc', id: 'contributing/setup'},
       items: [
         'contributing/workflow',
+        'contributing/git-hooks',
+        'contributing/knowledge-graphs',
         'contributing/testing',
         'contributing/code-style',
         'contributing/adding-a-handler',

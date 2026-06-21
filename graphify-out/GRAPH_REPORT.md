@@ -1,16 +1,16 @@
 # Graph Report - gitbuddy-bot  (2026-06-22)
 
 ## Corpus Check
-- 113 files · ~262,336 words
+- 115 files · ~265,164 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 906 nodes · 1237 edges · 62 communities (53 shown, 9 thin omitted)
+- 953 nodes · 1288 edges · 79 communities (67 shown, 12 thin omitted)
 - Extraction: 99% EXTRACTED · 1% INFERRED · 0% AMBIGUOUS · INFERRED: 17 edges (avg confidence: 0.89)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `e0ba6270`
+- Built from commit: `083874cd`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -46,8 +46,10 @@
 - [[_COMMUNITY_Auto Bootstrap|Auto Bootstrap]]
 - [[_COMMUNITY_Weekly Digest|Weekly Digest]]
 - [[_COMMUNITY_PAT Rotation|PAT Rotation]]
+- [[_COMMUNITY_Community 32|Community 32]]
 - [[_COMMUNITY_Community 33|Community 33]]
 - [[_COMMUNITY_Community 34|Community 34]]
+- [[_COMMUNITY_Community 35|Community 35]]
 - [[_COMMUNITY_Community 36|Community 36]]
 - [[_COMMUNITY_Community 37|Community 37]]
 - [[_COMMUNITY_Community 38|Community 38]]
@@ -57,6 +59,8 @@
 - [[_COMMUNITY_Community 42|Community 42]]
 - [[_COMMUNITY_Community 43|Community 43]]
 - [[_COMMUNITY_Community 44|Community 44]]
+- [[_COMMUNITY_Community 45|Community 45]]
+- [[_COMMUNITY_Community 46|Community 46]]
 - [[_COMMUNITY_Community 47|Community 47]]
 - [[_COMMUNITY_Community 48|Community 48]]
 - [[_COMMUNITY_Community 49|Community 49]]
@@ -68,13 +72,26 @@
 - [[_COMMUNITY_Community 55|Community 55]]
 - [[_COMMUNITY_Community 56|Community 56]]
 - [[_COMMUNITY_Community 57|Community 57]]
+- [[_COMMUNITY_Community 58|Community 58]]
 - [[_COMMUNITY_Community 59|Community 59]]
 - [[_COMMUNITY_Community 60|Community 60]]
 - [[_COMMUNITY_Community 61|Community 61]]
+- [[_COMMUNITY_Community 62|Community 62]]
 - [[_COMMUNITY_Community 63|Community 63]]
 - [[_COMMUNITY_Community 64|Community 64]]
 - [[_COMMUNITY_Community 65|Community 65]]
+- [[_COMMUNITY_Community 67|Community 67]]
 - [[_COMMUNITY_Community 68|Community 68]]
+- [[_COMMUNITY_Community 69|Community 69]]
+- [[_COMMUNITY_Community 70|Community 70]]
+- [[_COMMUNITY_Community 71|Community 71]]
+- [[_COMMUNITY_Community 72|Community 72]]
+- [[_COMMUNITY_Community 73|Community 73]]
+- [[_COMMUNITY_Community 74|Community 74]]
+- [[_COMMUNITY_Community 75|Community 75]]
+- [[_COMMUNITY_Community 76|Community 76]]
+- [[_COMMUNITY_Community 77|Community 77]]
+- [[_COMMUNITY_Community 78|Community 78]]
 
 ## God Nodes (most connected - your core abstractions)
 1. `EventContext` - 45 edges
@@ -83,8 +100,8 @@
 4. `compilerOptions` - 22 edges
 5. `ILogger` - 21 edges
 6. `BaseHandler` - 21 edges
-7. `GitBuddy Bot 🤖` - 18 edges
-8. `scripts` - 17 edges
+7. `scripts` - 17 edges
+8. `GitBuddy Bot 🤖` - 17 edges
 9. `IGitHubClient` - 14 edges
 10. `IConfigProvider` - 14 edges
 
@@ -95,10 +112,10 @@
   CODE_OF_CONDUCT.md → README.md
 - `Conventional Commits` --references--> `GitBuddy Bot 🤖`  [EXTRACTED]
   CONTRIBUTING.md → README.md
-- `Quick Start Guide` --references--> `GitBuddy Bot 🤖`  [EXTRACTED]
-  docs/docs/quick-start.md → README.md
 - `Vulnerability Reporting` --references--> `GitBuddy Bot 🤖`  [EXTRACTED]
   SECURITY.md → README.md
+- `StaleService` --conceptually_related_to--> `StaleHandler`  [INFERRED]
+  docs/docs/architecture/services.md → docs/docs/architecture/handlers.md
 
 ## Import Cycles
 - None detected.
@@ -112,7 +129,7 @@
 - **Stale Management Lifecycle** — configuration_stale_management_two_phase, configuration_stale_management_mark_phase, configuration_stale_management_close_phase, configuration_automation_stale_sweep [EXTRACTED 1.00]
 - **Self-Hosting Deployment Pipeline** — self_hosting_prerequisites_setup, self_hosting_github_app_setup_registration, self_hosting_github_app_setup_permissions, self_hosting_environment_variables_list, self_hosting_deployment_railway, self_hosting_monitoring_health [INFERRED 0.85]
 
-## Communities (62 total, 9 thin omitted)
+## Communities (79 total, 12 thin omitted)
 
 ### Community 0 - "Command System"
 Cohesion: 0.52
@@ -120,15 +137,15 @@ Nodes (6): check(), err(), header(), info(), warn(), setup.sh script
 
 ### Community 1 - "Event Handlers"
 Cohesion: 0.07
-Nodes (35): IEventHandler, AutomationConfig, CopilotConfig, EventContext, GovernanceConfig, HandlerResult, InsightsConfig, IntegrationConfig (+27 more)
+Nodes (34): AutomationConfig, CopilotConfig, EventContext, GovernanceConfig, HandlerResult, InsightsConfig, IntegrationConfig, LabelRule (+26 more)
 
 ### Community 2 - "Core Interfaces"
-Cohesion: 0.05
-Nodes (26): CommandRouter, LabelCommand, ShipitCommand, TriageCommand, CheckConclusion, CheckDetails, CommandContext, CommandResult (+18 more)
+Cohesion: 0.15
+Nodes (3): RepoInfo, BranchProtection, OctokitClient
 
 ### Community 3 - "Configuration & Errors"
-Cohesion: 0.12
-Nodes (11): FALLBACK_PATHS, YamlConfigProvider, AppError, ConfigError, ConfigNotFoundError, GitHubApiError, HandlerError, NotFoundError (+3 more)
+Cohesion: 0.14
+Nodes (10): FALLBACK_PATHS, AppError, ConfigError, ConfigNotFoundError, GitHubApiError, HandlerError, NotFoundError, RateLimitError (+2 more)
 
 ### Community 4 - "Docs Site Dependencies"
 Cohesion: 0.06
@@ -148,7 +165,7 @@ Nodes (26): description, devDependencies, husky, engines, node, pnpm, name, priv
 
 ### Community 8 - "Architecture Documentation"
 Cohesion: 0.09
-Nodes (24): GitHub App Manifest, Contributor Covenant, Conventional Commits, Quick Start Guide, Architecture, Configuration, Contributing, Development (+16 more)
+Nodes (23): GitHub App Manifest, Contributor Covenant, Conventional Commits, Architecture, Configuration, Contributing, Development, Docs Site (+15 more)
 
 ### Community 9 - "Feature Configuration"
 Cohesion: 0.14
@@ -175,16 +192,16 @@ Cohesion: 0.33
 Nodes (3): CacheEntry, MemoryCache, ICache
 
 ### Community 15 - "YAML Config Provider"
-Cohesion: 0.05
-Nodes (34): 1. Correction, 2. Warning, 3. Temporary Ban, 4. Permanent Ban, Attribution, Contributor Covenant Code of Conduct, Enforcement, Enforcement Guidelines (+26 more)
+Cohesion: 0.18
+Nodes (11): Adding a New Handler, Adding a New Slash Command, Architecture, Code of Conduct, Contributing to GitBuddy Bot, Dev Environment, Getting Started, Testing (+3 more)
 
 ### Community 16 - "Context Enrichment"
-Cohesion: 0.09
-Nodes (12): ILogger, RepoRef, ProbotLog, ProbotLogFn, ProbotLogger, ContextEnricher, ProbotContext, ErrorHandler (+4 more)
+Cohesion: 0.13
+Nodes (9): IEventHandler, ILogger, RepoRef, ContextEnricher, ProbotContext, ErrorHandler, RateLimitBucket, RateLimiter (+1 more)
 
 ### Community 17 - "Middleware Pipeline"
-Cohesion: 0.06
-Nodes (32): Adding a Domain Handler, Checklist, Overview, Step 1: Create the Handler File, Step 2: Register in the Composition Root, Step 3: Add Config Type (if needed), Step 4: Add Tests, Step 5: Add Config to Documentation (+24 more)
+Cohesion: 0.22
+Nodes (8): Adding a Domain Handler, Checklist, Overview, Step 1: Create the Handler File, Step 2: Register in the Composition Root, Step 3: Add Config Type (if needed), Step 4: Add Tests, Step 5: Add Config to Documentation
 
 ### Community 18 - "Test Configuration"
 Cohesion: 0.40
@@ -196,19 +213,27 @@ Nodes (3): GitBuddy Bot Brand Identity, GitBuddy Bot Logo (Full), GitBuddy Bot L
 
 ### Community 24 - "Event Processing"
 Cohesion: 0.06
-Nodes (30): Build and Run, Clone and Install, Installation, Next Steps, Prerequisites, Verify Setup, Environment Variables, Fly.io (+22 more)
+Nodes (32): Build and Run, Clone and Install, Installation, Manual Setup, Next Steps, One-Command Setup (Recommended), Prerequisites, Verify Setup (+24 more)
 
 ### Community 25 - "GitHub Client Interface"
 Cohesion: 0.06
 Nodes (28): Aliases, Examples, `/label`, Requirements, Usage, What It Does, Configuration, Example (+20 more)
+
+### Community 32 - "Community 32"
+Cohesion: 0.12
+Nodes (10): CommandRouter, LabelCommand, ShipitCommand, TriageCommand, CommandContext, CommandResult, ICommand, ProbotLog (+2 more)
 
 ### Community 33 - "Community 33"
 Cohesion: 0.50
 Nodes (3): GRAPHIFY_REBUILD_LOG, PYTHONHASHSEED, graphify-post-checkout.sh script
 
 ### Community 34 - "Community 34"
-Cohesion: 0.11
-Nodes (17): Architecture, Commands, Conventions, Dependency Inversion (the backbone), Error hierarchy, graphify, Handlers (Template Method pattern), Infrastructure adapters (+9 more)
+Cohesion: 0.22
+Nodes (9): Architecture, Dependency Inversion (the backbone), Error hierarchy, Handlers (Template Method pattern), Infrastructure adapters, Project tree, Request lifecycle (middleware chain), Services (pure business logic) (+1 more)
+
+### Community 35 - "Community 35"
+Cohesion: 0.09
+Nodes (22): Build Initial Graphs, Code-review-graph Analysis, File Reference, "graphify not found", Graphify Queries, Graphify rebuild fails, Hook slows down commits, How Graphs Are Kept Current (+14 more)
 
 ### Community 36 - "Community 36"
 Cohesion: 0.15
@@ -245,6 +270,14 @@ Nodes (8): `autoBootstrapPatterns`, `enforceMfa`, Full Example, Governance, Opti
 ### Community 44 - "Community 44"
 Cohesion: 0.22
 Nodes (8): Integration Tests, Running Tests, Test Coverage, Test Framework, Test Organization, Testing, Testing Services, Unit Tests
+
+### Community 45 - "Community 45"
+Cohesion: 0.22
+Nodes (3): IConfigProvider, IGitHubClient, StaleService
+
+### Community 46 - "Community 46"
+Cohesion: 0.14
+Nodes (14): Active Hooks, Adding a New Hook, Git Hooks, Hook Architecture, Hook Timeouts, How Husky Gets Installed, How It Works on a Fresh Clone, Installation Details (+6 more)
 
 ### Community 47 - "Community 47"
 Cohesion: 0.22
@@ -283,12 +316,16 @@ Cohesion: 0.33
 Nodes (6): Architecture at a Glance, Getting Help, How It Works, Introduction, License, What GitBuddy Bot Does
 
 ### Community 56 - "Community 56"
-Cohesion: 0.33
-Nodes (6): 1. Install the GitHub App, 2. Create the Config File, 3. Verify It's Working, 4. Set Up Stale Sweeps (Optional), Next Steps, Quick Start
+Cohesion: 0.29
+Nodes (7): 1. Install the GitHub App, 2. Create the Config File, 3. Verify It's Working, 4. Set Up Stale Sweeps (Optional), 5. Development Setup (Contributors), Next Steps, Quick Start
 
 ### Community 57 - "Community 57"
 Cohesion: 0.33
 Nodes (5): Build, Deployment, Installation, Local Development, Website
+
+### Community 58 - "Community 58"
+Cohesion: 0.14
+Nodes (14): 1. Install pnpm, 2. Clone and Install Dependencies, 3. Install Knowledge Graph Tools (Optional), 4. Register MCP Servers (Optional — Claude Code only), Development Setup, Development Workflow, Make Targets Quick Reference, Manual Setup (Step by Step) (+6 more)
 
 ### Community 59 - "Community 59"
 Cohesion: 0.33
@@ -301,6 +338,10 @@ Nodes (4): Debug Issue, Steps, Tips, Token Efficiency Rules
 ### Community 61 - "Community 61"
 Cohesion: 0.40
 Nodes (4): Explore Codebase, Steps, Tips, Token Efficiency Rules
+
+### Community 62 - "Community 62"
+Cohesion: 0.33
+Nodes (7): CheckConclusion, CheckDetails, IssueSearchResult, IssueUpdate, PullRequestInfo, TeamMember, ProbotOctokit
 
 ### Community 63 - "Community 63"
 Cohesion: 0.40
@@ -318,24 +359,56 @@ Nodes (4): Output Format, Review Changes, Steps, Token Efficiency Rules
 Cohesion: 0.50
 Nodes (3): GRAPHIFY_CHANGED, PYTHONHASHSEED, graphify-pre-commit.sh script
 
+### Community 69 - "Community 69"
+Cohesion: 0.22
+Nodes (9): Code Style, Dependency Injection, Error Handling, Formatting, GitBuddy-Specific Rules, Handler Pattern, Imports, Naming (+1 more)
+
+### Community 70 - "Community 70"
+Cohesion: 0.25
+Nodes (7): Commands, Conventions, graphify, Key Tools, MCP Tools: code-review-graph, When to use graph tools FIRST, Workflow
+
+### Community 71 - "Community 71"
+Cohesion: 0.25
+Nodes (8): After Merge, Before Committing, Branching, Code Review, Commit Messages, Development Workflow, Knowledge Graph Auto-Rebuild, Pull Requests
+
+### Community 72 - "Community 72"
+Cohesion: 0.29
+Nodes (7): Attribution, Contributor Covenant Code of Conduct, Enforcement, Enforcement Responsibilities, Our Pledge, Our Standards, Scope
+
+### Community 73 - "Community 73"
+Cohesion: 0.29
+Nodes (6): Affected Domains, Checklist, Description, Screenshots / Logs (if applicable), Testing, Type of Change
+
+### Community 74 - "Community 74"
+Cohesion: 0.33
+Nodes (4): BranchProtectionPayload, RepositoryCreatedPayload, createContext(), createMockOctokit()
+
+### Community 75 - "Community 75"
+Cohesion: 0.40
+Nodes (5): 1. Correction, 2. Warning, 3. Temporary Ban, 4. Permanent Ban, Enforcement Guidelines
+
+### Community 76 - "Community 76"
+Cohesion: 0.40
+Nodes (5): Before Submitting a PR, Branching, Commit Messages, Development Workflow, Pull Request Template
+
 ## Knowledge Gaps
-- **496 isolated node(s):** `husky.sh script`, `graphify-mcp`, `uvx`, `name`, `private` (+491 more)
+- **529 isolated node(s):** `Why Husky?`, `Hook Architecture`, `Pre-commit (`scripts/graphify-pre-commit.sh`)`, `Post-checkout (`scripts/graphify-post-checkout.sh`)`, `Python Detection` (+524 more)
   These have ≤1 connection - possible missing edges or undocumented components.
-- **9 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
+- **12 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `EventContext` connect `Event Handlers` to `Context Enrichment`, `Core Interfaces`?**
-  _High betweenness centrality (0.011) - this node is a cross-community bridge._
-- **What connects `husky.sh script`, `graphify-mcp`, `uvx` to the rest of the system?**
-  _498 weakly-connected nodes found - possible documentation gaps or missing edges._
+- **Why does `Knowledge Graphs` connect `Community 35` to `Community 66`?**
+  _High betweenness centrality (0.015) - this node is a cross-community bridge._
+- **What connects `Why Husky?`, `Hook Architecture`, `Pre-commit (`scripts/graphify-pre-commit.sh`)` to the rest of the system?**
+  _531 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `Event Handlers` be split into smaller, more focused modules?**
-  _Cohesion score 0.07177033492822966 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.06773211567732115 - nodes in this community are weakly interconnected._
 - **Should `Core Interfaces` be split into smaller, more focused modules?**
-  _Cohesion score 0.05160662122687439 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.14624505928853754 - nodes in this community are weakly interconnected._
 - **Should `Configuration & Errors` be split into smaller, more focused modules?**
-  _Cohesion score 0.1164021164021164 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.14285714285714285 - nodes in this community are weakly interconnected._
 - **Should `Docs Site Dependencies` be split into smaller, more focused modules?**
   _Cohesion score 0.05555555555555555 - nodes in this community are weakly interconnected._
 - **Should `App Dependencies` be split into smaller, more focused modules?**

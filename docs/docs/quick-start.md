@@ -75,8 +75,31 @@ jobs:
 
 When this workflow completes, GitBuddy Bot picks up the `workflow_run.completed` event and runs the stale sweep across your org.
 
+## 5. Development Setup (Contributors)
+
+If you're contributing code to GitBuddy Bot, use the one-command setup:
+
+```bash
+git clone https://github.com/shiv-source/gitbuddy-bot.git
+cd gitbuddy-bot
+make setup
+```
+
+`make setup` installs everything: uv, graphify, code-review-graph, MCP servers, pnpm dependencies, and git hooks. The pre-commit hook auto-rebuilds the knowledge graph on every commit — no manual steps needed.
+
+```bash
+make dev            # Watch mode — recompiles on changes
+make test           # Run all tests
+make lint           # ESLint
+make graph-update   # Manually rebuild knowledge graph
+make mcp-check      # Verify MCP connections
+```
+
+See the [Contributing Guide](contributing/setup.md) for full development setup instructions.
+
 ## Next Steps
 
 - [Configuration deep-dive](configuration/overview.md) — understand every config option
 - [Commands](commands/overview.md) — learn slash commands like `/shipit` and `/triage`
 - [Self-hosting](self-hosting/prerequisites.md) — deploy your own instance
+- [Contributing](contributing/setup.md) — set up your dev environment and contribute

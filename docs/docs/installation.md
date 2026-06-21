@@ -9,7 +9,25 @@ Self-host GitBuddy Bot on your own infrastructure.
 - **A GitHub App** — registered in your org or personal account
 - **A hosting platform** — Railway, Fly.io, Render, or any VPS
 
-## Clone and Install
+## One-Command Setup (Recommended)
+
+```bash
+git clone https://github.com/shiv-source/gitbuddy-bot.git
+cd gitbuddy-bot
+make setup
+```
+
+`make setup` handles everything: installs `uv`, `graphify[mcp]`, `code-review-graph`, registers MCP servers, installs pnpm dependencies, activates Husky git hooks, and builds both knowledge graphs.
+
+For CI environments:
+
+```bash
+make setup-ci
+```
+
+## Manual Setup
+
+### Clone and Install
 
 ```bash
 git clone https://github.com/shiv-source/gitbuddy-bot.git
@@ -17,7 +35,7 @@ cd gitbuddy-bot
 pnpm install
 ```
 
-## Verify Setup
+### Verify Setup
 
 ```bash
 pnpm run typecheck   # TypeScript compiles
@@ -25,7 +43,7 @@ pnpm test            # All tests pass
 pnpm run lint        # No lint errors
 ```
 
-## Build and Run
+### Build and Run
 
 ```bash
 pnpm run build       # Compile TypeScript → dist/
