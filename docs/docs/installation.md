@@ -32,28 +32,28 @@ make setup-ci
 ```bash
 git clone https://github.com/shiv-source/gitbuddy-bot.git
 cd gitbuddy-bot
-pnpm install
+make install
 ```
 
 ### Verify Setup
 
 ```bash
-pnpm run typecheck   # TypeScript compiles
-pnpm test            # All tests pass
-pnpm run lint        # No lint errors
+make typecheck       # TypeScript compiles
+make test            # All tests pass
+make lint            # No lint errors
 ```
 
 ### Build and Run
 
 ```bash
-pnpm run build       # Compile TypeScript → dist/
-pnpm start           # Start the bot (node dist/index.js)
+make build           # Compile TypeScript → dist/
+make start           # Start the bot (node dist/index.js)
 ```
 
 For development with hot reload:
 
 ```bash
-pnpm run dev         # Watch mode — recompiles on change
+make dev             # Watch mode — recompiles on change
 ```
 
 ## Next Steps

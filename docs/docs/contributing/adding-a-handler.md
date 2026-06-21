@@ -170,6 +170,6 @@ Add your config section to `docs/docs/configuration/` and update the sidebar if 
 - [ ] Returns `HandlerResult` or `NO_ACTION`
 - [ ] Registered in `src/index.ts`
 - [ ] Tests cover the `process()` method
-- [ ] TypeScript compiles cleanly: `pnpm run typecheck`
-- [ ] Tests pass: `pnpm test`
-- [ ] Linter passes: `pnpm run lint`
+- [ ] TypeScript compiles cleanly: `make typecheck`
+- [ ] Tests pass: `make test`
+- [ ] Linter passes: `make lint`

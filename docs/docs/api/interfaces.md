@@ -2,7 +2,7 @@
 
 The TypeScript interfaces that define GitBuddy Bot's contract. All code depends on these abstractions.
 
-> For auto-generated API documentation from JSDoc comments, run `pnpm run docs:api` (uses [TypeDoc](https://typedoc.org/)).
+> For auto-generated API documentation from JSDoc comments, run `make docs-api` (uses [TypeDoc](https://typedoc.org/)).
 
 ## IEventHandler
 

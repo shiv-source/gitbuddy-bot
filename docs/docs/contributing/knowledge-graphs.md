@@ -42,7 +42,7 @@ Skips MCP server registration but installs everything else.
 curl -LsSf https://astral.sh/uv/install.sh | sh
 
 # Restart your shell or source your profile, then:
-uv tool install 'graphifyy[mcp]'      # graphify + MCP server
+uv tool install 'graphify[mcp]'      # graphify + MCP server
 pipx install code-review-graph         # or: uvx code-review-graph (on-demand)
 ```
 
@@ -191,7 +191,7 @@ GRAPHIFY_FORCE=1 make graph-update
 which graphify
 
 # If not, reinstall:
-uv tool install 'graphifyy[mcp]'
+uv tool install 'graphify[mcp]'
 
 # Or use the pinned Python from graphify-out:
 cat graphify-out/.graphify_python

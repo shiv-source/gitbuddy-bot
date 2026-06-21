@@ -4,12 +4,12 @@ sidebar_position: 7
 
 # Git Hooks
 
-GitBuddy Bot uses [Husky](https://typicode.github.io/husky/) to manage git hooks portably. Hooks are tracked in version control and activated automatically on `pnpm install`.
+GitBuddy Bot uses [Husky](https://typicode.github.io/husky/) to manage git hooks portably. Hooks are tracked in version control and activated automatically on `make install`.
 
 ## Why Husky?
 
 - **Portable**: hooks live in `.husky/` (tracked in git), not `.git/hooks/` (local only)
-- **Automatic**: `pnpm install` runs `husky` via the `prepare` script, setting `core.hooksPath`
+- **Automatic**: `make install` runs `husky` via the `prepare` script, setting `core.hooksPath`
 - **Zero-config**: teammates get hooks the moment they clone and install
 - **Standard**: the JS/TS ecosystem default for git hook management
 
@@ -99,16 +99,18 @@ No hardcoded paths — the hooks work on any machine where graphify is installed
 
 ### How Husky Gets Installed
 
-1. `pnpm add -D husky -w` adds Husky to `devDependencies`
-2. `pnpm exec husky init` creates `.husky/_/` (internal shim) and `.husky/pre-commit` (sample)
+`make setup` handles everything automatically. Under the hood:
+
+1. `pnpm add -D husky -w` adds Husky (v9.1.7) to `devDependencies`
+2. `pnpm exec husky init` creates `.husky/_/` (internal shim) and the hook wrappers
 3. Husky adds `"prepare": "husky"` to `package.json` scripts
-4. On every `pnpm install`, the `prepare` script runs `husky`, which sets `git config core.hooksPath .husky/_`
+4. On every `make install` (or `pnpm install`), the `prepare` script runs `husky`, which sets `git config core.hooksPath .husky/_`
 
 ### How It Works on a Fresh Clone
 
 ```
 git clone <repo>          → gets .husky/ directory
-pnpm install              → prepare script runs husky
+make install              → prepare script runs husky
                           → core.hooksPath = .husky/_
 git commit                → hooks are active
 ```

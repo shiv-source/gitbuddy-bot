@@ -10,10 +10,10 @@ Testing conventions and guidelines for GitBuddy Bot.
 ## Running Tests
 
 ```bash
-pnpm test                  # All tests with coverage
-pnpm run test:unit         # Unit tests only (tests/unit/)
-pnpm run test:integration  # Integration tests only (tests/integration/)
-pnpm run test:watch        # Watch mode
+make test              # All tests with coverage
+make test-unit         # Unit tests only (tests/unit/)
+make test-integration  # Integration tests only (tests/integration/)
+make test-watch        # Watch mode
 ```
 
 ## Test Organization

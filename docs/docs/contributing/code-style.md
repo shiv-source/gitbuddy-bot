@@ -11,7 +11,7 @@ Formatting, naming, and design conventions for GitBuddy Bot.
 
 ## Formatting
 
-- ESLint enforces consistent style: `pnpm run lint`
+- ESLint enforces consistent style: `make lint`
 - Indentation: 2 spaces
 - Quotes: single (`'`) for strings, template literals for interpolation
 - Semicolons: required

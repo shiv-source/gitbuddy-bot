@@ -51,16 +51,16 @@ corepack enable pnpm
 ```bash
 git clone https://github.com/shiv-source/gitbuddy-bot.git
 cd gitbuddy-bot
-pnpm install
+make install
 ```
 
-The `pnpm install` triggers Husky's `prepare` script, which activates git hooks automatically.
+The `make install` triggers Husky's `prepare` script, which activates git hooks automatically.
 
 ### 3. Install Knowledge Graph Tools (Optional)
 
 ```bash
 # Graphify (knowledge graph):
-uv tool install 'graphifyy[mcp]'
+uv tool install 'graphify[mcp]'
 graphify update .
 
 # Code-review-graph:

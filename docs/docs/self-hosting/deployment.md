@@ -7,8 +7,8 @@ Deploy GitBuddy Bot to your preferred hosting platform.
 [Railway](https://railway.app/) is the simplest option for Node.js apps.
 
 1. Connect your GitHub repo to Railway
-2. Set the build command: `pnpm install && pnpm run build`
-3. Set the start command: `pnpm start`
+2. Set the build command: `make install && make build`
+3. Set the start command: `make start`
 4. Add environment variables from [GitHub App Setup](github-app-setup.md#6-configure-environment-variables)
 5. Set the webhook URL in your GitHub App to `https://<railway-url>/webhook`
 
@@ -48,8 +48,8 @@ fly secrets set WEBHOOK_SECRET="your-secret"
 1. Create a new **Web Service** on [Render](https://render.com/)
 2. Connect your GitHub repo
 3. Configure:
-   - **Build Command:** `pnpm install && pnpm run build`
-   - **Start Command:** `pnpm start`
+   - **Build Command:** `make install && make build`
+   - **Start Command:** `make start`
    - **Environment Variables:** See [environment variables](environment-variables.md)
 4. Choose the **Free** or **Starter** plan
 
@@ -64,8 +64,8 @@ npm install -g pnpm
 # Clone and set up
 git clone https://github.com/shiv-source/gitbuddy-bot.git
 cd gitbuddy-bot
-pnpm install
-pnpm run build
+make install
+make build
 
 # Set environment variables
 export APP_ID=12345
