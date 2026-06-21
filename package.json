@@ -2,7 +2,7 @@
   "name": "gitbuddy-bot",
   "private": true,
   "version": "0.0.0",
-  "description": "Monolithic GitHub App — org-wide governance, PR/issue automation, security scanning, cross-repo orchestration, DORA insights, and AI copilot integration",
+  "description": "GitHub App — org-wide governance, PR/issue automation, security scanning, cross-repo orchestration, DORA insights, and AI copilot integration",
   "type": "module",
   "main": "dist/index.js",
   "scripts": {
@@ -19,8 +19,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/shiv-source/github-actions-platform.git",
-    "directory": "apps/gitbuddy-bot"
+    "url": "https://github.com/shiv-source/github-actions-platform.git"
   },
   "author": "shiv-source",
   "license": "MIT",
