@@ -3,23 +3,24 @@
   "private": true,
   "description": "GitBuddy Bot — monorepo with Probot GitHub App and Docusaurus docs",
   "scripts": {
-    "build": "pnpm --filter gitbuddy-bot build",
-    "dev": "pnpm --filter gitbuddy-bot dev",
-    "start": "pnpm --filter gitbuddy-bot start",
-    "test": "pnpm --filter gitbuddy-bot test",
-    "test:unit": "pnpm --filter gitbuddy-bot test:unit",
-    "test:integration": "pnpm --filter gitbuddy-bot test:integration",
-    "test:watch": "pnpm --filter gitbuddy-bot test:watch",
-    "lint": "pnpm --filter gitbuddy-bot lint",
-    "typecheck": "pnpm --filter gitbuddy-bot typecheck",
-    "clean": "pnpm --filter gitbuddy-bot clean",
-    "docs:dev": "pnpm --filter docs start",
-    "docs:build": "pnpm --filter docs build",
-    "docs:deploy": "pnpm --filter docs deploy",
-    "docs:typecheck": "pnpm --filter docs typecheck",
-    "docs:api": "pnpm --filter docs typedoc"
+    "build": "pnpm --filter './app' build",
+    "dev": "pnpm --filter './app' dev",
+    "start": "pnpm --filter './app' start",
+    "test": "pnpm --filter './app' test",
+    "test:unit": "pnpm --filter './app' test:unit",
+    "test:integration": "pnpm --filter './app' test:integration",
+    "test:watch": "pnpm --filter './app' test:watch",
+    "lint": "pnpm --filter './app' lint",
+    "typecheck": "pnpm --filter './app' typecheck",
+    "clean": "pnpm --filter './app' clean",
+    "docs:dev": "pnpm --filter './docs' start",
+    "docs:build": "pnpm --filter './docs' build",
+    "docs:deploy": "pnpm --filter './docs' deploy",
+    "docs:typecheck": "pnpm --filter './docs' typecheck",
+    "docs:api": "pnpm --filter './docs' typedoc"
   },
   "engines": {
-    "node": ">=24"
+    "node": ">=24",
+    "pnpm": ">=11"
   }
 }
