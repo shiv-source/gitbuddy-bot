@@ -1,0 +1,56 @@
+# Watchdog Pro — GitHub App Manifest
+
+# ── Identity ───────────────────────────────────────────────
+name: watchdog-pro
+description: >-
+  Org-wide governance, PR/issue automation, security scanning,
+  cross-repo orchestration, DORA insights, and AI copilot — all in one app.
+url: https://github.com/shiv-source/github-actions-platform
+
+# ── Permissions ────────────────────────────────────────────
+# Principle of least privilege: only what each domain needs.
+# Broad because this is a monolith; split apps would have narrower scopes.
+
+default_permissions:
+  # Governance
+  administration: read
+  # Automation
+  issues: write
+  pull_requests: write
+  # Security
+  security_events: read
+  # Sync / Orchestration
+  actions: write
+  # Insights
+  checks: write
+  deployments: read
+  # Copilot
+  contents: read
+  # All domains
+  metadata: read
+  members: read
+
+# ── Events ─────────────────────────────────────────────────
+# Subscribe once — handlers filter what they care about.
+
+default_events:
+  # Governance
+  - repository
+  - branch_protection_rule
+  # Automation
+  - issues
+  - pull_request
+  - issue_comment
+  # Security
+  - secret_scanning_alert
+  - push
+  # Sync
+  - workflow_run
+  - deployment_status
+  # Insights
+  - check_run
+
+# ── OAuth (optional — for insights dashboard) ────────────
+# Uncomment when adding a web dashboard with user login.
+# oauth:
+#   redirect_url: https://watchdog-pro.example.com/auth/callback
