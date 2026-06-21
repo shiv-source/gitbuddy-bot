@@ -1,12 +1,18 @@
-# Graph Report - .  (2026-06-21)
+# Graph Report - gitbuddy-bot  (2026-06-21)
 
 ## Corpus Check
-- Corpus is ~14,652 words - fits in a single context window. You may not need a graph.
+- 35 files · ~13,028 words
+- Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 315 nodes · 642 edges · 18 communities (11 shown, 7 thin omitted)
+- 334 nodes · 659 edges · 18 communities (13 shown, 5 thin omitted)
 - Extraction: 100% EXTRACTED · 0% INFERRED · 0% AMBIGUOUS
-- Token cost: 38,843 input · 19,696 output
+- Token cost: 0 input · 0 output
+
+## Graph Freshness
+- Built from commit: `c23ab9f9`
+- Run `git rev-parse HEAD` and compare to check if the graph is stale.
+- Run `graphify update .` after code changes (no API cost).
 
 ## Community Hubs (Navigation)
 - [[_COMMUNITY_Core Interfaces and Types|Core Interfaces and Types]]
@@ -59,39 +65,39 @@
 - **Architecture Design Patterns** — claude_md_domain_driven_design, claude_md_composition_root, claude_md_template_method, claude_md_middleware_chain [EXTRACTED 1.00]
 - **Watchdog Pro Domain Modules** — feature_roadmap_governance, feature_roadmap_automation, feature_roadmap_security, feature_roadmap_stale_management, feature_roadmap_sync_orchestration, feature_roadmap_insights_dora, feature_roadmap_copilot_ai, feature_roadmap_commands, feature_roadmap_external_integrations, feature_roadmap_release_management, feature_roadmap_infrastructure_platform [EXTRACTED 1.00]
 
-## Communities (18 total, 7 thin omitted)
+## Communities (18 total, 5 thin omitted)
 
 ### Community 0 - "Core Interfaces and Types"
-Cohesion: 0.09
-Nodes (31): IEventHandler, AutomationConfig, CopilotConfig, EventContext, GovernanceConfig, HandlerResult, InsightsConfig, IntegrationConfig (+23 more)
+Cohesion: 0.08
+Nodes (30): AutomationConfig, CopilotConfig, EventContext, GovernanceConfig, HandlerResult, InsightsConfig, IntegrationConfig, LabelRule (+22 more)
 
 ### Community 1 - "Package Configuration"
 Cohesion: 0.06
 Nodes (35): author, dependencies, octokit, probot, yaml, description, devDependencies, jest (+27 more)
 
 ### Community 2 - "Handler Tests and Base"
-Cohesion: 0.10
-Nodes (12): IConfigProvider, IGitHubClient, ILogger, createIssueContext(), createMockOctokit(), createPRContext(), createContext(), createMockOctokit() (+4 more)
+Cohesion: 0.09
+Nodes (13): IConfigProvider, IGitHubClient, createIssueContext(), createMockOctokit(), createPRContext(), createContext(), createMockOctokit(), STALE_SWEEP_PATTERNS (+5 more)
 
 ### Community 3 - "GitHub Client Adapter"
-Cohesion: 0.11
-Nodes (10): CheckConclusion, CheckDetails, IssueSearchResult, IssueUpdate, PullRequestInfo, RepoInfo, BranchProtection, TeamMember (+2 more)
+Cohesion: 0.15
+Nodes (3): RepoInfo, BranchProtection, OctokitClient
 
 ### Community 4 - "Slash Commands"
-Cohesion: 0.14
-Nodes (10): CommandRouter, LabelCommand, ShipitCommand, TriageCommand, CommandContext, CommandResult, ICommand, ProbotLog (+2 more)
+Cohesion: 0.22
+Nodes (7): CommandRouter, LabelCommand, ShipitCommand, TriageCommand, CommandContext, CommandResult, ICommand
 
 ### Community 5 - "TypeScript Configuration"
 Cohesion: 0.08
 Nodes (24): compilerOptions, allowSyntheticDefaultImports, declaration, declarationMap, esModuleInterop, forceConsistentCasingInFileNames, isolatedModules, lib (+16 more)
 
 ### Community 6 - "Middleware Pipeline"
-Cohesion: 0.13
-Nodes (7): RepoRef, ContextEnricher, ProbotContext, ErrorHandler, RateLimitBucket, RateLimiter, WatchdogProApp
+Cohesion: 0.08
+Nodes (20): CheckConclusion, CheckDetails, IEventHandler, ILogger, IssueSearchResult, IssueUpdate, PullRequestInfo, RepoRef (+12 more)
 
 ### Community 7 - "Configuration and Errors"
-Cohesion: 0.14
-Nodes (10): FALLBACK_PATHS, AppError, ConfigError, ConfigNotFoundError, GitHubApiError, HandlerError, NotFoundError, RateLimitError (+2 more)
+Cohesion: 0.12
+Nodes (11): FALLBACK_PATHS, YamlConfigProvider, AppError, ConfigError, ConfigNotFoundError, GitHubApiError, HandlerError, NotFoundError (+3 more)
 
 ### Community 8 - "Documentation and Roadmap"
 Cohesion: 0.12
@@ -101,29 +107,37 @@ Nodes (16): GitHub App Manifest, Composition Root Pattern, Domain-Driven Design 
 Cohesion: 0.33
 Nodes (3): CacheEntry, MemoryCache, ICache
 
+### Community 10 - "YAML Config Provider"
+Cohesion: 0.17
+Nodes (10): Adding a new domain handler, Adding a new slash command, Architecture, Commands, Configuration, graphify, Interfaces and types, Key design patterns (+2 more)
+
+### Community 11 - "Automation Handler"
+Cohesion: 0.29
+Nodes (6): Architecture, Configuration, Design Patterns, Getting Started, Scheduled Sweeps, Watchdog Pro 🐶
+
 ### Community 12 - "Test TypeScript Config"
 Cohesion: 0.40
 Nodes (4): compilerOptions, types, extends, include
 
 ## Knowledge Gaps
-- **96 isolated node(s):** `name`, `private`, `version`, `description`, `type` (+91 more)
+- **110 isolated node(s):** `name`, `private`, `version`, `description`, `type` (+105 more)
   These have ≤1 connection - possible missing edges or undocumented components.
-- **7 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
+- **5 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `EventContext` connect `Core Interfaces and Types` to `Handler Tests and Base`, `Slash Commands`, `Middleware Pipeline`, `Configuration and Errors`, `Automation Handler`?**
-  _High betweenness centrality (0.092) - this node is a cross-community bridge._
+- **Why does `EventContext` connect `Core Interfaces and Types` to `Handler Tests and Base`, `Middleware Pipeline`?**
+  _High betweenness centrality (0.082) - this node is a cross-community bridge._
 - **Why does `OctokitClient` connect `GitHub Client Adapter` to `Handler Tests and Base`, `Middleware Pipeline`?**
-  _High betweenness centrality (0.063) - this node is a cross-community bridge._
-- **Why does `IGitHubClient` connect `Handler Tests and Base` to `Core Interfaces and Types`, `GitHub Client Adapter`, `Slash Commands`?**
-  _High betweenness centrality (0.046) - this node is a cross-community bridge._
+  _High betweenness centrality (0.056) - this node is a cross-community bridge._
+- **Why does `IGitHubClient` connect `Handler Tests and Base` to `Core Interfaces and Types`, `GitHub Client Adapter`, `Slash Commands`, `Middleware Pipeline`?**
+  _High betweenness centrality (0.041) - this node is a cross-community bridge._
 - **What connects `name`, `private`, `version` to the rest of the system?**
-  _101 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _115 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `Core Interfaces and Types` be split into smaller, more focused modules?**
-  _Cohesion score 0.08514013749338974 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.08158508158508158 - nodes in this community are weakly interconnected._
 - **Should `Package Configuration` be split into smaller, more focused modules?**
   _Cohesion score 0.05555555555555555 - nodes in this community are weakly interconnected._
 - **Should `Handler Tests and Base` be split into smaller, more focused modules?**
-  _Cohesion score 0.09747899159663866 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.08558558558558559 - nodes in this community are weakly interconnected._
