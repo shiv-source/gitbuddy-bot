@@ -1,0 +1,7 @@
+# Dependencies
+node_modules/
+app/node_modules/
+docs/node_modules/
+
+# Build output
+dist/
