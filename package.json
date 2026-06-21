@@ -17,10 +17,14 @@
     "docs:build": "pnpm --filter './docs' build",
     "docs:deploy": "pnpm --filter './docs' deploy",
     "docs:typecheck": "pnpm --filter './docs' typecheck",
-    "docs:api": "pnpm --filter './docs' typedoc"
+    "docs:api": "pnpm --filter './docs' typedoc",
+    "prepare": "husky"
   },
   "engines": {
     "node": ">=24",
     "pnpm": ">=11"
+  },
+  "devDependencies": {
+    "husky": "^9.1.7"
   }
 }

@@ -1,0 +1,3 @@
+#!/bin/sh
+# graphify — auto-rebuild knowledge graph on branch switch
+exec scripts/graphify-post-checkout.sh "$@"
