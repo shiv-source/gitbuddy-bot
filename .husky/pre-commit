@@ -1,0 +1,3 @@
+#!/bin/sh
+# graphify — auto-rebuild knowledge graph and stage into commit
+exec scripts/graphify-pre-commit.sh

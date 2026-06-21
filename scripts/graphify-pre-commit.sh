@@ -1,6 +1,7 @@
 #!/bin/sh
 # graphify — auto-rebuild knowledge graph on commit (code files only, no LLM needed).
-# Called by .husky/post-commit (Husky-managed git hook).
+# Pre-commit hook: rebuilds from staged changes, stages updated graph files into
+# the same commit. Called by .husky/pre-commit (Husky-managed git hook).
 
 # Deterministic clustering: networkx louvain iterates string-keyed sets whose
 # order is randomized per-process by PYTHONHASHSEED, so community assignments
@@ -16,12 +17,13 @@ GIT_DIR=$(git rev-parse --git-dir 2>/dev/null)
 
 [ "${GRAPHIFY_SKIP_HOOK:-0}" = "1" ] && exit 0
 
-CHANGED=$(git diff --name-only HEAD~1 HEAD 2>/dev/null || git diff --name-only HEAD 2>/dev/null)
+# Detect staged changes (pre-commit uses --cached, not HEAD~1 vs HEAD)
+CHANGED=$(git diff --name-only --cached 2>/dev/null)
 if [ -z "$CHANGED" ]; then
     exit 0
 fi
 
-# Skip when only graphify-out/ artifacts changed (avoids rebuild loop when graph outputs are tracked in git)
+# Skip when only graphify-out/ artifacts are staged (avoids rebuild loop)
 _NON_GRAPH=$(echo "$CHANGED" | grep -v '^graphify-out/' || true)
 if [ -z "$_NON_GRAPH" ]; then
     exit 0
@@ -58,8 +60,6 @@ if [ -z "$GRAPHIFY_PYTHON" ]; then
             */env\ *) GRAPHIFY_PYTHON="${_SHEBANG#*/env }" ;;
             *)         GRAPHIFY_PYTHON="$_SHEBANG" ;;
         esac
-        # Allowlist: only keep characters valid in a filesystem path to prevent
-        # injection if the shebang contains shell metacharacters.
         case "$GRAPHIFY_PYTHON" in
             *[!a-zA-Z0-9/_.@-]*) GRAPHIFY_PYTHON="" ;;
         esac
@@ -83,16 +83,10 @@ fi
 
 export GRAPHIFY_CHANGED="$CHANGED"
 
-# Run the rebuild detached so git commit returns immediately. Full-repo rebuilds
-# can take hours; blocking the post-commit hook stalls the shell. The Python
-# launcher below detaches the child cross-platform, so it works on Git for
-# Windows' shell too (which lacks the coreutils backgrounding tools).
-_GRAPHIFY_LOG="${HOME}/.cache/graphify-rebuild.log"
-mkdir -p "$(dirname "$_GRAPHIFY_LOG")"
-export GRAPHIFY_REBUILD_LOG="$_GRAPHIFY_LOG"
-echo "[graphify hook] launching background rebuild (log: $_GRAPHIFY_LOG)"
-"$GRAPHIFY_PYTHON" -c "import os, subprocess, sys
-_src = '''
+# Rebuild synchronously (pre-commit: must finish before commit proceeds).
+# graphify's internal flock() prevents pile-ups if checkout + commit fire close together.
+echo "[graphify hook] rebuilding graph from staged changes..."
+"$GRAPHIFY_PYTHON" -c "
 import os, signal, sys
 from pathlib import Path
 
@@ -102,7 +96,7 @@ changed = [Path(f.strip()) for f in changed_raw.strip().splitlines() if f.strip(
 if not changed:
     sys.exit(0)
 
-print(f'[graphify hook] {len(changed)} file(s) changed - rebuilding graph...')
+print(f'[graphify hook] {len(changed)} file(s) staged — rebuilding graph...')
 
 try:
     from graphify.watch import _rebuild_code, _apply_resource_limits
@@ -125,22 +119,14 @@ except TimeoutError as exc:
 except Exception as exc:
     print(f'[graphify hook] Rebuild failed: {exc}')
     sys.exit(1)
-
-'''
-_log = os.environ.get('GRAPHIFY_REBUILD_LOG') or os.path.join(os.path.expanduser('~'), '.cache', 'graphify-rebuild.log')
-try:
-    os.makedirs(os.path.dirname(_log), exist_ok=True)
-    _out = open(_log, 'a', buffering=1, encoding='utf-8', errors='replace')
-except OSError:
-    _out = subprocess.DEVNULL
-_kw = dict(stdout=_out, stderr=subprocess.STDOUT, stdin=subprocess.DEVNULL, cwd=os.getcwd(), close_fds=True)
-_cmd = [sys.executable, '-c', _src]
-if os.name == 'nt':
-    _flags = 0x00000008 | 0x00000200  # DETACHED_PROCESS | CREATE_NEW_PROCESS_GROUP
-    try:
-        subprocess.Popen(_cmd, creationflags=_flags | 0x01000000, **_kw)  # + CREATE_BREAKAWAY_FROM_JOB
-    except OSError:
-        subprocess.Popen(_cmd, creationflags=_flags, **_kw)
-else:
-    subprocess.Popen(_cmd, start_new_session=True, **_kw)
 "
+
+REBUILD_EXIT=$?
+if [ $REBUILD_EXIT -ne 0 ]; then
+    echo "[graphify hook] rebuild failed (exit $REBUILD_EXIT) — commit will proceed anyway" >&2
+    exit 0
+fi
+
+# Stage updated graph files into the current commit (so they never land as unstaged)
+git add graphify-out/
+echo "[graphify hook] staged graphify-out/ into commit"
