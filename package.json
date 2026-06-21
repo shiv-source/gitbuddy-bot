@@ -15,7 +15,11 @@
     "test:integration": "node --experimental-vm-modules node_modules/jest/bin/jest.js tests/integration",
     "lint": "eslint src/ tests/ --ext .ts",
     "typecheck": "tsc --noEmit",
-    "clean": "rm -rf dist/ coverage/"
+    "clean": "rm -rf dist/ coverage/",
+    "docs:dev": "cd docs && pnpm start",
+    "docs:build": "cd docs && pnpm build",
+    "docs:deploy": "cd docs && pnpm deploy",
+    "docs:api": "cd docs && pnpm typedoc"
   },
   "repository": {
     "type": "git",

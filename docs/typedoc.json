@@ -1,0 +1,24 @@
+{
+  "$schema": "https://typedoc.org/schema.json",
+  "entryPoints": ["../src/core/interfaces.ts", "../src/core/types.ts", "../src/core/errors.ts"],
+  "entryPointStrategy": "expand",
+  "out": "docs/api/generated",
+  "name": "GitBuddy Bot API",
+  "includeVersion": false,
+  "readme": "none",
+  "plugin": [],
+  "excludePrivate": true,
+  "excludeProtected": false,
+  "excludeInternal": true,
+  "cleanOutputDir": true,
+  "githubPages": false,
+  "hideGenerator": true,
+  "sort": ["source-order"],
+  "kindSortOrder": [
+    "Interface",
+    "TypeAlias",
+    "Class",
+    "Function",
+    "Variable"
+  ]
+}

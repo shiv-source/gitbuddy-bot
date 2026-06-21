@@ -1,6 +1,24 @@
 # GitBuddy Bot 🤖
 
+[![CI](https://github.com/shiv-source/gitbuddy-bot/actions/workflows/ci.yml/badge.svg)](https://github.com/shiv-source/gitbuddy-bot/actions/workflows/ci.yml)
+[![Docs](https://img.shields.io/badge/docs-gitbuddy.dev-blue)](https://shiv-source.github.io/gitbuddy-bot)
+[![License: MIT](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
+[![Node.js Version](https://img.shields.io/badge/node-%E2%89%A524-brightgreen.svg)](https://nodejs.org)
+
+> 📚 **Full documentation:** [shiv-source.github.io/gitbuddy-bot](https://shiv-source.github.io/gitbuddy-bot)
+
 Monolithic GitHub App for org-wide governance, PR/issue automation, security scanning, cross-repo orchestration, DORA insights, and AI copilot integration.
+
+## Quick Links
+
+| | Link |
+|---|---|
+| 📖 **Docs** | [gitbuddy-bot docs site](https://shiv-source.github.io/gitbuddy-bot) |
+| 🚀 **Quick Start** | [5-minute setup](https://shiv-source.github.io/gitbuddy-bot/docs/quick-start) |
+| ⚙️ **Config Reference** | [All config options](https://shiv-source.github.io/gitbuddy-bot/docs/configuration/reference) |
+| 🏗️ **Architecture** | [Design overview](https://shiv-source.github.io/gitbuddy-bot/docs/architecture/overview) |
+| 🤝 **Contributing** | [How to contribute](CONTRIBUTING.md) |
+| 🔒 **Security** | [Security policy](SECURITY.md) |
 
 ## Architecture
 
@@ -55,13 +73,16 @@ Any workflow whose name contains "stale-sweep" or "mark stale" (case-insensitive
 ## Getting Started
 
 ```bash
-cd apps/gitbuddy-bot
-npm install
-npm run typecheck
-npm test
-npm run build
-npm start
+git clone https://github.com/shiv-source/gitbuddy-bot.git
+cd gitbuddy-bot
+pnpm install
+pnpm run typecheck
+pnpm test
+pnpm run build
+pnpm start
 ```
+
+For full setup instructions, see the [Quick Start guide](https://shiv-source.github.io/gitbuddy-bot/docs/quick-start).
 
 ## Configuration
 
@@ -77,7 +98,7 @@ automation:
   defaultIssueLabels: ["triage"]
   staleAfterDays: 60
   closeAfterDays: 7
-  staleLabel: "stale"          # label applied to stale issues
+  staleLabel: "stale"
 
 security:
   alertChannel: "#security-alerts"
@@ -96,3 +117,18 @@ copilot:
   prDescriptionEnabled: true
   maxTokens: 4096
 ```
+
+See the [Configuration Reference](https://shiv-source.github.io/gitbuddy-bot/docs/configuration/reference) for every option.
+
+## Documentation
+
+```bash
+pnpm run docs:dev    # Start docs dev server
+pnpm run docs:build  # Build docs site
+pnpm run docs:deploy # Deploy to GitHub Pages
+pnpm run docs:api    # Generate API reference (TypeDoc)
+```
+
+## License
+
+MIT — see [LICENSE](LICENSE).

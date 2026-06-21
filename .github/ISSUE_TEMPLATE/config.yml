@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Documentation
+    url: https://shiv-source.github.io/gitbuddy-bot
+    about: Check the docs before opening an issue
+  - name: Discussions
+    url: https://github.com/shiv-source/gitbuddy-bot/discussions
+    about: Ask questions and discuss ideas here

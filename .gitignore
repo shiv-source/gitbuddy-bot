@@ -8,6 +8,11 @@ coverage/
 # macOS
 .DS_Store
 
+# Docusaurus
+docs/.docusaurus/
+docs/build/
+docs/.docusaurus.env
+
 # Graphify out
 .graphify_root
 .graphify_python
