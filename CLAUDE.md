@@ -6,6 +6,8 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 **Watchdog Pro** — a monolithic Probot GitHub App for org-wide governance, PR/issue automation, security scanning, cross-repo orchestration, DORA insights, and AI copilot integration. Node.js ESM, TypeScript, requires Node ≥24.
 
+**PR template:** `.github/pull_request_template.md` — use this when opening pull requests. It covers type of change, affected domains, and a checklist aligned with the architecture patterns below.
+
 ## Commands
 
 ```bash
