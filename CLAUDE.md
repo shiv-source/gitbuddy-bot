@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project
 
-**Watchdog Pro** — a monolithic Probot GitHub App for org-wide governance, PR/issue automation, security scanning, cross-repo orchestration, DORA insights, and AI copilot integration. Node.js ESM, TypeScript, requires Node ≥24.
+**GitBuddy Bot** — a monolithic Probot GitHub App for org-wide governance, PR/issue automation, security scanning, cross-repo orchestration, DORA insights, and AI copilot integration. Node.js ESM, TypeScript, requires Node ≥24.
 
 **PR template:** `.github/pull_request_template.md` — use this when opening pull requests. It covers type of change, affected domains, and a checklist aligned with the architecture patterns below.
 
@@ -58,7 +58,7 @@ src/
 ### Interfaces and types
 
 - `src/core/interfaces.ts` — `IEventHandler`, `ILogger`, `IGitHubClient`, `IConfigProvider`, `ICache`, `ICommand`
-- `src/core/types.ts` — `EventContext`, `RepoRef`, `HandlerResult`, `NO_ACTION`, `WatchdogConfig` (all sub-configs defined here), `BranchProtection`, `TeamMember`
+- `src/core/types.ts` — `EventContext`, `RepoRef`, `HandlerResult`, `NO_ACTION`, `GitBuddyConfig` (all sub-configs defined here), `BranchProtection`, `TeamMember`
 - `src/core/errors.ts` — `AppError` hierarchy: `ConfigError`, `ConfigNotFoundError`, `RateLimitError`, `ValidationError`, `GitHubApiError`, `NotFoundError`, `HandlerError`
 
 ### Adding a new domain handler
@@ -76,7 +76,7 @@ src/
 
 ## Configuration
 
-The app reads `.github/watchdog.yml` from repos. Config paths fall back: repo-level → org `.github` repo → defaults. Use dot notation to access nested values via `IConfigProvider.get('automation.staleAfterDays', 60)`.
+The app reads `.github/gitbuddy.yml` from repos. Config paths fall back: repo-level → org `.github` repo → defaults. Use dot notation to access nested values via `IConfigProvider.get('automation.staleAfterDays', 60)`.
 
 ## Stale issue sweeps
 

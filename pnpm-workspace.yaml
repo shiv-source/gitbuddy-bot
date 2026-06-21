@@ -1,2 +1,8 @@
-allowBuilds:
-  unrs-resolver: set this to true or false
+# pnpm workspace v11 configuration
+# Single-package repo — the root is the only package.
+packages:
+  - '.'
+
+# Packages allowed to run install/build scripts (pnpm v11+)
+onlyBuiltDependencies:
+  - unrs-resolver

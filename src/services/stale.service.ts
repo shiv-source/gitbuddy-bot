@@ -195,7 +195,7 @@ export class StaleService {
 
   private buildStaleMessage(staleAfterDays: number, closeAfterDays: number): string {
     return [
-      `> 🐶 This issue has been marked as **stale** because it has had no activity for ${staleAfterDays} days.`,
+      `> 🤖 This issue has been marked as **stale** because it has had no activity for ${staleAfterDays} days.`,
       `> Remove the stale label or leave a comment to keep this issue open.`,
       `> If there is no further activity, this issue will be automatically closed in ${closeAfterDays} days.`,
     ].join('\n');
@@ -203,7 +203,7 @@ export class StaleService {
 
   private buildCloseMessage(closeAfterDays: number): string {
     return [
-      `> 🐶 This issue has been automatically **closed** after remaining inactive for an additional ${closeAfterDays} days since being marked as stale.`,
+      `> 🤖 This issue has been automatically **closed** after remaining inactive for an additional ${closeAfterDays} days since being marked as stale.`,
       `> Feel free to reopen this issue if it is still relevant.`,
     ].join('\n');
   }

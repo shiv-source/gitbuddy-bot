@@ -1,7 +1,7 @@
-# Watchdog Pro — GitHub App Manifest
+# GitBuddy Bot — GitHub App Manifest
 
 # ── Identity ───────────────────────────────────────────────
-name: watchdog-pro
+name: gitbuddy-bot
 description: >-
   Org-wide governance, PR/issue automation, security scanning,
   cross-repo orchestration, DORA insights, and AI copilot — all in one app.
@@ -53,4 +53,4 @@ default_events:
 # ── OAuth (optional — for insights dashboard) ────────────
 # Uncomment when adding a web dashboard with user login.
 # oauth:
-#   redirect_url: https://watchdog-pro.example.com/auth/callback
+#   redirect_url: https://gitbuddy-bot.example.com/auth/callback

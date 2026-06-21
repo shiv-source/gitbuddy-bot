@@ -1,5 +1,5 @@
 /**
- * Domain-level error hierarchy for Watchdog Pro.
+ * Domain-level error hierarchy for GitBuddy Bot.
  *
  * Every error thrown by the app extends AppError so the error-handler
  * middleware can classify and format it consistently.
