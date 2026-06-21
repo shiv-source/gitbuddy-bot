@@ -1,5 +1,5 @@
 /**
- * YAML config provider — reads .github/watchdog.yml from the repository.
+ * YAML config provider — reads .github/gitbuddy.yml from the repository.
  *
  * Strategy pattern: the app uses IConfigProvider. Swap this for a database-backed
  * provider without changing any handler or service.
@@ -9,25 +9,25 @@ import * as fs from 'node:fs';
 import * as path from 'node:path';
 import YAML from 'yaml';
 import type { IConfigProvider } from '../../core/interfaces.js';
-import type { WatchdogConfig } from '../../core/types.js';
+import type { GitBuddyConfig } from '../../core/types.js';
 import { ConfigNotFoundError, ConfigError } from '../../core/errors.js';
 
-const CONFIG_FILE = '.github/watchdog.yml';
+const CONFIG_FILE = '.github/gitbuddy.yml';
 const FALLBACK_PATHS = [
-  '.github/watchdog.yaml',
-  'watchdog.yml',
-  'watchdog.yaml',
+  '.github/gitbuddy.yaml',
+  'gitbuddy.yml',
+  'gitbuddy.yaml',
 ];
 
 export class YamlConfigProvider implements IConfigProvider {
-  private config: WatchdogConfig;
+  private config: GitBuddyConfig;
   private configPath: string | null = null;
 
   constructor(searchDir: string = process.cwd()) {
     this.config = this.load(searchDir);
   }
 
-  getConfig(): WatchdogConfig {
+  getConfig(): GitBuddyConfig {
     return this.config;
   }
 
@@ -46,7 +46,7 @@ export class YamlConfigProvider implements IConfigProvider {
     this.config = this.load(dir);
   }
 
-  private load(searchDir: string): WatchdogConfig {
+  private load(searchDir: string): GitBuddyConfig {
     const filePath = this.findConfig(searchDir);
     if (!filePath) {
       throw new ConfigNotFoundError(
@@ -76,7 +76,7 @@ export class YamlConfigProvider implements IConfigProvider {
     return null;
   }
 
-  private applyDefaults(raw: Record<string, unknown>): WatchdogConfig {
+  private applyDefaults(raw: Record<string, unknown>): GitBuddyConfig {
     return {
       governance: {
         autoBootstrapPatterns: [],

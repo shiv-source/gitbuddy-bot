@@ -53,7 +53,7 @@ export const NO_ACTION: HandlerResult = {
 
 // ── Configuration ─────────────────────────────────────────────
 
-export interface WatchdogConfig {
+export interface GitBuddyConfig {
   governance?: GovernanceConfig;
   automation?: AutomationConfig;
   security?: SecurityConfig;

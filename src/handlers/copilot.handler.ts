@@ -3,7 +3,7 @@
  *
  * Events:
  *   - pull_request.opened     → auto-generate PR description if missing
- *   - issue_comment.created   → detect @watchdog mentions and respond
+ *   - issue_comment.created   → detect @gitbuddy mentions and respond
  *
  * AI integration is config-gated: only activates when copilot.* config is present.
  */
@@ -84,7 +84,7 @@ export class CopilotHandler extends BaseHandler {
     const comment = context.payload?.comment;
     if (!comment) return NO_ACTION;
 
-    const mentioned = /@watchdog\b/i.test(comment.body);
+    const mentioned = /@gitbuddy\b/i.test(comment.body);
     if (!mentioned) return NO_ACTION;
 
     const prReviewEnabled = this.config.get<boolean>('copilot.prReviewEnabled', false);
@@ -103,7 +103,7 @@ export class CopilotHandler extends BaseHandler {
     }
 
     return {
-      summary: `Responded to @watchdog mention on #${issue?.number}`,
+      summary: `Responded to @gitbuddy mention on #${issue?.number}`,
       actionTaken: true,
       metadata: { issueNumber: issue?.number, isPR },
     };

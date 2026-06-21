@@ -1,5 +1,5 @@
 /**
- * WatchdogPro — the central application class.
+ * GitBuddyBot — the central application class.
  *
  * Owns handler registration, middleware setup, and lifecycle.
  * The single place where all event → handler wiring happens.
@@ -17,7 +17,7 @@ import { ContextEnricher } from './middleware/context-enricher.js';
 import { RateLimiter } from './middleware/rate-limiter.js';
 import { ErrorHandler } from './middleware/error-handler.js';
 
-export class WatchdogProApp {
+export class GitBuddyBotApp {
   private enricher: ContextEnricher;
   private rateLimiter: RateLimiter;
   private errorHandler: ErrorHandler;
@@ -55,12 +55,12 @@ export class WatchdogProApp {
 
     const registeredEvents = this.handlers.flatMap((h) => h.events);
     const uniqueEvents = [...new Set(registeredEvents)];
-    console.log(`🐶 Watchdog Pro registered ${this.handlers.length} handlers for ${uniqueEvents.length} events`);
+    console.log(`🤖 GitBuddy Bot registered ${this.handlers.length} handlers for ${uniqueEvents.length} events`);
   }
 
   /** Start the app: register handlers and begin processing webhooks. */
   async start(): Promise<void> {
     this.registerAll();
-    console.log('🐶 Watchdog Pro started');
+    console.log('🤖 GitBuddy Bot started');
   }
 }

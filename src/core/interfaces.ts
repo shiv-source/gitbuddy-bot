@@ -1,12 +1,12 @@
 /**
- * Core abstractions for Watchdog Pro.
+ * Core abstractions for GitBuddy Bot.
  *
  * Every concrete dependency (Probot, Octokit, filesystem, cache backend)
  * hides behind one of these interfaces. Services and handlers depend on
  * interfaces, not implementations — the D in SOLID.
  */
 
-import type { EventContext, HandlerResult, BranchProtection, TeamMember, WatchdogConfig } from './types.js';
+import type { EventContext, HandlerResult, BranchProtection, TeamMember, GitBuddyConfig } from './types.js';
 
 // ── Event Handler ─────────────────────────────────────────────
 // S in SOLID: each handler has ONE reason to change — its domain.
@@ -115,7 +115,7 @@ export interface CheckDetails {
 
 export interface IConfigProvider {
   /** Get the full parsed config */
-  getConfig(): WatchdogConfig;
+  getConfig(): GitBuddyConfig;
   /** Get a nested config value by dot-notation path */
   get<T>(path: string, defaultValue: T): T;
   /** Reload config from source */

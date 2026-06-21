@@ -5,6 +5,9 @@ coverage/
 .env
 .env.local
 
+# macOS
+.DS_Store
+
 # Graphify out
 .graphify_root
 .graphify_python

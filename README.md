@@ -1,4 +1,4 @@
-# Watchdog Pro 🐶
+# GitBuddy Bot 🤖
 
 Monolithic GitHub App for org-wide governance, PR/issue automation, security scanning, cross-repo orchestration, DORA insights, and AI copilot integration.
 
@@ -42,10 +42,10 @@ jobs:
   trigger:
     runs-on: ubuntu-latest
     steps:
-      - run: echo "Triggering Watchdog Pro stale sweep"
+      - run: echo "Triggering GitBuddy Bot stale sweep"
 ```
 
-When the workflow completes successfully, Watchdog Pro picks up the `workflow_run.completed` event and executes the stale sweep:
+When the workflow completes successfully, GitBuddy Bot picks up the `workflow_run.completed` event and executes the stale sweep:
 
 - **From `.github` repo**: sweeps ALL repos in the org
 - **From any other repo**: sweeps only that repo
@@ -55,7 +55,7 @@ Any workflow whose name contains "stale-sweep" or "mark stale" (case-insensitive
 ## Getting Started
 
 ```bash
-cd github-apps/watchdog-pro
+cd apps/gitbuddy-bot
 npm install
 npm run typecheck
 npm test
@@ -65,7 +65,7 @@ npm start
 
 ## Configuration
 
-Place a `.github/watchdog.yml` in your org's `.github` repo:
+Place a `.github/gitbuddy.yml` in your org's `.github` repo:
 
 ```yaml
 governance:

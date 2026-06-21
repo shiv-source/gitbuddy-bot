@@ -2,7 +2,7 @@
 .PHONY: graph-update graph-query graph-html graph-wiki
 
 # ── Project ───────────────────────────────────────────────────────
-# Watchdog Pro — Probot GitHub App. Node ≥24, pnpm, TypeScript ESM.
+# GitBuddy Bot — Probot GitHub App. Node ≥24, pnpm, TypeScript ESM.
 
 install:
 	pnpm install

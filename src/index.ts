@@ -1,5 +1,5 @@
 /**
- * Watchdog Pro — GitHub App entry point.
+ * GitBuddy Bot — GitHub App entry point.
  *
  * This is the composition root (Factory Pattern + Manual DI).
  * All concrete implementations are chosen and wired here.
@@ -12,7 +12,7 @@
  */
 
 import type { Probot } from 'probot';
-import { WatchdogProApp } from './app.js';
+import { GitBuddyBotApp } from './app.js';
 import { ProbotLogger } from './infrastructure/logging/probot-logger.js';
 import { YamlConfigProvider } from './infrastructure/config/yaml-config.js';
 
@@ -62,6 +62,6 @@ export default function createApp(probot: Probot): void {
   ];
 
   // ── Bootstrap ───────────────────────────────────────────────
-  const app = new WatchdogProApp(probot, handlers, logger);
+  const app = new GitBuddyBotApp(probot, handlers, logger);
   app.start();
 }
