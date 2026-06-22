@@ -11,8 +11,8 @@ const config: Config = {
     v4: true,
   },
 
-  url: 'https://shiv-source.github.io',
-  baseUrl: '/gitbuddy-bot/',
+  url: 'https://gitbuddy-bot.shivkumar.me',
+  baseUrl: '/',
 
   organizationName: 'shiv-source',
   projectName: 'gitbuddy-bot',

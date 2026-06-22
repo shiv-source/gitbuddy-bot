@@ -115,814 +115,24 @@
   },
   "nodes": [
     {
-      "label": "git-hooks.md",
-      "file_type": "document",
-      "source_file": "docs/docs/contributing/git-hooks.md",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "contributing_git_hooks",
-      "community": 66,
-      "norm_label": "git-hooks.md"
-    },
-    {
-      "label": "Git Hooks",
-      "file_type": "document",
-      "source_file": "docs/docs/contributing/git-hooks.md",
-      "source_location": "L5",
-      "_origin": "ast",
-      "id": "contributing_git_hooks_git_hooks",
-      "community": 46,
-      "norm_label": "git hooks"
-    },
-    {
-      "label": "Why Husky?",
-      "file_type": "document",
-      "source_file": "docs/docs/contributing/git-hooks.md",
-      "source_location": "L9",
-      "_origin": "ast",
-      "id": "contributing_git_hooks_why_husky",
-      "community": 46,
-      "norm_label": "why husky?"
-    },
-    {
-      "label": "Hook Architecture",
-      "file_type": "document",
-      "source_file": "docs/docs/contributing/git-hooks.md",
-      "source_location": "L16",
-      "_origin": "ast",
-      "id": "contributing_git_hooks_hook_architecture",
-      "community": 46,
-      "norm_label": "hook architecture"
-    },
-    {
-      "label": "Active Hooks",
-      "file_type": "document",
-      "source_file": "docs/docs/contributing/git-hooks.md",
-      "source_location": "L27",
-      "_origin": "ast",
-      "id": "contributing_git_hooks_active_hooks",
-      "community": 46,
-      "norm_label": "active hooks"
-    },
-    {
-      "label": "Pre-commit (`scripts/graphify-pre-commit.sh`)",
-      "file_type": "document",
-      "source_file": "docs/docs/contributing/git-hooks.md",
-      "source_location": "L29",
-      "_origin": "ast",
-      "id": "contributing_git_hooks_pre_commit_scripts_graphify_pre_commit_sh",
-      "community": 46,
-      "norm_label": "pre-commit (`scripts/graphify-pre-commit.sh`)"
-    },
-    {
-      "label": "Post-checkout (`scripts/graphify-post-checkout.sh`)",
-      "file_type": "document",
-      "source_file": "docs/docs/contributing/git-hooks.md",
-      "source_location": "L56",
-      "_origin": "ast",
-      "id": "contributing_git_hooks_post_checkout_scripts_graphify_post_checkout_sh",
-      "community": 46,
-      "norm_label": "post-checkout (`scripts/graphify-post-checkout.sh`)"
-    },
-    {
-      "label": "Python Detection",
-      "file_type": "document",
-      "source_file": "docs/docs/contributing/git-hooks.md",
-      "source_location": "L69",
-      "_origin": "ast",
-      "id": "contributing_git_hooks_python_detection",
-      "community": 46,
-      "norm_label": "python detection"
-    },
-    {
-      "label": "Skipping Hooks",
-      "file_type": "document",
-      "source_file": "docs/docs/contributing/git-hooks.md",
-      "source_location": "L89",
-      "_origin": "ast",
-      "id": "contributing_git_hooks_skipping_hooks",
-      "community": 46,
-      "norm_label": "skipping hooks"
-    },
-    {
-      "label": "Installation Details",
-      "file_type": "document",
-      "source_file": "docs/docs/contributing/git-hooks.md",
-      "source_location": "L98",
-      "_origin": "ast",
-      "id": "contributing_git_hooks_installation_details",
-      "community": 46,
-      "norm_label": "installation details"
-    },
-    {
-      "label": "How Husky Gets Installed",
-      "file_type": "document",
-      "source_file": "docs/docs/contributing/git-hooks.md",
-      "source_location": "L100",
-      "_origin": "ast",
-      "id": "contributing_git_hooks_how_husky_gets_installed",
-      "community": 46,
-      "norm_label": "how husky gets installed"
-    },
-    {
-      "label": "How It Works on a Fresh Clone",
-      "file_type": "document",
-      "source_file": "docs/docs/contributing/git-hooks.md",
-      "source_location": "L107",
-      "_origin": "ast",
-      "id": "contributing_git_hooks_how_it_works_on_a_fresh_clone",
-      "community": 46,
-      "norm_label": "how it works on a fresh clone"
-    },
-    {
-      "label": "Verifying Hooks Are Active",
-      "file_type": "document",
-      "source_file": "docs/docs/contributing/git-hooks.md",
-      "source_location": "L118",
-      "_origin": "ast",
-      "id": "contributing_git_hooks_verifying_hooks_are_active",
-      "community": 46,
-      "norm_label": "verifying hooks are active"
-    },
-    {
-      "label": "Adding a New Hook",
-      "file_type": "document",
-      "source_file": "docs/docs/contributing/git-hooks.md",
-      "source_location": "L134",
-      "_origin": "ast",
-      "id": "contributing_git_hooks_adding_a_new_hook",
-      "community": 46,
-      "norm_label": "adding a new hook"
-    },
-    {
-      "label": "Hook Timeouts",
-      "file_type": "document",
-      "source_file": "docs/docs/contributing/git-hooks.md",
-      "source_location": "L161",
-      "_origin": "ast",
-      "id": "contributing_git_hooks_hook_timeouts",
-      "community": 46,
-      "norm_label": "hook timeouts"
-    },
-    {
-      "label": "knowledge-graphs.md",
-      "file_type": "document",
-      "source_file": "docs/docs/contributing/knowledge-graphs.md",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "contributing_knowledge_graphs",
-      "community": 66,
-      "norm_label": "knowledge-graphs.md"
-    },
-    {
-      "label": "Knowledge Graphs",
-      "file_type": "document",
-      "source_file": "docs/docs/contributing/knowledge-graphs.md",
-      "source_location": "L5",
-      "_origin": "ast",
-      "id": "contributing_knowledge_graphs_knowledge_graphs",
-      "community": 35,
-      "norm_label": "knowledge graphs"
-    },
-    {
-      "label": "Overview",
-      "file_type": "document",
-      "source_file": "docs/docs/contributing/knowledge-graphs.md",
-      "source_location": "L9",
-      "_origin": "ast",
-      "id": "contributing_knowledge_graphs_overview",
-      "community": 35,
-      "norm_label": "overview"
-    },
-    {
-      "label": "One-Command Setup",
-      "file_type": "document",
-      "source_file": "docs/docs/contributing/knowledge-graphs.md",
-      "source_location": "L20",
-      "_origin": "ast",
-      "id": "contributing_knowledge_graphs_one_command_setup",
-      "community": 35,
-      "norm_label": "one-command setup"
-    },
-    {
-      "label": "Manual Setup (step by step)",
-      "file_type": "document",
-      "source_file": "docs/docs/contributing/knowledge-graphs.md",
-      "source_location": "L36",
-      "_origin": "ast",
-      "id": "contributing_knowledge_graphs_manual_setup_step_by_step",
-      "community": 35,
-      "norm_label": "manual setup (step by step)"
-    },
-    {
-      "label": "Prerequisites",
-      "file_type": "document",
-      "source_file": "docs/docs/contributing/knowledge-graphs.md",
-      "source_location": "L38",
-      "_origin": "ast",
-      "id": "contributing_knowledge_graphs_prerequisites",
-      "community": 35,
-      "norm_label": "prerequisites"
-    },
-    {
-      "label": "Register MCP Servers",
-      "file_type": "document",
-      "source_file": "docs/docs/contributing/knowledge-graphs.md",
-      "source_location": "L49",
-      "_origin": "ast",
-      "id": "contributing_knowledge_graphs_register_mcp_servers",
-      "community": 35,
-      "norm_label": "register mcp servers"
-    },
-    {
-      "label": "Build Initial Graphs",
-      "file_type": "document",
-      "source_file": "docs/docs/contributing/knowledge-graphs.md",
-      "source_location": "L69",
-      "_origin": "ast",
-      "id": "contributing_knowledge_graphs_build_initial_graphs",
-      "community": 35,
-      "norm_label": "build initial graphs"
-    },
-    {
-      "label": "How Graphs Are Kept Current",
-      "file_type": "document",
-      "source_file": "docs/docs/contributing/knowledge-graphs.md",
-      "source_location": "L88",
-      "_origin": "ast",
-      "id": "contributing_knowledge_graphs_how_graphs_are_kept_current",
-      "community": 35,
-      "norm_label": "how graphs are kept current"
-    },
-    {
-      "label": "Pre-commit Hook (graphify)",
-      "file_type": "document",
-      "source_file": "docs/docs/contributing/knowledge-graphs.md",
-      "source_location": "L90",
-      "_origin": "ast",
-      "id": "contributing_knowledge_graphs_pre_commit_hook_graphify",
-      "community": 35,
-      "norm_label": "pre-commit hook (graphify)"
-    },
-    {
-      "label": "Post-checkout Hook (graphify)",
-      "file_type": "document",
-      "source_file": "docs/docs/contributing/knowledge-graphs.md",
-      "source_location": "L109",
-      "_origin": "ast",
-      "id": "contributing_knowledge_graphs_post_checkout_hook_graphify",
-      "community": 35,
-      "norm_label": "post-checkout hook (graphify)"
-    },
-    {
-      "label": "PostToolUse Hook (code-review-graph)",
-      "file_type": "document",
-      "source_file": "docs/docs/contributing/knowledge-graphs.md",
-      "source_location": "L117",
-      "_origin": "ast",
-      "id": "contributing_knowledge_graphs_posttooluse_hook_code_review_graph",
-      "community": 35,
-      "norm_label": "posttooluse hook (code-review-graph)"
-    },
-    {
-      "label": "Make Targets Reference",
-      "file_type": "document",
-      "source_file": "docs/docs/contributing/knowledge-graphs.md",
-      "source_location": "L135",
-      "_origin": "ast",
-      "id": "contributing_knowledge_graphs_make_targets_reference",
-      "community": 35,
-      "norm_label": "make targets reference"
-    },
-    {
-      "label": "Using the Graphs",
-      "file_type": "document",
-      "source_file": "docs/docs/contributing/knowledge-graphs.md",
-      "source_location": "L146",
-      "_origin": "ast",
-      "id": "contributing_knowledge_graphs_using_the_graphs",
-      "community": 35,
-      "norm_label": "using the graphs"
-    },
-    {
-      "label": "Graphify Queries",
-      "file_type": "document",
-      "source_file": "docs/docs/contributing/knowledge-graphs.md",
-      "source_location": "L148",
-      "_origin": "ast",
-      "id": "contributing_knowledge_graphs_graphify_queries",
-      "community": 35,
-      "norm_label": "graphify queries"
-    },
-    {
-      "label": "Code-review-graph Analysis",
-      "file_type": "document",
-      "source_file": "docs/docs/contributing/knowledge-graphs.md",
-      "source_location": "L166",
-      "_origin": "ast",
-      "id": "contributing_knowledge_graphs_code_review_graph_analysis",
-      "community": 35,
-      "norm_label": "code-review-graph analysis"
-    },
-    {
-      "label": "Troubleshooting",
-      "file_type": "document",
-      "source_file": "docs/docs/contributing/knowledge-graphs.md",
-      "source_location": "L175",
-      "_origin": "ast",
-      "id": "contributing_knowledge_graphs_troubleshooting",
-      "community": 35,
-      "norm_label": "troubleshooting"
-    },
-    {
-      "label": "Graphify rebuild fails",
-      "file_type": "document",
-      "source_file": "docs/docs/contributing/knowledge-graphs.md",
-      "source_location": "L177",
-      "_origin": "ast",
-      "id": "contributing_knowledge_graphs_graphify_rebuild_fails",
-      "community": 35,
-      "norm_label": "graphify rebuild fails"
-    },
-    {
-      "label": "\"graphify not found\"",
-      "file_type": "document",
-      "source_file": "docs/docs/contributing/knowledge-graphs.md",
-      "source_location": "L187",
-      "_origin": "ast",
-      "id": "contributing_knowledge_graphs_graphify_not_found",
-      "community": 35,
-      "norm_label": "\"graphify not found\""
-    },
-    {
-      "label": "MCP server not connecting",
-      "file_type": "document",
-      "source_file": "docs/docs/contributing/knowledge-graphs.md",
-      "source_location": "L200",
-      "_origin": "ast",
-      "id": "contributing_knowledge_graphs_mcp_server_not_connecting",
-      "community": 35,
-      "norm_label": "mcp server not connecting"
-    },
-    {
-      "label": "Hook slows down commits",
-      "file_type": "document",
-      "source_file": "docs/docs/contributing/knowledge-graphs.md",
-      "source_location": "L213",
-      "_origin": "ast",
-      "id": "contributing_knowledge_graphs_hook_slows_down_commits",
-      "community": 35,
-      "norm_label": "hook slows down commits"
-    },
-    {
-      "label": "Windows / non-macOS setup",
-      "file_type": "document",
-      "source_file": "docs/docs/contributing/knowledge-graphs.md",
-      "source_location": "L225",
-      "_origin": "ast",
-      "id": "contributing_knowledge_graphs_windows_non_macos_setup",
-      "community": 35,
-      "norm_label": "windows / non-macos setup"
-    },
-    {
-      "label": "File Reference",
-      "file_type": "document",
-      "source_file": "docs/docs/contributing/knowledge-graphs.md",
-      "source_location": "L229",
-      "_origin": "ast",
-      "id": "contributing_knowledge_graphs_file_reference",
-      "community": 35,
-      "norm_label": "file reference"
-    },
-    {
-      "label": "setup.md",
-      "file_type": "document",
-      "source_file": "docs/docs/contributing/setup.md",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "contributing_setup",
-      "community": 66,
-      "norm_label": "setup.md"
-    },
-    {
-      "label": "Development Setup",
-      "file_type": "document",
-      "source_file": "docs/docs/contributing/setup.md",
-      "source_location": "L5",
-      "_origin": "ast",
-      "id": "contributing_setup_development_setup",
-      "community": 58,
-      "norm_label": "development setup"
-    },
-    {
-      "label": "Prerequisites",
-      "file_type": "document",
-      "source_file": "docs/docs/contributing/setup.md",
-      "source_location": "L9",
-      "_origin": "ast",
-      "id": "contributing_setup_prerequisites",
-      "community": 58,
-      "norm_label": "prerequisites"
-    },
-    {
-      "label": "One-Command Setup (Recommended)",
-      "file_type": "document",
-      "source_file": "docs/docs/contributing/setup.md",
-      "source_location": "L18",
-      "_origin": "ast",
-      "id": "contributing_setup_one_command_setup_recommended",
-      "community": 58,
-      "norm_label": "one-command setup (recommended)"
-    },
-    {
-      "label": "Manual Setup (Step by Step)",
-      "file_type": "document",
-      "source_file": "docs/docs/contributing/setup.md",
-      "source_location": "L40",
-      "_origin": "ast",
-      "id": "contributing_setup_manual_setup_step_by_step",
-      "community": 58,
-      "norm_label": "manual setup (step by step)"
-    },
-    {
-      "label": "1. Install pnpm",
-      "file_type": "document",
-      "source_file": "docs/docs/contributing/setup.md",
-      "source_location": "L42",
-      "_origin": "ast",
-      "id": "contributing_setup_1_install_pnpm",
-      "community": 58,
-      "norm_label": "1. install pnpm"
-    },
-    {
-      "label": "2. Clone and Install Dependencies",
-      "file_type": "document",
-      "source_file": "docs/docs/contributing/setup.md",
-      "source_location": "L49",
-      "_origin": "ast",
-      "id": "contributing_setup_2_clone_and_install_dependencies",
-      "community": 58,
-      "norm_label": "2. clone and install dependencies"
-    },
-    {
-      "label": "3. Install Knowledge Graph Tools (Optional)",
-      "file_type": "document",
-      "source_file": "docs/docs/contributing/setup.md",
-      "source_location": "L59",
-      "_origin": "ast",
-      "id": "contributing_setup_3_install_knowledge_graph_tools_optional",
-      "community": 58,
-      "norm_label": "3. install knowledge graph tools (optional)"
-    },
-    {
-      "label": "4. Register MCP Servers (Optional \u2014 Claude Code only)",
-      "file_type": "document",
-      "source_file": "docs/docs/contributing/setup.md",
-      "source_location": "L71",
-      "_origin": "ast",
-      "id": "contributing_setup_4_register_mcp_servers_optional_claude_code_only",
-      "community": 58,
-      "norm_label": "4. register mcp servers (optional \u2014 claude code only)"
-    },
-    {
-      "label": "Verify Setup",
-      "file_type": "document",
-      "source_file": "docs/docs/contributing/setup.md",
-      "source_location": "L78",
-      "_origin": "ast",
-      "id": "contributing_setup_verify_setup",
-      "community": 58,
-      "norm_label": "verify setup"
-    },
-    {
-      "label": "Project Layout",
-      "file_type": "document",
-      "source_file": "docs/docs/contributing/setup.md",
-      "source_location": "L91",
-      "_origin": "ast",
-      "id": "contributing_setup_project_layout",
-      "community": 58,
-      "norm_label": "project layout"
-    },
-    {
-      "label": "Running Locally",
-      "file_type": "document",
-      "source_file": "docs/docs/contributing/setup.md",
-      "source_location": "L124",
-      "_origin": "ast",
-      "id": "contributing_setup_running_locally",
-      "community": 58,
-      "norm_label": "running locally"
-    },
-    {
-      "label": "Development Workflow",
-      "file_type": "document",
-      "source_file": "docs/docs/contributing/setup.md",
-      "source_location": "L137",
-      "_origin": "ast",
-      "id": "contributing_setup_development_workflow",
-      "community": 58,
-      "norm_label": "development workflow"
-    },
-    {
-      "label": "Make Targets Quick Reference",
-      "file_type": "document",
-      "source_file": "docs/docs/contributing/setup.md",
-      "source_location": "L146",
-      "_origin": "ast",
-      "id": "contributing_setup_make_targets_quick_reference",
-      "community": 58,
-      "norm_label": "make targets quick reference"
-    },
-    {
-      "label": "Next Steps",
-      "file_type": "document",
-      "source_file": "docs/docs/contributing/setup.md",
-      "source_location": "L163",
-      "_origin": "ast",
-      "id": "contributing_setup_next_steps",
-      "community": 58,
-      "norm_label": "next steps"
-    },
-    {
-      "label": "workflow.md",
-      "file_type": "document",
-      "source_file": "docs/docs/contributing/workflow.md",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "contributing_workflow",
-      "community": 66,
-      "norm_label": "workflow.md"
-    },
-    {
-      "label": "Development Workflow",
-      "file_type": "document",
-      "source_file": "docs/docs/contributing/workflow.md",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "contributing_workflow_development_workflow",
-      "community": 71,
-      "norm_label": "development workflow"
-    },
-    {
-      "label": "Branching",
-      "file_type": "document",
-      "source_file": "docs/docs/contributing/workflow.md",
-      "source_location": "L5",
-      "_origin": "ast",
-      "id": "contributing_workflow_branching",
-      "community": 71,
-      "norm_label": "branching"
-    },
-    {
-      "label": "Commit Messages",
-      "file_type": "document",
-      "source_file": "docs/docs/contributing/workflow.md",
-      "source_location": "L16",
-      "_origin": "ast",
-      "id": "contributing_workflow_commit_messages",
-      "community": 71,
-      "norm_label": "commit messages"
-    },
-    {
-      "label": "Before Committing",
-      "file_type": "document",
-      "source_file": "docs/docs/contributing/workflow.md",
-      "source_location": "L33",
-      "_origin": "ast",
-      "id": "contributing_workflow_before_committing",
-      "community": 71,
-      "norm_label": "before committing"
-    },
-    {
-      "label": "Knowledge Graph Auto-Rebuild",
-      "file_type": "document",
-      "source_file": "docs/docs/contributing/workflow.md",
-      "source_location": "L43",
-      "_origin": "ast",
-      "id": "contributing_workflow_knowledge_graph_auto_rebuild",
-      "community": 71,
-      "norm_label": "knowledge graph auto-rebuild"
-    },
-    {
-      "label": "Pull Requests",
-      "file_type": "document",
-      "source_file": "docs/docs/contributing/workflow.md",
-      "source_location": "L70",
-      "_origin": "ast",
-      "id": "contributing_workflow_pull_requests",
-      "community": 71,
-      "norm_label": "pull requests"
-    },
-    {
-      "label": "Code Review",
-      "file_type": "document",
-      "source_file": "docs/docs/contributing/workflow.md",
-      "source_location": "L83",
-      "_origin": "ast",
-      "id": "contributing_workflow_code_review",
-      "community": 71,
-      "norm_label": "code review"
-    },
-    {
-      "label": "After Merge",
-      "file_type": "document",
-      "source_file": "docs/docs/contributing/workflow.md",
-      "source_location": "L93",
-      "_origin": "ast",
-      "id": "contributing_workflow_after_merge",
-      "community": 71,
-      "norm_label": "after merge"
-    },
-    {
-      "label": "installation.md",
-      "file_type": "document",
-      "source_file": "docs/docs/installation.md",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "docs_installation",
-      "community": 24,
-      "norm_label": "installation.md"
-    },
-    {
-      "label": "Installation",
-      "file_type": "document",
-      "source_file": "docs/docs/installation.md",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "docs_installation_installation",
-      "community": 24,
-      "norm_label": "installation"
-    },
-    {
-      "label": "Prerequisites",
-      "file_type": "document",
-      "source_file": "docs/docs/installation.md",
-      "source_location": "L5",
-      "_origin": "ast",
-      "id": "docs_installation_prerequisites",
-      "community": 24,
-      "norm_label": "prerequisites"
-    },
-    {
-      "label": "One-Command Setup (Recommended)",
-      "file_type": "document",
-      "source_file": "docs/docs/installation.md",
-      "source_location": "L12",
-      "_origin": "ast",
-      "id": "docs_installation_one_command_setup_recommended",
-      "community": 24,
-      "norm_label": "one-command setup (recommended)"
-    },
-    {
-      "label": "Manual Setup",
-      "file_type": "document",
-      "source_file": "docs/docs/installation.md",
-      "source_location": "L28",
-      "_origin": "ast",
-      "id": "docs_installation_manual_setup",
-      "community": 24,
-      "norm_label": "manual setup"
-    },
-    {
-      "label": "Clone and Install",
-      "file_type": "document",
-      "source_file": "docs/docs/installation.md",
-      "source_location": "L30",
-      "_origin": "ast",
-      "id": "docs_installation_clone_and_install",
-      "community": 24,
-      "norm_label": "clone and install"
-    },
-    {
-      "label": "Verify Setup",
-      "file_type": "document",
-      "source_file": "docs/docs/installation.md",
-      "source_location": "L38",
-      "_origin": "ast",
-      "id": "docs_installation_verify_setup",
-      "community": 24,
-      "norm_label": "verify setup"
-    },
-    {
-      "label": "Build and Run",
-      "file_type": "document",
-      "source_file": "docs/docs/installation.md",
-      "source_location": "L46",
-      "_origin": "ast",
-      "id": "docs_installation_build_and_run",
-      "community": 24,
-      "norm_label": "build and run"
-    },
-    {
-      "label": "Next Steps",
-      "file_type": "document",
-      "source_file": "docs/docs/installation.md",
-      "source_location": "L59",
-      "_origin": "ast",
-      "id": "docs_installation_next_steps",
-      "community": 24,
-      "norm_label": "next steps"
-    },
-    {
-      "label": "quick-start.md",
-      "file_type": "document",
-      "source_file": "docs/docs/quick-start.md",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "docs_quick_start",
-      "community": 66,
-      "norm_label": "quick-start.md"
-    },
-    {
-      "label": "Quick Start",
-      "file_type": "document",
-      "source_file": "docs/docs/quick-start.md",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "docs_quick_start_quick_start",
-      "community": 56,
-      "norm_label": "quick start"
-    },
-    {
-      "label": "1. Install the GitHub App",
-      "file_type": "document",
-      "source_file": "docs/docs/quick-start.md",
-      "source_location": "L5",
-      "_origin": "ast",
-      "id": "docs_quick_start_1_install_the_github_app",
-      "community": 56,
-      "norm_label": "1. install the github app"
-    },
-    {
-      "label": "2. Create the Config File",
-      "file_type": "document",
-      "source_file": "docs/docs/quick-start.md",
-      "source_location": "L12",
-      "_origin": "ast",
-      "id": "docs_quick_start_2_create_the_config_file",
-      "community": 56,
-      "norm_label": "2. create the config file"
-    },
-    {
-      "label": "3. Verify It's Working",
-      "file_type": "document",
-      "source_file": "docs/docs/quick-start.md",
-      "source_location": "L52",
-      "_origin": "ast",
-      "id": "docs_quick_start_3_verify_it_s_working",
-      "community": 56,
-      "norm_label": "3. verify it's working"
-    },
-    {
-      "label": "4. Set Up Stale Sweeps (Optional)",
-      "file_type": "document",
-      "source_file": "docs/docs/quick-start.md",
-      "source_location": "L58",
-      "_origin": "ast",
-      "id": "docs_quick_start_4_set_up_stale_sweeps_optional",
-      "community": 56,
-      "norm_label": "4. set up stale sweeps (optional)"
-    },
-    {
-      "label": "5. Development Setup (Contributors)",
-      "file_type": "document",
-      "source_file": "docs/docs/quick-start.md",
-      "source_location": "L78",
-      "_origin": "ast",
-      "id": "docs_quick_start_5_development_setup_contributors",
-      "community": 56,
-      "norm_label": "5. development setup (contributors)"
-    },
-    {
-      "label": "Next Steps",
-      "file_type": "document",
-      "source_file": "docs/docs/quick-start.md",
-      "source_location": "L100",
-      "_origin": "ast",
-      "id": "docs_quick_start_next_steps",
-      "community": 56,
-      "norm_label": "next steps"
-    },
-    {
-      "label": "sidebars.ts",
+      "label": "docusaurus.config.ts",
       "file_type": "code",
-      "source_file": "docs/sidebars.ts",
+      "source_file": "docs/docusaurus.config.ts",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "docs_sidebars",
-      "community": 22,
-      "norm_label": "sidebars.ts"
+      "id": "docs_docusaurus_config",
+      "community": 21,
+      "norm_label": "docusaurus.config.ts"
     },
     {
-      "label": "sidebars",
+      "label": "config",
       "file_type": "code",
-      "source_file": "docs/sidebars.ts",
-      "source_location": "L3",
+      "source_file": "docs/docusaurus.config.ts",
+      "source_location": "L5",
       "_origin": "ast",
-      "id": "docs_sidebars_sidebars",
-      "community": 22,
-      "norm_label": "sidebars"
+      "id": "docs_docusaurus_config_config",
+      "community": 21,
+      "norm_label": "config"
     },
     {
       "label": "husky.sh",
@@ -1423,7 +633,7 @@
       "source_file": "app/src/commands/command-router.ts",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 62,
+      "community": 16,
       "norm_label": "command-router.ts",
       "id": "commands_command_router"
     },
@@ -1583,7 +793,7 @@
       "source_file": "app/src/core/errors.ts",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 3,
+      "community": 80,
       "norm_label": "errors.ts",
       "id": "core_errors"
     },
@@ -1593,7 +803,7 @@
       "source_file": "app/src/core/errors.ts",
       "source_location": "L8",
       "_origin": "ast",
-      "community": 3,
+      "community": 80,
       "norm_label": "apperror",
       "id": "core_errors_apperror"
     },
@@ -1603,7 +813,7 @@
       "source_file": "app/src/core/errors.ts",
       "source_location": "L13",
       "_origin": "ast",
-      "community": 3,
+      "community": 80,
       "norm_label": ".constructor()",
       "id": "core_errors_apperror_constructor"
     },
@@ -1613,7 +823,7 @@
       "source_file": "app/src/core/errors.ts",
       "source_location": "L24",
       "_origin": "ast",
-      "community": 3,
+      "community": 80,
       "norm_label": "configerror",
       "id": "core_errors_configerror"
     },
@@ -1623,7 +833,7 @@
       "source_file": "app/src/core/errors.ts",
       "source_location": "L25",
       "_origin": "ast",
-      "community": 3,
+      "community": 80,
       "norm_label": ".constructor()",
       "id": "core_errors_configerror_constructor"
     },
@@ -1633,7 +843,7 @@
       "source_file": "app/src/core/errors.ts",
       "source_location": "L30",
       "_origin": "ast",
-      "community": 3,
+      "community": 80,
       "norm_label": "confignotfounderror",
       "id": "core_errors_confignotfounderror"
     },
@@ -1643,7 +853,7 @@
       "source_file": "app/src/core/errors.ts",
       "source_location": "L31",
       "_origin": "ast",
-      "community": 3,
+      "community": 80,
       "norm_label": ".constructor()",
       "id": "core_errors_confignotfounderror_constructor"
     },
@@ -1653,7 +863,7 @@
       "source_file": "app/src/core/errors.ts",
       "source_location": "L38",
       "_origin": "ast",
-      "community": 3,
+      "community": 80,
       "norm_label": "ratelimiterror",
       "id": "core_errors_ratelimiterror"
     },
@@ -1663,7 +873,7 @@
       "source_file": "app/src/core/errors.ts",
       "source_location": "L41",
       "_origin": "ast",
-      "community": 3,
+      "community": 80,
       "norm_label": ".constructor()",
       "id": "core_errors_ratelimiterror_constructor"
     },
@@ -1673,7 +883,7 @@
       "source_file": "app/src/core/errors.ts",
       "source_location": "L54",
       "_origin": "ast",
-      "community": 3,
+      "community": 80,
       "norm_label": "validationerror",
       "id": "core_errors_validationerror"
     },
@@ -1683,7 +893,7 @@
       "source_file": "app/src/core/errors.ts",
       "source_location": "L55",
       "_origin": "ast",
-      "community": 3,
+      "community": 80,
       "norm_label": ".constructor()",
       "id": "core_errors_validationerror_constructor"
     },
@@ -1693,7 +903,7 @@
       "source_file": "app/src/core/errors.ts",
       "source_location": "L62",
       "_origin": "ast",
-      "community": 3,
+      "community": 80,
       "norm_label": "githubapierror",
       "id": "core_errors_githubapierror"
     },
@@ -1703,7 +913,7 @@
       "source_file": "app/src/core/errors.ts",
       "source_location": "L63",
       "_origin": "ast",
-      "community": 3,
+      "community": 80,
       "norm_label": ".constructor()",
       "id": "core_errors_githubapierror_constructor"
     },
@@ -1713,7 +923,7 @@
       "source_file": "app/src/core/errors.ts",
       "source_location": "L70",
       "_origin": "ast",
-      "community": 3,
+      "community": 80,
       "norm_label": "notfounderror",
       "id": "core_errors_notfounderror"
     },
@@ -1723,7 +933,7 @@
       "source_file": "app/src/core/errors.ts",
       "source_location": "L71",
       "_origin": "ast",
-      "community": 3,
+      "community": 80,
       "norm_label": ".constructor()",
       "id": "core_errors_notfounderror_constructor"
     },
@@ -1733,7 +943,7 @@
       "source_file": "app/src/core/errors.ts",
       "source_location": "L78",
       "_origin": "ast",
-      "community": 3,
+      "community": 80,
       "norm_label": "handlererror",
       "id": "core_errors_handlererror"
     },
@@ -1743,7 +953,7 @@
       "source_file": "app/src/core/errors.ts",
       "source_location": "L79",
       "_origin": "ast",
-      "community": 3,
+      "community": 80,
       "norm_label": ".constructor()",
       "id": "core_errors_handlererror_constructor"
     },
@@ -1753,7 +963,7 @@
       "source_file": "app/src/core/interfaces.ts",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 62,
+      "community": 16,
       "norm_label": "interfaces.ts",
       "id": "core_interfaces"
     },
@@ -1913,7 +1123,7 @@
       "source_file": "app/src/core/types.ts",
       "source_location": "L14",
       "_origin": "ast",
-      "community": 1,
+      "community": 24,
       "norm_label": "eventcontext",
       "id": "core_types_eventcontext"
     },
@@ -1923,7 +1133,7 @@
       "source_file": "app/src/core/types.ts",
       "source_location": "L32",
       "_origin": "ast",
-      "community": 16,
+      "community": 79,
       "norm_label": "reporef",
       "id": "core_types_reporef"
     },
@@ -1933,7 +1143,7 @@
       "source_file": "app/src/core/types.ts",
       "source_location": "L39",
       "_origin": "ast",
-      "community": 1,
+      "community": 24,
       "norm_label": "handlerresult",
       "id": "core_types_handlerresult"
     },
@@ -1983,7 +1193,7 @@
       "source_file": "app/src/core/types.ts",
       "source_location": "L87",
       "_origin": "ast",
-      "community": 1,
+      "community": 81,
       "norm_label": "labelrule",
       "id": "core_types_labelrule"
     },
@@ -2063,7 +1273,7 @@
       "source_file": "app/src/handlers/automation.handler.ts",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 1,
+      "community": 81,
       "norm_label": "automation.handler.ts",
       "id": "handlers_automation_handler"
     },
@@ -2073,7 +1283,7 @@
       "source_file": "app/src/handlers/automation.handler.ts",
       "source_location": "L15",
       "_origin": "ast",
-      "community": 1,
+      "community": 81,
       "norm_label": "issuepayload",
       "id": "handlers_automation_handler_issuepayload"
     },
@@ -2083,7 +1293,7 @@
       "source_file": "app/src/handlers/automation.handler.ts",
       "source_location": "L32",
       "_origin": "ast",
-      "community": 1,
+      "community": 81,
       "norm_label": "automationhandler",
       "id": "handlers_automation_handler_automationhandler"
     },
@@ -2093,7 +1303,7 @@
       "source_file": "app/src/handlers/automation.handler.ts",
       "source_location": "L40",
       "_origin": "ast",
-      "community": 1,
+      "community": 81,
       "norm_label": ".process()",
       "id": "handlers_automation_handler_automationhandler_process"
     },
@@ -2103,7 +1313,7 @@
       "source_file": "app/src/handlers/automation.handler.ts",
       "source_location": "L53",
       "_origin": "ast",
-      "community": 1,
+      "community": 81,
       "norm_label": ".handleissueopened()",
       "id": "handlers_automation_handler_automationhandler_handleissueopened"
     },
@@ -2113,7 +1323,7 @@
       "source_file": "app/src/handlers/automation.handler.ts",
       "source_location": "L74",
       "_origin": "ast",
-      "community": 1,
+      "community": 81,
       "norm_label": ".handlepropened()",
       "id": "handlers_automation_handler_automationhandler_handlepropened"
     },
@@ -2123,7 +1333,7 @@
       "source_file": "app/src/handlers/automation.handler.ts",
       "source_location": "L122",
       "_origin": "ast",
-      "community": 1,
+      "community": 81,
       "norm_label": ".handlelabeled()",
       "id": "handlers_automation_handler_automationhandler_handlelabeled"
     },
@@ -2133,7 +1343,7 @@
       "source_file": "app/src/handlers/automation.handler.ts",
       "source_location": "L139",
       "_origin": "ast",
-      "community": 1,
+      "community": 81,
       "norm_label": ".collectlabels()",
       "id": "handlers_automation_handler_automationhandler_collectlabels"
     },
@@ -2143,7 +1353,7 @@
       "source_file": "app/src/handlers/automation.handler.ts",
       "source_location": "L167",
       "_origin": "ast",
-      "community": 1,
+      "community": 81,
       "norm_label": ".rulematches()",
       "id": "handlers_automation_handler_automationhandler_rulematches"
     },
@@ -2153,7 +1363,7 @@
       "source_file": "app/src/handlers/base-handler.ts",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 16,
+      "community": 1,
       "norm_label": "base-handler.ts",
       "id": "handlers_base_handler"
     },
@@ -2163,7 +1373,7 @@
       "source_file": "app/src/handlers/base-handler.ts",
       "source_location": "L21",
       "_origin": "ast",
-      "community": 1,
+      "community": 82,
       "norm_label": "basehandler",
       "id": "handlers_base_handler_basehandler"
     },
@@ -2173,7 +1383,7 @@
       "source_file": "app/src/handlers/base-handler.ts",
       "source_location": "L25",
       "_origin": "ast",
-      "community": 1,
+      "community": 82,
       "norm_label": ".constructor()",
       "id": "handlers_base_handler_basehandler_constructor"
     },
@@ -2183,7 +1393,7 @@
       "source_file": "app/src/handlers/base-handler.ts",
       "source_location": "L32",
       "_origin": "ast",
-      "community": 1,
+      "community": 82,
       "norm_label": ".handle()",
       "id": "handlers_base_handler_basehandler_handle"
     },
@@ -2193,7 +1403,7 @@
       "source_file": "app/src/handlers/base-handler.ts",
       "source_location": "L56",
       "_origin": "ast",
-      "community": 1,
+      "community": 82,
       "norm_label": ".validate()",
       "id": "handlers_base_handler_basehandler_validate"
     },
@@ -2203,7 +1413,7 @@
       "source_file": "app/src/handlers/base-handler.ts",
       "source_location": "L61",
       "_origin": "ast",
-      "community": 1,
+      "community": 82,
       "norm_label": ".enrich()",
       "id": "handlers_base_handler_basehandler_enrich"
     },
@@ -2213,7 +1423,7 @@
       "source_file": "app/src/handlers/base-handler.ts",
       "source_location": "L69",
       "_origin": "ast",
-      "community": 1,
+      "community": 82,
       "norm_label": ".respond()",
       "id": "handlers_base_handler_basehandler_respond"
     },
@@ -2253,7 +1463,7 @@
       "source_file": "app/src/handlers/copilot.handler.ts",
       "source_location": "L31",
       "_origin": "ast",
-      "community": 1,
+      "community": 24,
       "norm_label": "copilothandler",
       "id": "handlers_copilot_handler_copilothandler"
     },
@@ -2263,7 +1473,7 @@
       "source_file": "app/src/handlers/copilot.handler.ts",
       "source_location": "L38",
       "_origin": "ast",
-      "community": 1,
+      "community": 24,
       "norm_label": ".process()",
       "id": "handlers_copilot_handler_copilothandler_process"
     },
@@ -2273,7 +1483,7 @@
       "source_file": "app/src/handlers/copilot.handler.ts",
       "source_location": "L55",
       "_origin": "ast",
-      "community": 1,
+      "community": 24,
       "norm_label": ".handlepropened()",
       "id": "handlers_copilot_handler_copilothandler_handlepropened"
     },
@@ -2283,7 +1493,7 @@
       "source_file": "app/src/handlers/copilot.handler.ts",
       "source_location": "L83",
       "_origin": "ast",
-      "community": 1,
+      "community": 24,
       "norm_label": ".handlecommentcreated()",
       "id": "handlers_copilot_handler_copilothandler_handlecommentcreated"
     },
@@ -2293,7 +1503,7 @@
       "source_file": "app/src/handlers/governance.handler.ts",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 74,
+      "community": 1,
       "norm_label": "governance.handler.ts",
       "id": "handlers_governance_handler"
     },
@@ -2303,7 +1513,7 @@
       "source_file": "app/src/handlers/governance.handler.ts",
       "source_location": "L15",
       "_origin": "ast",
-      "community": 74,
+      "community": 1,
       "norm_label": "repositorycreatedpayload",
       "id": "handlers_governance_handler_repositorycreatedpayload"
     },
@@ -2313,7 +1523,7 @@
       "source_file": "app/src/handlers/governance.handler.ts",
       "source_location": "L19",
       "_origin": "ast",
-      "community": 74,
+      "community": 1,
       "norm_label": "branchprotectionpayload",
       "id": "handlers_governance_handler_branchprotectionpayload"
     },
@@ -2323,7 +1533,7 @@
       "source_file": "app/src/handlers/governance.handler.ts",
       "source_location": "L24",
       "_origin": "ast",
-      "community": 1,
+      "community": 24,
       "norm_label": "governancehandler",
       "id": "handlers_governance_handler_governancehandler"
     },
@@ -2333,7 +1543,7 @@
       "source_file": "app/src/handlers/governance.handler.ts",
       "source_location": "L32",
       "_origin": "ast",
-      "community": 1,
+      "community": 24,
       "norm_label": ".validate()",
       "id": "handlers_governance_handler_governancehandler_validate"
     },
@@ -2343,7 +1553,7 @@
       "source_file": "app/src/handlers/governance.handler.ts",
       "source_location": "L38",
       "_origin": "ast",
-      "community": 1,
+      "community": 24,
       "norm_label": ".process()",
       "id": "handlers_governance_handler_governancehandler_process"
     },
@@ -2353,7 +1563,7 @@
       "source_file": "app/src/handlers/governance.handler.ts",
       "source_location": "L50",
       "_origin": "ast",
-      "community": 1,
+      "community": 24,
       "norm_label": ".handlerepocreated()",
       "id": "handlers_governance_handler_governancehandler_handlerepocreated"
     },
@@ -2363,7 +1573,7 @@
       "source_file": "app/src/handlers/governance.handler.ts",
       "source_location": "L80",
       "_origin": "ast",
-      "community": 1,
+      "community": 24,
       "norm_label": ".handlebranchprotectionchange()",
       "id": "handlers_governance_handler_governancehandler_handlebranchprotectionchange"
     },
@@ -2403,7 +1613,7 @@
       "source_file": "app/src/handlers/insights.handler.ts",
       "source_location": "L31",
       "_origin": "ast",
-      "community": 1,
+      "community": 24,
       "norm_label": "insightshandler",
       "id": "handlers_insights_handler_insightshandler"
     },
@@ -2413,7 +1623,7 @@
       "source_file": "app/src/handlers/insights.handler.ts",
       "source_location": "L38",
       "_origin": "ast",
-      "community": 1,
+      "community": 24,
       "norm_label": ".process()",
       "id": "handlers_insights_handler_insightshandler_process"
     },
@@ -2423,7 +1633,7 @@
       "source_file": "app/src/handlers/insights.handler.ts",
       "source_location": "L53",
       "_origin": "ast",
-      "community": 1,
+      "community": 24,
       "norm_label": ".handlecheckruncompleted()",
       "id": "handlers_insights_handler_insightshandler_handlecheckruncompleted"
     },
@@ -2433,7 +1643,7 @@
       "source_file": "app/src/handlers/insights.handler.ts",
       "source_location": "L80",
       "_origin": "ast",
-      "community": 1,
+      "community": 24,
       "norm_label": ".handleprclosed()",
       "id": "handlers_insights_handler_insightshandler_handleprclosed"
     },
@@ -2473,7 +1683,7 @@
       "source_file": "app/src/handlers/security.handler.ts",
       "source_location": "L26",
       "_origin": "ast",
-      "community": 1,
+      "community": 24,
       "norm_label": "securityhandler",
       "id": "handlers_security_handler_securityhandler"
     },
@@ -2483,7 +1693,7 @@
       "source_file": "app/src/handlers/security.handler.ts",
       "source_location": "L33",
       "_origin": "ast",
-      "community": 1,
+      "community": 24,
       "norm_label": ".process()",
       "id": "handlers_security_handler_securityhandler_process"
     },
@@ -2493,7 +1703,7 @@
       "source_file": "app/src/handlers/security.handler.ts",
       "source_location": "L44",
       "_origin": "ast",
-      "community": 1,
+      "community": 24,
       "norm_label": ".handlesecretalert()",
       "id": "handlers_security_handler_securityhandler_handlesecretalert"
     },
@@ -2503,7 +1713,7 @@
       "source_file": "app/src/handlers/security.handler.ts",
       "source_location": "L69",
       "_origin": "ast",
-      "community": 1,
+      "community": 24,
       "norm_label": ".handlepush()",
       "id": "handlers_security_handler_securityhandler_handlepush"
     },
@@ -2513,7 +1723,7 @@
       "source_file": "app/src/handlers/stale.handler.ts",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 1,
+      "community": 82,
       "norm_label": "stale.handler.ts",
       "id": "handlers_stale_handler"
     },
@@ -2523,7 +1733,7 @@
       "source_file": "app/src/handlers/stale.handler.ts",
       "source_location": "L18",
       "_origin": "ast",
-      "community": 1,
+      "community": 82,
       "norm_label": "workflowrunpayload",
       "id": "handlers_stale_handler_workflowrunpayload"
     },
@@ -2533,7 +1743,7 @@
       "source_file": "app/src/handlers/stale.handler.ts",
       "source_location": "L28",
       "_origin": "ast",
-      "community": 1,
+      "community": 82,
       "norm_label": "stale_sweep_patterns",
       "id": "handlers_stale_handler_stale_sweep_patterns"
     },
@@ -2543,7 +1753,7 @@
       "source_file": "app/src/handlers/stale.handler.ts",
       "source_location": "L30",
       "_origin": "ast",
-      "community": 1,
+      "community": 82,
       "norm_label": "stalehandler",
       "id": "handlers_stale_handler_stalehandler"
     },
@@ -2553,7 +1763,7 @@
       "source_file": "app/src/handlers/stale.handler.ts",
       "source_location": "L38",
       "_origin": "ast",
-      "community": 1,
+      "community": 82,
       "norm_label": ".process()",
       "id": "handlers_stale_handler_stalehandler_process"
     },
@@ -2563,7 +1773,7 @@
       "source_file": "app/src/handlers/stale.handler.ts",
       "source_location": "L47",
       "_origin": "ast",
-      "community": 1,
+      "community": 82,
       "norm_label": ".handleworkflowcompleted()",
       "id": "handlers_stale_handler_stalehandler_handleworkflowcompleted"
     },
@@ -2603,7 +1813,7 @@
       "source_file": "app/src/handlers/sync.handler.ts",
       "source_location": "L28",
       "_origin": "ast",
-      "community": 1,
+      "community": 24,
       "norm_label": "synchandler",
       "id": "handlers_sync_handler_synchandler"
     },
@@ -2613,7 +1823,7 @@
       "source_file": "app/src/handlers/sync.handler.ts",
       "source_location": "L35",
       "_origin": "ast",
-      "community": 1,
+      "community": 24,
       "norm_label": ".process()",
       "id": "handlers_sync_handler_synchandler_process"
     },
@@ -2623,7 +1833,7 @@
       "source_file": "app/src/handlers/sync.handler.ts",
       "source_location": "L46",
       "_origin": "ast",
-      "community": 1,
+      "community": 24,
       "norm_label": ".handleworkflowcompleted()",
       "id": "handlers_sync_handler_synchandler_handleworkflowcompleted"
     },
@@ -2633,7 +1843,7 @@
       "source_file": "app/src/handlers/sync.handler.ts",
       "source_location": "L71",
       "_origin": "ast",
-      "community": 1,
+      "community": 24,
       "norm_label": ".handledeploymentstatus()",
       "id": "handlers_sync_handler_synchandler_handledeploymentstatus"
     },
@@ -2743,7 +1953,7 @@
       "source_file": "app/src/infrastructure/config/yaml-config.ts",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 3,
+      "community": 80,
       "norm_label": "yaml-config.ts",
       "id": "config_yaml_config"
     },
@@ -2753,7 +1963,7 @@
       "source_file": "app/src/infrastructure/config/yaml-config.ts",
       "source_location": "L16",
       "_origin": "ast",
-      "community": 3,
+      "community": 80,
       "norm_label": "fallback_paths",
       "id": "config_yaml_config_fallback_paths"
     },
@@ -2923,7 +2133,7 @@
       "source_file": "app/src/infrastructure/github/octokit-client.ts",
       "source_location": "L85",
       "_origin": "ast",
-      "community": 2,
+      "community": 62,
       "norm_label": ".getpullrequest()",
       "id": "github_octokit_client_octokitclient_getpullrequest"
     },
@@ -2973,7 +2183,7 @@
       "source_file": "app/src/infrastructure/github/octokit-client.ts",
       "source_location": "L172",
       "_origin": "ast",
-      "community": 2,
+      "community": 62,
       "norm_label": ".getteammembers()",
       "id": "github_octokit_client_octokitclient_getteammembers"
     },
@@ -2993,7 +2203,7 @@
       "source_file": "app/src/infrastructure/github/octokit-client.ts",
       "source_location": "L199",
       "_origin": "ast",
-      "community": 2,
+      "community": 62,
       "norm_label": ".createcheckrun()",
       "id": "github_octokit_client_octokitclient_createcheckrun"
     },
@@ -3013,7 +2223,7 @@
       "source_file": "app/src/infrastructure/github/octokit-client.ts",
       "source_location": "L233",
       "_origin": "ast",
-      "community": 2,
+      "community": 62,
       "norm_label": ".searchissues()",
       "id": "github_octokit_client_octokitclient_searchissues"
     },
@@ -3183,7 +2393,7 @@
       "source_file": "app/src/middleware/context-enricher.ts",
       "source_location": "L15",
       "_origin": "ast",
-      "community": 16,
+      "community": 79,
       "norm_label": "contextenricher",
       "id": "middleware_context_enricher_contextenricher"
     },
@@ -3193,7 +2403,7 @@
       "source_file": "app/src/middleware/context-enricher.ts",
       "source_location": "L16",
       "_origin": "ast",
-      "community": 16,
+      "community": 79,
       "norm_label": ".constructor()",
       "id": "middleware_context_enricher_contextenricher_constructor"
     },
@@ -3203,7 +2413,7 @@
       "source_file": "app/src/middleware/context-enricher.ts",
       "source_location": "L19",
       "_origin": "ast",
-      "community": 16,
+      "community": 79,
       "norm_label": ".enrich()",
       "id": "middleware_context_enricher_contextenricher_enrich"
     },
@@ -3213,7 +2423,7 @@
       "source_file": "app/src/middleware/context-enricher.ts",
       "source_location": "L44",
       "_origin": "ast",
-      "community": 16,
+      "community": 79,
       "norm_label": ".extractrepo()",
       "id": "middleware_context_enricher_contextenricher_extractrepo"
     },
@@ -3223,7 +2433,7 @@
       "source_file": "app/src/middleware/context-enricher.ts",
       "source_location": "L55",
       "_origin": "ast",
-      "community": 16,
+      "community": 79,
       "norm_label": ".extractorg()",
       "id": "middleware_context_enricher_contextenricher_extractorg"
     },
@@ -3233,7 +2443,7 @@
       "source_file": "app/src/middleware/error-handler.ts",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 3,
+      "community": 80,
       "norm_label": "error-handler.ts",
       "id": "middleware_error_handler"
     },
@@ -3243,7 +2453,7 @@
       "source_file": "app/src/middleware/error-handler.ts",
       "source_location": "L14",
       "_origin": "ast",
-      "community": 3,
+      "community": 80,
       "norm_label": "errorhandleroptions",
       "id": "middleware_error_handler_errorhandleroptions"
     },
@@ -3363,7 +2573,7 @@
       "source_file": "app/src/services/stale.service.ts",
       "source_location": "L26",
       "_origin": "ast",
-      "community": 1,
+      "community": 82,
       "norm_label": "stalesweepresult",
       "id": "services_stale_service_stalesweepresult"
     },
@@ -3443,7 +2653,7 @@
       "source_file": "app/tests/unit/handlers/automation.handler.test.ts",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 1,
+      "community": 81,
       "norm_label": "automation.handler.test.ts",
       "id": "handlers_automation_handler_test"
     },
@@ -3453,7 +2663,7 @@
       "source_file": "app/tests/unit/handlers/automation.handler.test.ts",
       "source_location": "L13",
       "_origin": "ast",
-      "community": 1,
+      "community": 81,
       "norm_label": "createmockoctokit()",
       "id": "handlers_automation_handler_test_createmockoctokit"
     },
@@ -3463,7 +2673,7 @@
       "source_file": "app/tests/unit/handlers/automation.handler.test.ts",
       "source_location": "L33",
       "_origin": "ast",
-      "community": 1,
+      "community": 81,
       "norm_label": "createmocklogger()",
       "id": "handlers_automation_handler_test_createmocklogger"
     },
@@ -3473,7 +2683,7 @@
       "source_file": "app/tests/unit/handlers/automation.handler.test.ts",
       "source_location": "L42",
       "_origin": "ast",
-      "community": 1,
+      "community": 81,
       "norm_label": "createmockconfig()",
       "id": "handlers_automation_handler_test_createmockconfig"
     },
@@ -3483,7 +2693,7 @@
       "source_file": "app/tests/unit/handlers/automation.handler.test.ts",
       "source_location": "L60",
       "_origin": "ast",
-      "community": 1,
+      "community": 81,
       "norm_label": "createissuecontext()",
       "id": "handlers_automation_handler_test_createissuecontext"
     },
@@ -3493,7 +2703,7 @@
       "source_file": "app/tests/unit/handlers/automation.handler.test.ts",
       "source_location": "L81",
       "_origin": "ast",
-      "community": 1,
+      "community": 81,
       "norm_label": "createprcontext()",
       "id": "handlers_automation_handler_test_createprcontext"
     },
@@ -3948,26 +3158,6 @@
       "id": "app_tsconfig_test_include"
     },
     {
-      "label": "docusaurus.config.ts",
-      "file_type": "code",
-      "source_file": "docs/docusaurus.config.ts",
-      "source_location": "L1",
-      "_origin": "ast",
-      "community": 21,
-      "norm_label": "docusaurus.config.ts",
-      "id": "docs_docusaurus_config"
-    },
-    {
-      "label": "config",
-      "file_type": "code",
-      "source_file": "docs/docusaurus.config.ts",
-      "source_location": "L5",
-      "_origin": "ast",
-      "community": 21,
-      "norm_label": "config",
-      "id": "docs_docusaurus_config_config"
-    },
-    {
       "label": "package.json",
       "file_type": "code",
       "source_file": "docs/package.json",
@@ -4326,6 +3516,26 @@
       "community": 4,
       "norm_label": "node",
       "id": "docs_package_engines_node"
+    },
+    {
+      "label": "sidebars.ts",
+      "file_type": "code",
+      "source_file": "docs/sidebars.ts",
+      "source_location": "L1",
+      "_origin": "ast",
+      "community": 22,
+      "norm_label": "sidebars.ts",
+      "id": "docs_sidebars"
+    },
+    {
+      "label": "sidebars",
+      "file_type": "code",
+      "source_file": "docs/sidebars.ts",
+      "source_location": "L3",
+      "_origin": "ast",
+      "community": 22,
+      "norm_label": "sidebars",
+      "id": "docs_sidebars_sidebars"
     },
     {
       "label": "index.tsx",
@@ -5988,30 +5198,50 @@
       "id": "readme_prerequisites"
     },
     {
-      "label": "Install & Run",
+      "label": "One-command setup (recommended)",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L43",
+      "source_location": "L44",
       "_origin": "ast",
       "community": 8,
-      "norm_label": "install & run",
-      "id": "readme_install_run"
+      "norm_label": "one-command setup (recommended)",
+      "id": "readme_one_command_setup_recommended"
+    },
+    {
+      "label": "Manual install",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L54",
+      "_origin": "ast",
+      "community": 8,
+      "norm_label": "manual install",
+      "id": "readme_manual_install"
     },
     {
       "label": "Development",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L53",
+      "source_location": "L62",
       "_origin": "ast",
       "community": 8,
       "norm_label": "development",
       "id": "readme_development"
     },
     {
+      "label": "Knowledge Graphs",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L73",
+      "_origin": "ast",
+      "community": 8,
+      "norm_label": "knowledge graphs",
+      "id": "readme_knowledge_graphs"
+    },
+    {
       "label": "Docs Site",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L64",
+      "source_location": "L82",
       "_origin": "ast",
       "community": 8,
       "norm_label": "docs site",
@@ -6021,7 +5251,7 @@
       "label": "Configuration",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L74",
+      "source_location": "L92",
       "_origin": "ast",
       "community": 8,
       "norm_label": "configuration",
@@ -6031,7 +5261,7 @@
       "label": "Slash Commands",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L117",
+      "source_location": "L135",
       "_origin": "ast",
       "community": 8,
       "norm_label": "slash commands",
@@ -6041,7 +5271,7 @@
       "label": "Architecture",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L132",
+      "source_location": "L150",
       "_origin": "ast",
       "community": 8,
       "norm_label": "architecture",
@@ -6051,7 +5281,7 @@
       "label": "Source Layout",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L154",
+      "source_location": "L172",
       "_origin": "ast",
       "community": 8,
       "norm_label": "source layout",
@@ -6061,7 +5291,7 @@
       "label": "Monorepo Structure",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L168",
+      "source_location": "L186",
       "_origin": "ast",
       "community": 8,
       "norm_label": "monorepo structure",
@@ -6071,7 +5301,7 @@
       "label": "Contributing",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L224",
+      "source_location": "L258",
       "_origin": "ast",
       "community": 8,
       "norm_label": "contributing",
@@ -6081,7 +5311,7 @@
       "label": "License",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L238",
+      "source_location": "L275",
       "_origin": "ast",
       "community": 8,
       "norm_label": "license",
@@ -8458,6 +7688,536 @@
       "id": "contributing_code_style_gitbuddy_specific_rules"
     },
     {
+      "label": "git-hooks.md",
+      "file_type": "document",
+      "source_file": "docs/docs/contributing/git-hooks.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "community": 66,
+      "norm_label": "git-hooks.md",
+      "id": "contributing_git_hooks"
+    },
+    {
+      "label": "Git Hooks",
+      "file_type": "document",
+      "source_file": "docs/docs/contributing/git-hooks.md",
+      "source_location": "L5",
+      "_origin": "ast",
+      "community": 46,
+      "norm_label": "git hooks",
+      "id": "contributing_git_hooks_git_hooks"
+    },
+    {
+      "label": "Why Husky?",
+      "file_type": "document",
+      "source_file": "docs/docs/contributing/git-hooks.md",
+      "source_location": "L9",
+      "_origin": "ast",
+      "community": 46,
+      "norm_label": "why husky?",
+      "id": "contributing_git_hooks_why_husky"
+    },
+    {
+      "label": "Hook Architecture",
+      "file_type": "document",
+      "source_file": "docs/docs/contributing/git-hooks.md",
+      "source_location": "L16",
+      "_origin": "ast",
+      "community": 46,
+      "norm_label": "hook architecture",
+      "id": "contributing_git_hooks_hook_architecture"
+    },
+    {
+      "label": "Active Hooks",
+      "file_type": "document",
+      "source_file": "docs/docs/contributing/git-hooks.md",
+      "source_location": "L27",
+      "_origin": "ast",
+      "community": 46,
+      "norm_label": "active hooks",
+      "id": "contributing_git_hooks_active_hooks"
+    },
+    {
+      "label": "Pre-commit (`scripts/graphify-pre-commit.sh`)",
+      "file_type": "document",
+      "source_file": "docs/docs/contributing/git-hooks.md",
+      "source_location": "L29",
+      "_origin": "ast",
+      "community": 46,
+      "norm_label": "pre-commit (`scripts/graphify-pre-commit.sh`)",
+      "id": "contributing_git_hooks_pre_commit_scripts_graphify_pre_commit_sh"
+    },
+    {
+      "label": "Post-checkout (`scripts/graphify-post-checkout.sh`)",
+      "file_type": "document",
+      "source_file": "docs/docs/contributing/git-hooks.md",
+      "source_location": "L56",
+      "_origin": "ast",
+      "community": 46,
+      "norm_label": "post-checkout (`scripts/graphify-post-checkout.sh`)",
+      "id": "contributing_git_hooks_post_checkout_scripts_graphify_post_checkout_sh"
+    },
+    {
+      "label": "Python Detection",
+      "file_type": "document",
+      "source_file": "docs/docs/contributing/git-hooks.md",
+      "source_location": "L69",
+      "_origin": "ast",
+      "community": 46,
+      "norm_label": "python detection",
+      "id": "contributing_git_hooks_python_detection"
+    },
+    {
+      "label": "Skipping Hooks",
+      "file_type": "document",
+      "source_file": "docs/docs/contributing/git-hooks.md",
+      "source_location": "L89",
+      "_origin": "ast",
+      "community": 46,
+      "norm_label": "skipping hooks",
+      "id": "contributing_git_hooks_skipping_hooks"
+    },
+    {
+      "label": "Installation Details",
+      "file_type": "document",
+      "source_file": "docs/docs/contributing/git-hooks.md",
+      "source_location": "L98",
+      "_origin": "ast",
+      "community": 46,
+      "norm_label": "installation details",
+      "id": "contributing_git_hooks_installation_details"
+    },
+    {
+      "label": "How Husky Gets Installed",
+      "file_type": "document",
+      "source_file": "docs/docs/contributing/git-hooks.md",
+      "source_location": "L100",
+      "_origin": "ast",
+      "community": 46,
+      "norm_label": "how husky gets installed",
+      "id": "contributing_git_hooks_how_husky_gets_installed"
+    },
+    {
+      "label": "How It Works on a Fresh Clone",
+      "file_type": "document",
+      "source_file": "docs/docs/contributing/git-hooks.md",
+      "source_location": "L109",
+      "_origin": "ast",
+      "community": 46,
+      "norm_label": "how it works on a fresh clone",
+      "id": "contributing_git_hooks_how_it_works_on_a_fresh_clone"
+    },
+    {
+      "label": "Verifying Hooks Are Active",
+      "file_type": "document",
+      "source_file": "docs/docs/contributing/git-hooks.md",
+      "source_location": "L120",
+      "_origin": "ast",
+      "community": 46,
+      "norm_label": "verifying hooks are active",
+      "id": "contributing_git_hooks_verifying_hooks_are_active"
+    },
+    {
+      "label": "Adding a New Hook",
+      "file_type": "document",
+      "source_file": "docs/docs/contributing/git-hooks.md",
+      "source_location": "L136",
+      "_origin": "ast",
+      "community": 46,
+      "norm_label": "adding a new hook",
+      "id": "contributing_git_hooks_adding_a_new_hook"
+    },
+    {
+      "label": "Hook Timeouts",
+      "file_type": "document",
+      "source_file": "docs/docs/contributing/git-hooks.md",
+      "source_location": "L163",
+      "_origin": "ast",
+      "community": 46,
+      "norm_label": "hook timeouts",
+      "id": "contributing_git_hooks_hook_timeouts"
+    },
+    {
+      "label": "knowledge-graphs.md",
+      "file_type": "document",
+      "source_file": "docs/docs/contributing/knowledge-graphs.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "community": 66,
+      "norm_label": "knowledge-graphs.md",
+      "id": "contributing_knowledge_graphs"
+    },
+    {
+      "label": "Knowledge Graphs",
+      "file_type": "document",
+      "source_file": "docs/docs/contributing/knowledge-graphs.md",
+      "source_location": "L5",
+      "_origin": "ast",
+      "community": 35,
+      "norm_label": "knowledge graphs",
+      "id": "contributing_knowledge_graphs_knowledge_graphs"
+    },
+    {
+      "label": "Overview",
+      "file_type": "document",
+      "source_file": "docs/docs/contributing/knowledge-graphs.md",
+      "source_location": "L9",
+      "_origin": "ast",
+      "community": 35,
+      "norm_label": "overview",
+      "id": "contributing_knowledge_graphs_overview"
+    },
+    {
+      "label": "One-Command Setup",
+      "file_type": "document",
+      "source_file": "docs/docs/contributing/knowledge-graphs.md",
+      "source_location": "L20",
+      "_origin": "ast",
+      "community": 35,
+      "norm_label": "one-command setup",
+      "id": "contributing_knowledge_graphs_one_command_setup"
+    },
+    {
+      "label": "Manual Setup (step by step)",
+      "file_type": "document",
+      "source_file": "docs/docs/contributing/knowledge-graphs.md",
+      "source_location": "L36",
+      "_origin": "ast",
+      "community": 35,
+      "norm_label": "manual setup (step by step)",
+      "id": "contributing_knowledge_graphs_manual_setup_step_by_step"
+    },
+    {
+      "label": "Prerequisites",
+      "file_type": "document",
+      "source_file": "docs/docs/contributing/knowledge-graphs.md",
+      "source_location": "L38",
+      "_origin": "ast",
+      "community": 35,
+      "norm_label": "prerequisites",
+      "id": "contributing_knowledge_graphs_prerequisites"
+    },
+    {
+      "label": "Register MCP Servers",
+      "file_type": "document",
+      "source_file": "docs/docs/contributing/knowledge-graphs.md",
+      "source_location": "L49",
+      "_origin": "ast",
+      "community": 35,
+      "norm_label": "register mcp servers",
+      "id": "contributing_knowledge_graphs_register_mcp_servers"
+    },
+    {
+      "label": "Build Initial Graphs",
+      "file_type": "document",
+      "source_file": "docs/docs/contributing/knowledge-graphs.md",
+      "source_location": "L69",
+      "_origin": "ast",
+      "community": 35,
+      "norm_label": "build initial graphs",
+      "id": "contributing_knowledge_graphs_build_initial_graphs"
+    },
+    {
+      "label": "How Graphs Are Kept Current",
+      "file_type": "document",
+      "source_file": "docs/docs/contributing/knowledge-graphs.md",
+      "source_location": "L88",
+      "_origin": "ast",
+      "community": 35,
+      "norm_label": "how graphs are kept current",
+      "id": "contributing_knowledge_graphs_how_graphs_are_kept_current"
+    },
+    {
+      "label": "Pre-commit Hook (graphify)",
+      "file_type": "document",
+      "source_file": "docs/docs/contributing/knowledge-graphs.md",
+      "source_location": "L90",
+      "_origin": "ast",
+      "community": 35,
+      "norm_label": "pre-commit hook (graphify)",
+      "id": "contributing_knowledge_graphs_pre_commit_hook_graphify"
+    },
+    {
+      "label": "Post-checkout Hook (graphify)",
+      "file_type": "document",
+      "source_file": "docs/docs/contributing/knowledge-graphs.md",
+      "source_location": "L109",
+      "_origin": "ast",
+      "community": 35,
+      "norm_label": "post-checkout hook (graphify)",
+      "id": "contributing_knowledge_graphs_post_checkout_hook_graphify"
+    },
+    {
+      "label": "PostToolUse Hook (code-review-graph)",
+      "file_type": "document",
+      "source_file": "docs/docs/contributing/knowledge-graphs.md",
+      "source_location": "L117",
+      "_origin": "ast",
+      "community": 35,
+      "norm_label": "posttooluse hook (code-review-graph)",
+      "id": "contributing_knowledge_graphs_posttooluse_hook_code_review_graph"
+    },
+    {
+      "label": "Make Targets Reference",
+      "file_type": "document",
+      "source_file": "docs/docs/contributing/knowledge-graphs.md",
+      "source_location": "L135",
+      "_origin": "ast",
+      "community": 35,
+      "norm_label": "make targets reference",
+      "id": "contributing_knowledge_graphs_make_targets_reference"
+    },
+    {
+      "label": "Using the Graphs",
+      "file_type": "document",
+      "source_file": "docs/docs/contributing/knowledge-graphs.md",
+      "source_location": "L146",
+      "_origin": "ast",
+      "community": 35,
+      "norm_label": "using the graphs",
+      "id": "contributing_knowledge_graphs_using_the_graphs"
+    },
+    {
+      "label": "Graphify Queries",
+      "file_type": "document",
+      "source_file": "docs/docs/contributing/knowledge-graphs.md",
+      "source_location": "L148",
+      "_origin": "ast",
+      "community": 35,
+      "norm_label": "graphify queries",
+      "id": "contributing_knowledge_graphs_graphify_queries"
+    },
+    {
+      "label": "Code-review-graph Analysis",
+      "file_type": "document",
+      "source_file": "docs/docs/contributing/knowledge-graphs.md",
+      "source_location": "L166",
+      "_origin": "ast",
+      "community": 35,
+      "norm_label": "code-review-graph analysis",
+      "id": "contributing_knowledge_graphs_code_review_graph_analysis"
+    },
+    {
+      "label": "Troubleshooting",
+      "file_type": "document",
+      "source_file": "docs/docs/contributing/knowledge-graphs.md",
+      "source_location": "L175",
+      "_origin": "ast",
+      "community": 35,
+      "norm_label": "troubleshooting",
+      "id": "contributing_knowledge_graphs_troubleshooting"
+    },
+    {
+      "label": "Graphify rebuild fails",
+      "file_type": "document",
+      "source_file": "docs/docs/contributing/knowledge-graphs.md",
+      "source_location": "L177",
+      "_origin": "ast",
+      "community": 35,
+      "norm_label": "graphify rebuild fails",
+      "id": "contributing_knowledge_graphs_graphify_rebuild_fails"
+    },
+    {
+      "label": "\"graphify not found\"",
+      "file_type": "document",
+      "source_file": "docs/docs/contributing/knowledge-graphs.md",
+      "source_location": "L187",
+      "_origin": "ast",
+      "community": 35,
+      "norm_label": "\"graphify not found\"",
+      "id": "contributing_knowledge_graphs_graphify_not_found"
+    },
+    {
+      "label": "MCP server not connecting",
+      "file_type": "document",
+      "source_file": "docs/docs/contributing/knowledge-graphs.md",
+      "source_location": "L200",
+      "_origin": "ast",
+      "community": 35,
+      "norm_label": "mcp server not connecting",
+      "id": "contributing_knowledge_graphs_mcp_server_not_connecting"
+    },
+    {
+      "label": "Hook slows down commits",
+      "file_type": "document",
+      "source_file": "docs/docs/contributing/knowledge-graphs.md",
+      "source_location": "L213",
+      "_origin": "ast",
+      "community": 35,
+      "norm_label": "hook slows down commits",
+      "id": "contributing_knowledge_graphs_hook_slows_down_commits"
+    },
+    {
+      "label": "Windows / non-macOS setup",
+      "file_type": "document",
+      "source_file": "docs/docs/contributing/knowledge-graphs.md",
+      "source_location": "L225",
+      "_origin": "ast",
+      "community": 35,
+      "norm_label": "windows / non-macos setup",
+      "id": "contributing_knowledge_graphs_windows_non_macos_setup"
+    },
+    {
+      "label": "File Reference",
+      "file_type": "document",
+      "source_file": "docs/docs/contributing/knowledge-graphs.md",
+      "source_location": "L229",
+      "_origin": "ast",
+      "community": 35,
+      "norm_label": "file reference",
+      "id": "contributing_knowledge_graphs_file_reference"
+    },
+    {
+      "label": "setup.md",
+      "file_type": "document",
+      "source_file": "docs/docs/contributing/setup.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "community": 66,
+      "norm_label": "setup.md",
+      "id": "contributing_setup"
+    },
+    {
+      "label": "Development Setup",
+      "file_type": "document",
+      "source_file": "docs/docs/contributing/setup.md",
+      "source_location": "L5",
+      "_origin": "ast",
+      "community": 58,
+      "norm_label": "development setup",
+      "id": "contributing_setup_development_setup"
+    },
+    {
+      "label": "Prerequisites",
+      "file_type": "document",
+      "source_file": "docs/docs/contributing/setup.md",
+      "source_location": "L9",
+      "_origin": "ast",
+      "community": 58,
+      "norm_label": "prerequisites",
+      "id": "contributing_setup_prerequisites"
+    },
+    {
+      "label": "One-Command Setup (Recommended)",
+      "file_type": "document",
+      "source_file": "docs/docs/contributing/setup.md",
+      "source_location": "L18",
+      "_origin": "ast",
+      "community": 58,
+      "norm_label": "one-command setup (recommended)",
+      "id": "contributing_setup_one_command_setup_recommended"
+    },
+    {
+      "label": "Manual Setup (Step by Step)",
+      "file_type": "document",
+      "source_file": "docs/docs/contributing/setup.md",
+      "source_location": "L40",
+      "_origin": "ast",
+      "community": 58,
+      "norm_label": "manual setup (step by step)",
+      "id": "contributing_setup_manual_setup_step_by_step"
+    },
+    {
+      "label": "1. Install pnpm",
+      "file_type": "document",
+      "source_file": "docs/docs/contributing/setup.md",
+      "source_location": "L42",
+      "_origin": "ast",
+      "community": 58,
+      "norm_label": "1. install pnpm",
+      "id": "contributing_setup_1_install_pnpm"
+    },
+    {
+      "label": "2. Clone and Install Dependencies",
+      "file_type": "document",
+      "source_file": "docs/docs/contributing/setup.md",
+      "source_location": "L49",
+      "_origin": "ast",
+      "community": 58,
+      "norm_label": "2. clone and install dependencies",
+      "id": "contributing_setup_2_clone_and_install_dependencies"
+    },
+    {
+      "label": "3. Install Knowledge Graph Tools (Optional)",
+      "file_type": "document",
+      "source_file": "docs/docs/contributing/setup.md",
+      "source_location": "L59",
+      "_origin": "ast",
+      "community": 58,
+      "norm_label": "3. install knowledge graph tools (optional)",
+      "id": "contributing_setup_3_install_knowledge_graph_tools_optional"
+    },
+    {
+      "label": "4. Register MCP Servers (Optional \u2014 Claude Code only)",
+      "file_type": "document",
+      "source_file": "docs/docs/contributing/setup.md",
+      "source_location": "L71",
+      "_origin": "ast",
+      "community": 58,
+      "norm_label": "4. register mcp servers (optional \u2014 claude code only)",
+      "id": "contributing_setup_4_register_mcp_servers_optional_claude_code_only"
+    },
+    {
+      "label": "Verify Setup",
+      "file_type": "document",
+      "source_file": "docs/docs/contributing/setup.md",
+      "source_location": "L78",
+      "_origin": "ast",
+      "community": 58,
+      "norm_label": "verify setup",
+      "id": "contributing_setup_verify_setup"
+    },
+    {
+      "label": "Project Layout",
+      "file_type": "document",
+      "source_file": "docs/docs/contributing/setup.md",
+      "source_location": "L91",
+      "_origin": "ast",
+      "community": 58,
+      "norm_label": "project layout",
+      "id": "contributing_setup_project_layout"
+    },
+    {
+      "label": "Running Locally",
+      "file_type": "document",
+      "source_file": "docs/docs/contributing/setup.md",
+      "source_location": "L124",
+      "_origin": "ast",
+      "community": 58,
+      "norm_label": "running locally",
+      "id": "contributing_setup_running_locally"
+    },
+    {
+      "label": "Development Workflow",
+      "file_type": "document",
+      "source_file": "docs/docs/contributing/setup.md",
+      "source_location": "L137",
+      "_origin": "ast",
+      "community": 58,
+      "norm_label": "development workflow",
+      "id": "contributing_setup_development_workflow"
+    },
+    {
+      "label": "Make Targets Quick Reference",
+      "file_type": "document",
+      "source_file": "docs/docs/contributing/setup.md",
+      "source_location": "L146",
+      "_origin": "ast",
+      "community": 58,
+      "norm_label": "make targets quick reference",
+      "id": "contributing_setup_make_targets_quick_reference"
+    },
+    {
+      "label": "Next Steps",
+      "file_type": "document",
+      "source_file": "docs/docs/contributing/setup.md",
+      "source_location": "L163",
+      "_origin": "ast",
+      "community": 58,
+      "norm_label": "next steps",
+      "id": "contributing_setup_next_steps"
+    },
+    {
       "label": "testing.md",
       "file_type": "document",
       "source_file": "docs/docs/contributing/testing.md",
@@ -8548,6 +8308,186 @@
       "id": "contributing_testing_test_coverage"
     },
     {
+      "label": "workflow.md",
+      "file_type": "document",
+      "source_file": "docs/docs/contributing/workflow.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "community": 66,
+      "norm_label": "workflow.md",
+      "id": "contributing_workflow"
+    },
+    {
+      "label": "Development Workflow",
+      "file_type": "document",
+      "source_file": "docs/docs/contributing/workflow.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "community": 71,
+      "norm_label": "development workflow",
+      "id": "contributing_workflow_development_workflow"
+    },
+    {
+      "label": "Branching",
+      "file_type": "document",
+      "source_file": "docs/docs/contributing/workflow.md",
+      "source_location": "L5",
+      "_origin": "ast",
+      "community": 71,
+      "norm_label": "branching",
+      "id": "contributing_workflow_branching"
+    },
+    {
+      "label": "Commit Messages",
+      "file_type": "document",
+      "source_file": "docs/docs/contributing/workflow.md",
+      "source_location": "L16",
+      "_origin": "ast",
+      "community": 71,
+      "norm_label": "commit messages",
+      "id": "contributing_workflow_commit_messages"
+    },
+    {
+      "label": "Before Committing",
+      "file_type": "document",
+      "source_file": "docs/docs/contributing/workflow.md",
+      "source_location": "L33",
+      "_origin": "ast",
+      "community": 71,
+      "norm_label": "before committing",
+      "id": "contributing_workflow_before_committing"
+    },
+    {
+      "label": "Knowledge Graph Auto-Rebuild",
+      "file_type": "document",
+      "source_file": "docs/docs/contributing/workflow.md",
+      "source_location": "L43",
+      "_origin": "ast",
+      "community": 71,
+      "norm_label": "knowledge graph auto-rebuild",
+      "id": "contributing_workflow_knowledge_graph_auto_rebuild"
+    },
+    {
+      "label": "Pull Requests",
+      "file_type": "document",
+      "source_file": "docs/docs/contributing/workflow.md",
+      "source_location": "L70",
+      "_origin": "ast",
+      "community": 71,
+      "norm_label": "pull requests",
+      "id": "contributing_workflow_pull_requests"
+    },
+    {
+      "label": "Code Review",
+      "file_type": "document",
+      "source_file": "docs/docs/contributing/workflow.md",
+      "source_location": "L83",
+      "_origin": "ast",
+      "community": 71,
+      "norm_label": "code review",
+      "id": "contributing_workflow_code_review"
+    },
+    {
+      "label": "After Merge",
+      "file_type": "document",
+      "source_file": "docs/docs/contributing/workflow.md",
+      "source_location": "L93",
+      "_origin": "ast",
+      "community": 71,
+      "norm_label": "after merge",
+      "id": "contributing_workflow_after_merge"
+    },
+    {
+      "label": "installation.md",
+      "file_type": "document",
+      "source_file": "docs/docs/installation.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "community": 3,
+      "norm_label": "installation.md",
+      "id": "docs_installation"
+    },
+    {
+      "label": "Installation",
+      "file_type": "document",
+      "source_file": "docs/docs/installation.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "community": 3,
+      "norm_label": "installation",
+      "id": "docs_installation_installation"
+    },
+    {
+      "label": "Prerequisites",
+      "file_type": "document",
+      "source_file": "docs/docs/installation.md",
+      "source_location": "L5",
+      "_origin": "ast",
+      "community": 3,
+      "norm_label": "prerequisites",
+      "id": "docs_installation_prerequisites"
+    },
+    {
+      "label": "One-Command Setup (Recommended)",
+      "file_type": "document",
+      "source_file": "docs/docs/installation.md",
+      "source_location": "L12",
+      "_origin": "ast",
+      "community": 3,
+      "norm_label": "one-command setup (recommended)",
+      "id": "docs_installation_one_command_setup_recommended"
+    },
+    {
+      "label": "Manual Setup",
+      "file_type": "document",
+      "source_file": "docs/docs/installation.md",
+      "source_location": "L28",
+      "_origin": "ast",
+      "community": 3,
+      "norm_label": "manual setup",
+      "id": "docs_installation_manual_setup"
+    },
+    {
+      "label": "Clone and Install",
+      "file_type": "document",
+      "source_file": "docs/docs/installation.md",
+      "source_location": "L30",
+      "_origin": "ast",
+      "community": 3,
+      "norm_label": "clone and install",
+      "id": "docs_installation_clone_and_install"
+    },
+    {
+      "label": "Verify Setup",
+      "file_type": "document",
+      "source_file": "docs/docs/installation.md",
+      "source_location": "L38",
+      "_origin": "ast",
+      "community": 3,
+      "norm_label": "verify setup",
+      "id": "docs_installation_verify_setup"
+    },
+    {
+      "label": "Build and Run",
+      "file_type": "document",
+      "source_file": "docs/docs/installation.md",
+      "source_location": "L46",
+      "_origin": "ast",
+      "community": 3,
+      "norm_label": "build and run",
+      "id": "docs_installation_build_and_run"
+    },
+    {
+      "label": "Next Steps",
+      "file_type": "document",
+      "source_file": "docs/docs/installation.md",
+      "source_location": "L59",
+      "_origin": "ast",
+      "community": 3,
+      "norm_label": "next steps",
+      "id": "docs_installation_next_steps"
+    },
+    {
       "label": "introduction.md",
       "file_type": "document",
       "source_file": "docs/docs/introduction.md",
@@ -8618,12 +8558,92 @@
       "id": "docs_introduction_license"
     },
     {
+      "label": "quick-start.md",
+      "file_type": "document",
+      "source_file": "docs/docs/quick-start.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "community": 66,
+      "norm_label": "quick-start.md",
+      "id": "docs_quick_start"
+    },
+    {
+      "label": "Quick Start",
+      "file_type": "document",
+      "source_file": "docs/docs/quick-start.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "community": 56,
+      "norm_label": "quick start",
+      "id": "docs_quick_start_quick_start"
+    },
+    {
+      "label": "1. Install the GitHub App",
+      "file_type": "document",
+      "source_file": "docs/docs/quick-start.md",
+      "source_location": "L5",
+      "_origin": "ast",
+      "community": 56,
+      "norm_label": "1. install the github app",
+      "id": "docs_quick_start_1_install_the_github_app"
+    },
+    {
+      "label": "2. Create the Config File",
+      "file_type": "document",
+      "source_file": "docs/docs/quick-start.md",
+      "source_location": "L12",
+      "_origin": "ast",
+      "community": 56,
+      "norm_label": "2. create the config file",
+      "id": "docs_quick_start_2_create_the_config_file"
+    },
+    {
+      "label": "3. Verify It's Working",
+      "file_type": "document",
+      "source_file": "docs/docs/quick-start.md",
+      "source_location": "L52",
+      "_origin": "ast",
+      "community": 56,
+      "norm_label": "3. verify it's working",
+      "id": "docs_quick_start_3_verify_it_s_working"
+    },
+    {
+      "label": "4. Set Up Stale Sweeps (Optional)",
+      "file_type": "document",
+      "source_file": "docs/docs/quick-start.md",
+      "source_location": "L58",
+      "_origin": "ast",
+      "community": 56,
+      "norm_label": "4. set up stale sweeps (optional)",
+      "id": "docs_quick_start_4_set_up_stale_sweeps_optional"
+    },
+    {
+      "label": "5. Development Setup (Contributors)",
+      "file_type": "document",
+      "source_file": "docs/docs/quick-start.md",
+      "source_location": "L78",
+      "_origin": "ast",
+      "community": 56,
+      "norm_label": "5. development setup (contributors)",
+      "id": "docs_quick_start_5_development_setup_contributors"
+    },
+    {
+      "label": "Next Steps",
+      "file_type": "document",
+      "source_file": "docs/docs/quick-start.md",
+      "source_location": "L100",
+      "_origin": "ast",
+      "community": 56,
+      "norm_label": "next steps",
+      "id": "docs_quick_start_next_steps"
+    },
+    {
       "label": "deployment.md",
       "file_type": "document",
       "source_file": "docs/docs/self-hosting/deployment.md",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 24,
+      "community": 3,
       "norm_label": "deployment.md",
       "id": "self_hosting_deployment"
     },
@@ -8693,7 +8713,7 @@
       "source_file": "docs/docs/self-hosting/environment-variables.md",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 24,
+      "community": 3,
       "norm_label": "environment-variables.md",
       "id": "self_hosting_environment_variables"
     },
@@ -8703,7 +8723,7 @@
       "source_file": "docs/docs/self-hosting/environment-variables.md",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 24,
+      "community": 3,
       "norm_label": "environment variables",
       "id": "self_hosting_environment_variables_environment_variables"
     },
@@ -8713,7 +8733,7 @@
       "source_file": "docs/docs/self-hosting/environment-variables.md",
       "source_location": "L5",
       "_origin": "ast",
-      "community": 24,
+      "community": 3,
       "norm_label": "required",
       "id": "self_hosting_environment_variables_required"
     },
@@ -8723,7 +8743,7 @@
       "source_file": "docs/docs/self-hosting/environment-variables.md",
       "source_location": "L13",
       "_origin": "ast",
-      "community": 24,
+      "community": 3,
       "norm_label": "optional",
       "id": "self_hosting_environment_variables_optional"
     },
@@ -8733,7 +8753,7 @@
       "source_file": "docs/docs/self-hosting/environment-variables.md",
       "source_location": "L28",
       "_origin": "ast",
-      "community": 24,
+      "community": 3,
       "norm_label": "setting variables",
       "id": "self_hosting_environment_variables_setting_variables"
     },
@@ -8743,7 +8763,7 @@
       "source_file": "docs/docs/self-hosting/environment-variables.md",
       "source_location": "L30",
       "_origin": "ast",
-      "community": 24,
+      "community": 3,
       "norm_label": "railway / render",
       "id": "self_hosting_environment_variables_railway_render"
     },
@@ -8753,7 +8773,7 @@
       "source_file": "docs/docs/self-hosting/environment-variables.md",
       "source_location": "L33",
       "_origin": "ast",
-      "community": 24,
+      "community": 3,
       "norm_label": "fly.io",
       "id": "self_hosting_environment_variables_fly_io"
     },
@@ -8763,7 +8783,7 @@
       "source_file": "docs/docs/self-hosting/environment-variables.md",
       "source_location": "L38",
       "_origin": "ast",
-      "community": 24,
+      "community": 3,
       "norm_label": "vps / systemd",
       "id": "self_hosting_environment_variables_vps_systemd"
     },
@@ -8773,7 +8793,7 @@
       "source_file": "docs/docs/self-hosting/environment-variables.md",
       "source_location": "L41",
       "_origin": "ast",
-      "community": 24,
+      "community": 3,
       "norm_label": "local development",
       "id": "self_hosting_environment_variables_local_development"
     },
@@ -8783,7 +8803,7 @@
       "source_file": "docs/docs/self-hosting/environment-variables.md",
       "source_location": "L52",
       "_origin": "ast",
-      "community": 24,
+      "community": 3,
       "norm_label": "private key format",
       "id": "self_hosting_environment_variables_private_key_format"
     },
@@ -8793,7 +8813,7 @@
       "source_file": "docs/docs/self-hosting/github-app-setup.md",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 24,
+      "community": 3,
       "norm_label": "github-app-setup.md",
       "id": "self_hosting_github_app_setup"
     },
@@ -8803,7 +8823,7 @@
       "source_file": "docs/docs/self-hosting/github-app-setup.md",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 24,
+      "community": 3,
       "norm_label": "github app setup",
       "id": "self_hosting_github_app_setup_github_app_setup"
     },
@@ -8813,7 +8833,7 @@
       "source_file": "docs/docs/self-hosting/github-app-setup.md",
       "source_location": "L5",
       "_origin": "ast",
-      "community": 24,
+      "community": 3,
       "norm_label": "1. create the github app",
       "id": "self_hosting_github_app_setup_1_create_the_github_app"
     },
@@ -8823,7 +8843,7 @@
       "source_file": "docs/docs/self-hosting/github-app-setup.md",
       "source_location": "L20",
       "_origin": "ast",
-      "community": 24,
+      "community": 3,
       "norm_label": "2. configure permissions",
       "id": "self_hosting_github_app_setup_2_configure_permissions"
     },
@@ -8833,7 +8853,7 @@
       "source_file": "docs/docs/self-hosting/github-app-setup.md",
       "source_location": "L40",
       "_origin": "ast",
-      "community": 24,
+      "community": 3,
       "norm_label": "3. subscribe to events",
       "id": "self_hosting_github_app_setup_3_subscribe_to_events"
     },
@@ -8843,7 +8863,7 @@
       "source_file": "docs/docs/self-hosting/github-app-setup.md",
       "source_location": "L54",
       "_origin": "ast",
-      "community": 24,
+      "community": 3,
       "norm_label": "4. generate private key",
       "id": "self_hosting_github_app_setup_4_generate_private_key"
     },
@@ -8853,7 +8873,7 @@
       "source_file": "docs/docs/self-hosting/github-app-setup.md",
       "source_location": "L60",
       "_origin": "ast",
-      "community": 24,
+      "community": 3,
       "norm_label": "5. install the app",
       "id": "self_hosting_github_app_setup_5_install_the_app"
     },
@@ -8863,7 +8883,7 @@
       "source_file": "docs/docs/self-hosting/github-app-setup.md",
       "source_location": "L67",
       "_origin": "ast",
-      "community": 24,
+      "community": 3,
       "norm_label": "6. configure environment variables",
       "id": "self_hosting_github_app_setup_6_configure_environment_variables"
     },
@@ -8873,7 +8893,7 @@
       "source_file": "docs/docs/self-hosting/github-app-setup.md",
       "source_location": "L84",
       "_origin": "ast",
-      "community": 24,
+      "community": 3,
       "norm_label": "7. verify installation",
       "id": "self_hosting_github_app_setup_7_verify_installation"
     },
@@ -8883,7 +8903,7 @@
       "source_file": "docs/docs/self-hosting/github-app-setup.md",
       "source_location": "L90",
       "_origin": "ast",
-      "community": 24,
+      "community": 3,
       "norm_label": "next steps",
       "id": "self_hosting_github_app_setup_next_steps"
     },
@@ -9013,7 +9033,7 @@
       "source_file": "docs/docs/self-hosting/prerequisites.md",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 24,
+      "community": 3,
       "norm_label": "prerequisites.md",
       "id": "self_hosting_prerequisites"
     },
@@ -9023,7 +9043,7 @@
       "source_file": "docs/docs/self-hosting/prerequisites.md",
       "source_location": "L5",
       "_origin": "ast",
-      "community": 24,
+      "community": 3,
       "norm_label": "prerequisites",
       "id": "self_hosting_prerequisites_prerequisites"
     },
@@ -9033,7 +9053,7 @@
       "source_file": "docs/docs/self-hosting/prerequisites.md",
       "source_location": "L9",
       "_origin": "ast",
-      "community": 24,
+      "community": 3,
       "norm_label": "required",
       "id": "self_hosting_prerequisites_required"
     },
@@ -9043,7 +9063,7 @@
       "source_file": "docs/docs/self-hosting/prerequisites.md",
       "source_location": "L18",
       "_origin": "ast",
-      "community": 24,
+      "community": 3,
       "norm_label": "recommended",
       "id": "self_hosting_prerequisites_recommended"
     },
@@ -9053,7 +9073,7 @@
       "source_file": "docs/docs/self-hosting/prerequisites.md",
       "source_location": "L27",
       "_origin": "ast",
-      "community": 24,
+      "community": 3,
       "norm_label": "github app permissions",
       "id": "self_hosting_prerequisites_github_app_permissions"
     },
@@ -9063,7 +9083,7 @@
       "source_file": "docs/docs/self-hosting/prerequisites.md",
       "source_location": "L42",
       "_origin": "ast",
-      "community": 24,
+      "community": 3,
       "norm_label": "subscribe to events",
       "id": "self_hosting_prerequisites_subscribe_to_events"
     },
@@ -9073,7 +9093,7 @@
       "source_file": "docs/docs/self-hosting/prerequisites.md",
       "source_location": "L56",
       "_origin": "ast",
-      "community": 24,
+      "community": 3,
       "norm_label": "next steps",
       "id": "self_hosting_prerequisites_next_steps"
     },
@@ -9806,19 +9826,6 @@
       "id": "img_docusaurus_logo_png"
     },
     {
-      "label": "Docusaurus Logo (SVG)",
-      "file_type": "image",
-      "source_file": "docs/static/img/logo.svg",
-      "source_location": null,
-      "source_url": null,
-      "captured_at": null,
-      "author": null,
-      "contributor": null,
-      "community": 13,
-      "norm_label": "docusaurus logo (svg)",
-      "id": "img_logo_svg"
-    },
-    {
       "label": "Easy to Use Illustration",
       "file_type": "image",
       "source_file": "docs/static/img/undraw_docusaurus_mountain.svg",
@@ -9927,962 +9934,12 @@
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": "docs/docs/contributing/git-hooks.md",
-      "source_location": "L5",
-      "weight": 1.0,
-      "source": "contributing_git_hooks",
-      "target": "contributing_git_hooks_git_hooks",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/docs/contributing/setup.md",
-      "source_location": "L166",
-      "weight": 1.0,
-      "source": "contributing_setup",
-      "target": "contributing_git_hooks",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/docs/contributing/workflow.md",
-      "source_location": "L68",
-      "weight": 1.0,
-      "source": "contributing_workflow",
-      "target": "contributing_git_hooks",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/docs/contributing/git-hooks.md",
-      "source_location": "L27",
-      "weight": 1.0,
-      "source": "contributing_git_hooks_git_hooks",
-      "target": "contributing_git_hooks_active_hooks",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/docs/contributing/git-hooks.md",
-      "source_location": "L134",
-      "weight": 1.0,
-      "source": "contributing_git_hooks_git_hooks",
-      "target": "contributing_git_hooks_adding_a_new_hook",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/docs/contributing/git-hooks.md",
-      "source_location": "L16",
-      "weight": 1.0,
-      "source": "contributing_git_hooks_git_hooks",
-      "target": "contributing_git_hooks_hook_architecture",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/docs/contributing/git-hooks.md",
-      "source_location": "L161",
-      "weight": 1.0,
-      "source": "contributing_git_hooks_git_hooks",
-      "target": "contributing_git_hooks_hook_timeouts",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/docs/contributing/git-hooks.md",
-      "source_location": "L98",
-      "weight": 1.0,
-      "source": "contributing_git_hooks_git_hooks",
-      "target": "contributing_git_hooks_installation_details",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/docs/contributing/git-hooks.md",
-      "source_location": "L69",
-      "weight": 1.0,
-      "source": "contributing_git_hooks_git_hooks",
-      "target": "contributing_git_hooks_python_detection",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/docs/contributing/git-hooks.md",
-      "source_location": "L89",
-      "weight": 1.0,
-      "source": "contributing_git_hooks_git_hooks",
-      "target": "contributing_git_hooks_skipping_hooks",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/docs/contributing/git-hooks.md",
-      "source_location": "L118",
-      "weight": 1.0,
-      "source": "contributing_git_hooks_git_hooks",
-      "target": "contributing_git_hooks_verifying_hooks_are_active",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/docs/contributing/git-hooks.md",
-      "source_location": "L9",
-      "weight": 1.0,
-      "source": "contributing_git_hooks_git_hooks",
-      "target": "contributing_git_hooks_why_husky",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/docs/contributing/git-hooks.md",
-      "source_location": "L56",
-      "weight": 1.0,
-      "source": "contributing_git_hooks_active_hooks",
-      "target": "contributing_git_hooks_post_checkout_scripts_graphify_post_checkout_sh",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/docs/contributing/git-hooks.md",
-      "source_location": "L29",
-      "weight": 1.0,
-      "source": "contributing_git_hooks_active_hooks",
-      "target": "contributing_git_hooks_pre_commit_scripts_graphify_pre_commit_sh",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/docs/contributing/git-hooks.md",
-      "source_location": "L100",
-      "weight": 1.0,
-      "source": "contributing_git_hooks_installation_details",
-      "target": "contributing_git_hooks_how_husky_gets_installed",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/docs/contributing/git-hooks.md",
-      "source_location": "L107",
-      "weight": 1.0,
-      "source": "contributing_git_hooks_installation_details",
-      "target": "contributing_git_hooks_how_it_works_on_a_fresh_clone",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/docs/contributing/knowledge-graphs.md",
-      "source_location": "L5",
-      "weight": 1.0,
-      "source": "contributing_knowledge_graphs",
-      "target": "contributing_knowledge_graphs_knowledge_graphs",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/docs/contributing/setup.md",
-      "source_location": "L167",
-      "weight": 1.0,
-      "source": "contributing_setup",
-      "target": "contributing_knowledge_graphs",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/docs/contributing/knowledge-graphs.md",
-      "source_location": "L229",
-      "weight": 1.0,
-      "source": "contributing_knowledge_graphs_knowledge_graphs",
-      "target": "contributing_knowledge_graphs_file_reference",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/docs/contributing/knowledge-graphs.md",
-      "source_location": "L88",
-      "weight": 1.0,
-      "source": "contributing_knowledge_graphs_knowledge_graphs",
-      "target": "contributing_knowledge_graphs_how_graphs_are_kept_current",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/docs/contributing/knowledge-graphs.md",
-      "source_location": "L135",
-      "weight": 1.0,
-      "source": "contributing_knowledge_graphs_knowledge_graphs",
-      "target": "contributing_knowledge_graphs_make_targets_reference",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/docs/contributing/knowledge-graphs.md",
-      "source_location": "L36",
-      "weight": 1.0,
-      "source": "contributing_knowledge_graphs_knowledge_graphs",
-      "target": "contributing_knowledge_graphs_manual_setup_step_by_step",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/docs/contributing/knowledge-graphs.md",
-      "source_location": "L20",
-      "weight": 1.0,
-      "source": "contributing_knowledge_graphs_knowledge_graphs",
-      "target": "contributing_knowledge_graphs_one_command_setup",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/docs/contributing/knowledge-graphs.md",
-      "source_location": "L9",
-      "weight": 1.0,
-      "source": "contributing_knowledge_graphs_knowledge_graphs",
-      "target": "contributing_knowledge_graphs_overview",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/docs/contributing/knowledge-graphs.md",
-      "source_location": "L175",
-      "weight": 1.0,
-      "source": "contributing_knowledge_graphs_knowledge_graphs",
-      "target": "contributing_knowledge_graphs_troubleshooting",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/docs/contributing/knowledge-graphs.md",
-      "source_location": "L146",
-      "weight": 1.0,
-      "source": "contributing_knowledge_graphs_knowledge_graphs",
-      "target": "contributing_knowledge_graphs_using_the_graphs",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/docs/contributing/knowledge-graphs.md",
-      "source_location": "L69",
-      "weight": 1.0,
-      "source": "contributing_knowledge_graphs_manual_setup_step_by_step",
-      "target": "contributing_knowledge_graphs_build_initial_graphs",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/docs/contributing/knowledge-graphs.md",
-      "source_location": "L38",
-      "weight": 1.0,
-      "source": "contributing_knowledge_graphs_manual_setup_step_by_step",
-      "target": "contributing_knowledge_graphs_prerequisites",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/docs/contributing/knowledge-graphs.md",
-      "source_location": "L49",
-      "weight": 1.0,
-      "source": "contributing_knowledge_graphs_manual_setup_step_by_step",
-      "target": "contributing_knowledge_graphs_register_mcp_servers",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/docs/contributing/knowledge-graphs.md",
-      "source_location": "L109",
-      "weight": 1.0,
-      "source": "contributing_knowledge_graphs_how_graphs_are_kept_current",
-      "target": "contributing_knowledge_graphs_post_checkout_hook_graphify",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/docs/contributing/knowledge-graphs.md",
-      "source_location": "L117",
-      "weight": 1.0,
-      "source": "contributing_knowledge_graphs_how_graphs_are_kept_current",
-      "target": "contributing_knowledge_graphs_posttooluse_hook_code_review_graph",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/docs/contributing/knowledge-graphs.md",
-      "source_location": "L90",
-      "weight": 1.0,
-      "source": "contributing_knowledge_graphs_how_graphs_are_kept_current",
-      "target": "contributing_knowledge_graphs_pre_commit_hook_graphify",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/docs/contributing/knowledge-graphs.md",
-      "source_location": "L166",
-      "weight": 1.0,
-      "source": "contributing_knowledge_graphs_using_the_graphs",
-      "target": "contributing_knowledge_graphs_code_review_graph_analysis",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/docs/contributing/knowledge-graphs.md",
-      "source_location": "L148",
-      "weight": 1.0,
-      "source": "contributing_knowledge_graphs_using_the_graphs",
-      "target": "contributing_knowledge_graphs_graphify_queries",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/docs/contributing/knowledge-graphs.md",
-      "source_location": "L187",
-      "weight": 1.0,
-      "source": "contributing_knowledge_graphs_troubleshooting",
-      "target": "contributing_knowledge_graphs_graphify_not_found",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/docs/contributing/knowledge-graphs.md",
-      "source_location": "L177",
-      "weight": 1.0,
-      "source": "contributing_knowledge_graphs_troubleshooting",
-      "target": "contributing_knowledge_graphs_graphify_rebuild_fails",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/docs/contributing/knowledge-graphs.md",
-      "source_location": "L213",
-      "weight": 1.0,
-      "source": "contributing_knowledge_graphs_troubleshooting",
-      "target": "contributing_knowledge_graphs_hook_slows_down_commits",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/docs/contributing/knowledge-graphs.md",
-      "source_location": "L200",
-      "weight": 1.0,
-      "source": "contributing_knowledge_graphs_troubleshooting",
-      "target": "contributing_knowledge_graphs_mcp_server_not_connecting",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/docs/contributing/knowledge-graphs.md",
-      "source_location": "L225",
-      "weight": 1.0,
-      "source": "contributing_knowledge_graphs_troubleshooting",
-      "target": "contributing_knowledge_graphs_windows_non_macos_setup",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/docs/contributing/setup.md",
-      "source_location": "L83",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "contributing_setup",
-      "target": "contributing_adding_a_handler"
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/docs/contributing/setup.md",
-      "source_location": "L82",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "contributing_setup",
-      "target": "contributing_code_style"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/docs/contributing/setup.md",
+      "source_file": "docs/docusaurus.config.ts",
       "source_location": "L5",
       "weight": 1.0,
       "confidence_score": 1.0,
-      "source": "contributing_setup",
-      "target": "contributing_setup_development_setup"
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/docs/contributing/setup.md",
-      "source_location": "L80",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "contributing_setup",
-      "target": "contributing_workflow"
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/docs/contributing/setup.md",
-      "source_location": "L67",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "contributing_setup",
-      "target": "self_hosting_github_app_setup"
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/docs/introduction.md",
-      "source_location": "L48",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "docs_introduction",
-      "target": "contributing_setup"
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/docs/quick-start.md",
-      "source_location": "L98",
-      "weight": 1.0,
-      "source": "docs_quick_start",
-      "target": "contributing_setup",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/docs/contributing/setup.md",
-      "source_location": "L71",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "contributing_setup_development_setup",
-      "target": "contributing_setup_development_workflow"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/docs/contributing/setup.md",
-      "source_location": "L146",
-      "weight": 1.0,
-      "source": "contributing_setup_development_setup",
-      "target": "contributing_setup_make_targets_quick_reference",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/docs/contributing/setup.md",
-      "source_location": "L40",
-      "weight": 1.0,
-      "source": "contributing_setup_development_setup",
-      "target": "contributing_setup_manual_setup_step_by_step",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/docs/contributing/setup.md",
-      "source_location": "L78",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "contributing_setup_development_setup",
-      "target": "contributing_setup_next_steps"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/docs/contributing/setup.md",
-      "source_location": "L18",
-      "weight": 1.0,
-      "source": "contributing_setup_development_setup",
-      "target": "contributing_setup_one_command_setup_recommended",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/docs/contributing/setup.md",
-      "source_location": "L9",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "contributing_setup_development_setup",
-      "target": "contributing_setup_prerequisites"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/docs/contributing/setup.md",
-      "source_location": "L36",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "contributing_setup_development_setup",
-      "target": "contributing_setup_project_layout"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/docs/contributing/setup.md",
-      "source_location": "L58",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "contributing_setup_development_setup",
-      "target": "contributing_setup_running_locally"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/docs/contributing/setup.md",
-      "source_location": "L24",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "contributing_setup_development_setup",
-      "target": "contributing_setup_verify_setup"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/docs/contributing/setup.md",
-      "source_location": "L42",
-      "weight": 1.0,
-      "source": "contributing_setup_manual_setup_step_by_step",
-      "target": "contributing_setup_1_install_pnpm",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/docs/contributing/setup.md",
-      "source_location": "L49",
-      "weight": 1.0,
-      "source": "contributing_setup_manual_setup_step_by_step",
-      "target": "contributing_setup_2_clone_and_install_dependencies",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/docs/contributing/setup.md",
-      "source_location": "L59",
-      "weight": 1.0,
-      "source": "contributing_setup_manual_setup_step_by_step",
-      "target": "contributing_setup_3_install_knowledge_graph_tools_optional",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/docs/contributing/setup.md",
-      "source_location": "L71",
-      "weight": 1.0,
-      "source": "contributing_setup_manual_setup_step_by_step",
-      "target": "contributing_setup_4_register_mcp_servers_optional_claude_code_only",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/docs/contributing/workflow.md",
-      "source_location": "L1",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "contributing_workflow",
-      "target": "contributing_workflow_development_workflow"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/docs/contributing/workflow.md",
-      "source_location": "L65",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "contributing_workflow_development_workflow",
-      "target": "contributing_workflow_after_merge"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/docs/contributing/workflow.md",
-      "source_location": "L33",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "contributing_workflow_development_workflow",
-      "target": "contributing_workflow_before_committing"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/docs/contributing/workflow.md",
-      "source_location": "L5",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "contributing_workflow_development_workflow",
-      "target": "contributing_workflow_branching"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/docs/contributing/workflow.md",
-      "source_location": "L56",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "contributing_workflow_development_workflow",
-      "target": "contributing_workflow_code_review"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/docs/contributing/workflow.md",
-      "source_location": "L16",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "contributing_workflow_development_workflow",
-      "target": "contributing_workflow_commit_messages"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/docs/contributing/workflow.md",
-      "source_location": "L43",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "contributing_workflow_development_workflow",
-      "target": "contributing_workflow_pull_requests"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/docs/contributing/workflow.md",
-      "source_location": "L43",
-      "weight": 1.0,
-      "source": "contributing_workflow_before_committing",
-      "target": "contributing_workflow_knowledge_graph_auto_rebuild",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/docs/installation.md",
-      "source_location": "L1",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "docs_installation",
-      "target": "docs_installation_installation"
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/docs/installation.md",
-      "source_location": "L44",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "docs_installation",
-      "target": "self_hosting_deployment"
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/docs/installation.md",
-      "source_location": "L45",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "docs_installation",
-      "target": "self_hosting_environment_variables"
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/docs/installation.md",
-      "source_location": "L43",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "docs_installation",
-      "target": "self_hosting_github_app_setup"
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/docs/installation.md",
-      "source_location": "L46",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "docs_installation",
-      "target": "self_hosting_monitoring"
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/docs/introduction.md",
-      "source_location": "L45",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "docs_introduction",
-      "target": "docs_installation"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/docs/installation.md",
-      "source_location": "L28",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "docs_installation_installation",
-      "target": "docs_installation_build_and_run"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/docs/installation.md",
-      "source_location": "L12",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "docs_installation_installation",
-      "target": "docs_installation_clone_and_install"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/docs/installation.md",
-      "source_location": "L28",
-      "weight": 1.0,
-      "source": "docs_installation_installation",
-      "target": "docs_installation_manual_setup",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/docs/installation.md",
-      "source_location": "L41",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "docs_installation_installation",
-      "target": "docs_installation_next_steps"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/docs/installation.md",
-      "source_location": "L12",
-      "weight": 1.0,
-      "source": "docs_installation_installation",
-      "target": "docs_installation_one_command_setup_recommended",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/docs/installation.md",
-      "source_location": "L5",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "docs_installation_installation",
-      "target": "docs_installation_prerequisites"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/docs/installation.md",
-      "source_location": "L20",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "docs_installation_installation",
-      "target": "docs_installation_verify_setup"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/docs/installation.md",
-      "source_location": "L46",
-      "weight": 1.0,
-      "source": "docs_installation_manual_setup",
-      "target": "docs_installation_build_and_run",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/docs/installation.md",
-      "source_location": "L30",
-      "weight": 1.0,
-      "source": "docs_installation_manual_setup",
-      "target": "docs_installation_clone_and_install",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/docs/installation.md",
-      "source_location": "L38",
-      "weight": 1.0,
-      "source": "docs_installation_manual_setup",
-      "target": "docs_installation_verify_setup",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/docs/introduction.md",
-      "source_location": "L44",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "docs_introduction",
-      "target": "docs_quick_start"
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/docs/quick-start.md",
-      "source_location": "L81",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "docs_quick_start",
-      "target": "commands_overview"
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/docs/quick-start.md",
-      "source_location": "L80",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "docs_quick_start",
-      "target": "configuration_overview"
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/docs/quick-start.md",
-      "source_location": "L50",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "docs_quick_start",
-      "target": "configuration_reference"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/docs/quick-start.md",
-      "source_location": "L1",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "docs_quick_start",
-      "target": "docs_quick_start_quick_start"
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/docs/quick-start.md",
-      "source_location": "L82",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "docs_quick_start",
-      "target": "self_hosting_prerequisites"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/docs/quick-start.md",
-      "source_location": "L5",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "docs_quick_start_quick_start",
-      "target": "docs_quick_start_1_install_the_github_app"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/docs/quick-start.md",
-      "source_location": "L12",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "docs_quick_start_quick_start",
-      "target": "docs_quick_start_2_create_the_config_file"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/docs/quick-start.md",
-      "source_location": "L52",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "docs_quick_start_quick_start",
-      "target": "docs_quick_start_3_verify_it_s_working"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/docs/quick-start.md",
-      "source_location": "L58",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "docs_quick_start_quick_start",
-      "target": "docs_quick_start_4_set_up_stale_sweeps_optional"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/docs/quick-start.md",
-      "source_location": "L78",
-      "weight": 1.0,
-      "source": "docs_quick_start_quick_start",
-      "target": "docs_quick_start_5_development_setup_contributors",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/docs/quick-start.md",
-      "source_location": "L78",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "docs_quick_start_quick_start",
-      "target": "docs_quick_start_next_steps"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/sidebars.ts",
-      "source_location": "L3",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "docs_sidebars",
-      "target": "docs_sidebars_sidebars"
+      "source": "docs_docusaurus_config",
+      "target": "docs_docusaurus_config_config"
     },
     {
       "relation": "contains",
@@ -17575,16 +16632,6 @@
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": "docs/docusaurus.config.ts",
-      "source_location": "L5",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "docs_docusaurus_config",
-      "target": "docs_docusaurus_config_config"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
       "source_file": "docs/package.json",
       "source_location": "L35",
       "weight": 1.0,
@@ -17931,6 +16978,16 @@
       "confidence_score": 1.0,
       "source": "docs_package_engines",
       "target": "docs_package_engines_node"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/sidebars.ts",
+      "source_location": "L3",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_sidebars",
+      "target": "docs_sidebars_sidebars"
     },
     {
       "relation": "contains",
@@ -19591,11 +18648,31 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "README.md",
-      "source_location": "L43",
+      "source_location": "L73",
       "weight": 1.0,
       "confidence_score": 1.0,
       "source": "readme_quick_start",
-      "target": "readme_install_run"
+      "target": "readme_knowledge_graphs"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L54",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "readme_quick_start",
+      "target": "readme_manual_install"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L44",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "readme_quick_start",
+      "target": "readme_one_command_setup_recommended"
     },
     {
       "relation": "contains",
@@ -20698,6 +19775,16 @@
       "target": "commands_overview"
     },
     {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/docs/quick-start.md",
+      "source_location": "L81",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_quick_start",
+      "target": "commands_overview"
+    },
+    {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "docs/docs/commands/overview.md",
@@ -21468,6 +20555,16 @@
       "target": "configuration_overview"
     },
     {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/docs/quick-start.md",
+      "source_location": "L80",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_quick_start",
+      "target": "configuration_overview"
+    },
+    {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "docs/docs/configuration/overview.md",
@@ -21536,6 +20633,16 @@
       "confidence_score": 1.0,
       "source": "configuration_reference",
       "target": "configuration_reference_configuration_reference"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/docs/quick-start.md",
+      "source_location": "L50",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_quick_start",
+      "target": "configuration_reference"
     },
     {
       "relation": "contains",
@@ -21818,6 +20925,16 @@
       "target": "contributing_adding_a_handler_adding_a_domain_handler"
     },
     {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/docs/contributing/setup.md",
+      "source_location": "L83",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "contributing_setup",
+      "target": "contributing_adding_a_handler"
+    },
+    {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "docs/docs/contributing/adding-a-handler.md",
@@ -21896,6 +21013,16 @@
       "confidence_score": 1.0,
       "source": "contributing_code_style",
       "target": "contributing_code_style_code_style"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/docs/contributing/setup.md",
+      "source_location": "L82",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "contributing_setup",
+      "target": "contributing_code_style"
     },
     {
       "relation": "contains",
@@ -21980,6 +21107,576 @@
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
+      "source_file": "docs/docs/contributing/git-hooks.md",
+      "source_location": "L5",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "contributing_git_hooks",
+      "target": "contributing_git_hooks_git_hooks"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/docs/contributing/setup.md",
+      "source_location": "L166",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "contributing_setup",
+      "target": "contributing_git_hooks"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/docs/contributing/workflow.md",
+      "source_location": "L68",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "contributing_workflow",
+      "target": "contributing_git_hooks"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/docs/contributing/git-hooks.md",
+      "source_location": "L27",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "contributing_git_hooks_git_hooks",
+      "target": "contributing_git_hooks_active_hooks"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/docs/contributing/git-hooks.md",
+      "source_location": "L134",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "contributing_git_hooks_git_hooks",
+      "target": "contributing_git_hooks_adding_a_new_hook"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/docs/contributing/git-hooks.md",
+      "source_location": "L16",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "contributing_git_hooks_git_hooks",
+      "target": "contributing_git_hooks_hook_architecture"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/docs/contributing/git-hooks.md",
+      "source_location": "L161",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "contributing_git_hooks_git_hooks",
+      "target": "contributing_git_hooks_hook_timeouts"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/docs/contributing/git-hooks.md",
+      "source_location": "L98",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "contributing_git_hooks_git_hooks",
+      "target": "contributing_git_hooks_installation_details"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/docs/contributing/git-hooks.md",
+      "source_location": "L69",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "contributing_git_hooks_git_hooks",
+      "target": "contributing_git_hooks_python_detection"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/docs/contributing/git-hooks.md",
+      "source_location": "L89",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "contributing_git_hooks_git_hooks",
+      "target": "contributing_git_hooks_skipping_hooks"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/docs/contributing/git-hooks.md",
+      "source_location": "L118",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "contributing_git_hooks_git_hooks",
+      "target": "contributing_git_hooks_verifying_hooks_are_active"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/docs/contributing/git-hooks.md",
+      "source_location": "L9",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "contributing_git_hooks_git_hooks",
+      "target": "contributing_git_hooks_why_husky"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/docs/contributing/git-hooks.md",
+      "source_location": "L56",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "contributing_git_hooks_active_hooks",
+      "target": "contributing_git_hooks_post_checkout_scripts_graphify_post_checkout_sh"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/docs/contributing/git-hooks.md",
+      "source_location": "L29",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "contributing_git_hooks_active_hooks",
+      "target": "contributing_git_hooks_pre_commit_scripts_graphify_pre_commit_sh"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/docs/contributing/git-hooks.md",
+      "source_location": "L100",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "contributing_git_hooks_installation_details",
+      "target": "contributing_git_hooks_how_husky_gets_installed"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/docs/contributing/git-hooks.md",
+      "source_location": "L107",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "contributing_git_hooks_installation_details",
+      "target": "contributing_git_hooks_how_it_works_on_a_fresh_clone"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/docs/contributing/knowledge-graphs.md",
+      "source_location": "L5",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "contributing_knowledge_graphs",
+      "target": "contributing_knowledge_graphs_knowledge_graphs"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/docs/contributing/setup.md",
+      "source_location": "L167",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "contributing_setup",
+      "target": "contributing_knowledge_graphs"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/docs/contributing/knowledge-graphs.md",
+      "source_location": "L229",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "contributing_knowledge_graphs_knowledge_graphs",
+      "target": "contributing_knowledge_graphs_file_reference"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/docs/contributing/knowledge-graphs.md",
+      "source_location": "L88",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "contributing_knowledge_graphs_knowledge_graphs",
+      "target": "contributing_knowledge_graphs_how_graphs_are_kept_current"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/docs/contributing/knowledge-graphs.md",
+      "source_location": "L135",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "contributing_knowledge_graphs_knowledge_graphs",
+      "target": "contributing_knowledge_graphs_make_targets_reference"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/docs/contributing/knowledge-graphs.md",
+      "source_location": "L36",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "contributing_knowledge_graphs_knowledge_graphs",
+      "target": "contributing_knowledge_graphs_manual_setup_step_by_step"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/docs/contributing/knowledge-graphs.md",
+      "source_location": "L20",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "contributing_knowledge_graphs_knowledge_graphs",
+      "target": "contributing_knowledge_graphs_one_command_setup"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/docs/contributing/knowledge-graphs.md",
+      "source_location": "L9",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "contributing_knowledge_graphs_knowledge_graphs",
+      "target": "contributing_knowledge_graphs_overview"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/docs/contributing/knowledge-graphs.md",
+      "source_location": "L175",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "contributing_knowledge_graphs_knowledge_graphs",
+      "target": "contributing_knowledge_graphs_troubleshooting"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/docs/contributing/knowledge-graphs.md",
+      "source_location": "L146",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "contributing_knowledge_graphs_knowledge_graphs",
+      "target": "contributing_knowledge_graphs_using_the_graphs"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/docs/contributing/knowledge-graphs.md",
+      "source_location": "L69",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "contributing_knowledge_graphs_manual_setup_step_by_step",
+      "target": "contributing_knowledge_graphs_build_initial_graphs"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/docs/contributing/knowledge-graphs.md",
+      "source_location": "L38",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "contributing_knowledge_graphs_manual_setup_step_by_step",
+      "target": "contributing_knowledge_graphs_prerequisites"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/docs/contributing/knowledge-graphs.md",
+      "source_location": "L49",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "contributing_knowledge_graphs_manual_setup_step_by_step",
+      "target": "contributing_knowledge_graphs_register_mcp_servers"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/docs/contributing/knowledge-graphs.md",
+      "source_location": "L109",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "contributing_knowledge_graphs_how_graphs_are_kept_current",
+      "target": "contributing_knowledge_graphs_post_checkout_hook_graphify"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/docs/contributing/knowledge-graphs.md",
+      "source_location": "L117",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "contributing_knowledge_graphs_how_graphs_are_kept_current",
+      "target": "contributing_knowledge_graphs_posttooluse_hook_code_review_graph"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/docs/contributing/knowledge-graphs.md",
+      "source_location": "L90",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "contributing_knowledge_graphs_how_graphs_are_kept_current",
+      "target": "contributing_knowledge_graphs_pre_commit_hook_graphify"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/docs/contributing/knowledge-graphs.md",
+      "source_location": "L166",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "contributing_knowledge_graphs_using_the_graphs",
+      "target": "contributing_knowledge_graphs_code_review_graph_analysis"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/docs/contributing/knowledge-graphs.md",
+      "source_location": "L148",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "contributing_knowledge_graphs_using_the_graphs",
+      "target": "contributing_knowledge_graphs_graphify_queries"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/docs/contributing/knowledge-graphs.md",
+      "source_location": "L187",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "contributing_knowledge_graphs_troubleshooting",
+      "target": "contributing_knowledge_graphs_graphify_not_found"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/docs/contributing/knowledge-graphs.md",
+      "source_location": "L177",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "contributing_knowledge_graphs_troubleshooting",
+      "target": "contributing_knowledge_graphs_graphify_rebuild_fails"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/docs/contributing/knowledge-graphs.md",
+      "source_location": "L213",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "contributing_knowledge_graphs_troubleshooting",
+      "target": "contributing_knowledge_graphs_hook_slows_down_commits"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/docs/contributing/knowledge-graphs.md",
+      "source_location": "L200",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "contributing_knowledge_graphs_troubleshooting",
+      "target": "contributing_knowledge_graphs_mcp_server_not_connecting"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/docs/contributing/knowledge-graphs.md",
+      "source_location": "L225",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "contributing_knowledge_graphs_troubleshooting",
+      "target": "contributing_knowledge_graphs_windows_non_macos_setup"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/docs/contributing/setup.md",
+      "source_location": "L5",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "contributing_setup",
+      "target": "contributing_setup_development_setup"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/docs/contributing/setup.md",
+      "source_location": "L80",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "contributing_setup",
+      "target": "contributing_workflow"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/docs/contributing/setup.md",
+      "source_location": "L67",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "contributing_setup",
+      "target": "self_hosting_github_app_setup"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/docs/introduction.md",
+      "source_location": "L48",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_introduction",
+      "target": "contributing_setup"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/docs/quick-start.md",
+      "source_location": "L98",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_quick_start",
+      "target": "contributing_setup"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/docs/contributing/setup.md",
+      "source_location": "L71",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "contributing_setup_development_setup",
+      "target": "contributing_setup_development_workflow"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/docs/contributing/setup.md",
+      "source_location": "L146",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "contributing_setup_development_setup",
+      "target": "contributing_setup_make_targets_quick_reference"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/docs/contributing/setup.md",
+      "source_location": "L40",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "contributing_setup_development_setup",
+      "target": "contributing_setup_manual_setup_step_by_step"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/docs/contributing/setup.md",
+      "source_location": "L78",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "contributing_setup_development_setup",
+      "target": "contributing_setup_next_steps"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/docs/contributing/setup.md",
+      "source_location": "L18",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "contributing_setup_development_setup",
+      "target": "contributing_setup_one_command_setup_recommended"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/docs/contributing/setup.md",
+      "source_location": "L9",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "contributing_setup_development_setup",
+      "target": "contributing_setup_prerequisites"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/docs/contributing/setup.md",
+      "source_location": "L36",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "contributing_setup_development_setup",
+      "target": "contributing_setup_project_layout"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/docs/contributing/setup.md",
+      "source_location": "L58",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "contributing_setup_development_setup",
+      "target": "contributing_setup_running_locally"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/docs/contributing/setup.md",
+      "source_location": "L24",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "contributing_setup_development_setup",
+      "target": "contributing_setup_verify_setup"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/docs/contributing/setup.md",
+      "source_location": "L42",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "contributing_setup_manual_setup_step_by_step",
+      "target": "contributing_setup_1_install_pnpm"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/docs/contributing/setup.md",
+      "source_location": "L49",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "contributing_setup_manual_setup_step_by_step",
+      "target": "contributing_setup_2_clone_and_install_dependencies"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/docs/contributing/setup.md",
+      "source_location": "L59",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "contributing_setup_manual_setup_step_by_step",
+      "target": "contributing_setup_3_install_knowledge_graph_tools_optional"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/docs/contributing/setup.md",
+      "source_location": "L71",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "contributing_setup_manual_setup_step_by_step",
+      "target": "contributing_setup_4_register_mcp_servers_optional_claude_code_only"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
       "source_file": "docs/docs/contributing/testing.md",
       "source_location": "L1",
       "weight": 1.0,
@@ -22060,12 +21757,262 @@
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
+      "source_file": "docs/docs/contributing/workflow.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "contributing_workflow",
+      "target": "contributing_workflow_development_workflow"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/docs/contributing/workflow.md",
+      "source_location": "L65",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "contributing_workflow_development_workflow",
+      "target": "contributing_workflow_after_merge"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/docs/contributing/workflow.md",
+      "source_location": "L33",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "contributing_workflow_development_workflow",
+      "target": "contributing_workflow_before_committing"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/docs/contributing/workflow.md",
+      "source_location": "L5",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "contributing_workflow_development_workflow",
+      "target": "contributing_workflow_branching"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/docs/contributing/workflow.md",
+      "source_location": "L56",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "contributing_workflow_development_workflow",
+      "target": "contributing_workflow_code_review"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/docs/contributing/workflow.md",
+      "source_location": "L16",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "contributing_workflow_development_workflow",
+      "target": "contributing_workflow_commit_messages"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/docs/contributing/workflow.md",
+      "source_location": "L43",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "contributing_workflow_development_workflow",
+      "target": "contributing_workflow_pull_requests"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/docs/contributing/workflow.md",
+      "source_location": "L43",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "contributing_workflow_before_committing",
+      "target": "contributing_workflow_knowledge_graph_auto_rebuild"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/docs/installation.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_installation",
+      "target": "docs_installation_installation"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/docs/installation.md",
+      "source_location": "L44",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_installation",
+      "target": "self_hosting_deployment"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/docs/installation.md",
+      "source_location": "L45",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_installation",
+      "target": "self_hosting_environment_variables"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/docs/installation.md",
+      "source_location": "L43",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_installation",
+      "target": "self_hosting_github_app_setup"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/docs/installation.md",
+      "source_location": "L46",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_installation",
+      "target": "self_hosting_monitoring"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/docs/introduction.md",
+      "source_location": "L45",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_introduction",
+      "target": "docs_installation"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/docs/installation.md",
+      "source_location": "L28",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_installation_installation",
+      "target": "docs_installation_build_and_run"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/docs/installation.md",
+      "source_location": "L12",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_installation_installation",
+      "target": "docs_installation_clone_and_install"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/docs/installation.md",
+      "source_location": "L28",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_installation_installation",
+      "target": "docs_installation_manual_setup"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/docs/installation.md",
+      "source_location": "L41",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_installation_installation",
+      "target": "docs_installation_next_steps"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/docs/installation.md",
+      "source_location": "L12",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_installation_installation",
+      "target": "docs_installation_one_command_setup_recommended"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/docs/installation.md",
+      "source_location": "L5",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_installation_installation",
+      "target": "docs_installation_prerequisites"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/docs/installation.md",
+      "source_location": "L20",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_installation_installation",
+      "target": "docs_installation_verify_setup"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/docs/installation.md",
+      "source_location": "L46",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_installation_manual_setup",
+      "target": "docs_installation_build_and_run"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/docs/installation.md",
+      "source_location": "L30",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_installation_manual_setup",
+      "target": "docs_installation_clone_and_install"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/docs/installation.md",
+      "source_location": "L38",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_installation_manual_setup",
+      "target": "docs_installation_verify_setup"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
       "source_file": "docs/docs/introduction.md",
       "source_location": "L1",
       "weight": 1.0,
       "confidence_score": 1.0,
       "source": "docs_introduction",
       "target": "docs_introduction_introduction"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/docs/introduction.md",
+      "source_location": "L44",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_introduction",
+      "target": "docs_quick_start"
     },
     {
       "relation": "contains",
@@ -22116,6 +22063,86 @@
       "confidence_score": 1.0,
       "source": "docs_introduction_introduction",
       "target": "docs_introduction_what_gitbuddy_bot_does"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/docs/quick-start.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_quick_start",
+      "target": "docs_quick_start_quick_start"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/docs/quick-start.md",
+      "source_location": "L82",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_quick_start",
+      "target": "self_hosting_prerequisites"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/docs/quick-start.md",
+      "source_location": "L5",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_quick_start_quick_start",
+      "target": "docs_quick_start_1_install_the_github_app"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/docs/quick-start.md",
+      "source_location": "L12",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_quick_start_quick_start",
+      "target": "docs_quick_start_2_create_the_config_file"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/docs/quick-start.md",
+      "source_location": "L52",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_quick_start_quick_start",
+      "target": "docs_quick_start_3_verify_it_s_working"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/docs/quick-start.md",
+      "source_location": "L58",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_quick_start_quick_start",
+      "target": "docs_quick_start_4_set_up_stale_sweeps_optional"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/docs/quick-start.md",
+      "source_location": "L78",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_quick_start_quick_start",
+      "target": "docs_quick_start_5_development_setup_contributors"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/docs/quick-start.md",
+      "source_location": "L78",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_quick_start_quick_start",
+      "target": "docs_quick_start_next_steps"
     },
     {
       "relation": "contains",
@@ -23101,26 +23128,6 @@
       "relation": "conceptually_related_to",
       "confidence": "INFERRED",
       "confidence_score": 0.95,
-      "source_file": "docs/static/img/docusaurus.png",
-      "source_location": null,
-      "weight": 1.0,
-      "source": "img_docusaurus_logo_png",
-      "target": "img_logo_svg"
-    },
-    {
-      "relation": "conceptually_related_to",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "docs/static/img/logo.svg",
-      "source_location": null,
-      "weight": 1.0,
-      "source": "img_logo_svg",
-      "target": "docusaurus_docs_brand"
-    },
-    {
-      "relation": "conceptually_related_to",
-      "confidence": "INFERRED",
-      "confidence_score": 0.95,
       "source_file": "docs/static/img/undraw_docusaurus_mountain.svg",
       "source_location": null,
       "weight": 1.0,
@@ -23288,5 +23295,5 @@
       "source_file": "docs/docs/self-hosting/deployment.md"
     }
   ],
-  "built_at_commit": "083874cd8c55e1d01281bfbad6eb6ad943a69305"
+  "built_at_commit": "1ef6fe8c949aabde86ce57362a059af346ef06f6"
 }
