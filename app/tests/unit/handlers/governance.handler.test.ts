@@ -126,4 +126,134 @@ describe('GovernanceHandler', () => {
     expect(result.actionTaken).toBe(false);
     expect(context.octokit.updateBranchProtection).not.toHaveBeenCalled();
   });
+
+  it('skips bootstrapping when autoBootstrapPatterns is empty', async () => {
+    mocks.config.get.mockImplementation((_path: string, defaultValue: unknown) => defaultValue);
+
+    const context = createContext({
+      name: 'repository.created',
+      repo: { owner: 'test-org', repo: 'service-api' },
+    });
+
+    const result = await handler.handle(context);
+    expect(result.actionTaken).toBe(false);
+    expect(context.octokit.updateBranchProtection).not.toHaveBeenCalled();
+  });
+
+  it('throws ValidationError when payload is null', async () => {
+    const context = createContext({ name: 'repository.created', payload: null as unknown as Record<string, unknown> });
+    await expect(handler.handle(context)).rejects.toThrow('Governance event missing payload');
+  });
+
+  it('throws ValidationError when payload is undefined', async () => {
+    const context = createContext({ name: 'repository.created', payload: undefined });
+    await expect(handler.handle(context)).rejects.toThrow('Governance event missing payload');
+  });
+
+  describe('branch_protection_rule.created', () => {
+    it('creates branch protection when none exists', async () => {
+      mocks.config.get.mockImplementation((path: string, defaultValue: unknown) => {
+        if (path === 'governance.requiredStatusChecks') return ['ci/build'];
+        if (path === 'governance.requiredReviewCount') return 2;
+        return defaultValue;
+      });
+
+      const octokit = createMockOctokit();
+      octokit.getBranchProtection.mockResolvedValue(null);
+
+      const context = createContext({
+        name: 'branch_protection_rule.created',
+        repo: { owner: 'test-org', repo: 'test-repo' },
+        octokit,
+      });
+
+      const result = await handler.handle(context);
+      expect(result.actionTaken).toBe(true);
+      expect(result.summary).toContain('Enforced branch protection');
+      expect(octokit.updateBranchProtection).toHaveBeenCalledWith(
+        'test-org', 'test-repo', 'main',
+        expect.objectContaining({ requiredReviews: 2, requiredStatusChecks: ['ci/build'], enforceAdmins: true }),
+      );
+    });
+  });
+
+  describe('branch_protection_rule.edited', () => {
+    it('corrects missing status checks', async () => {
+      mocks.config.get.mockImplementation((path: string, defaultValue: unknown) => {
+        if (path === 'governance.requiredStatusChecks') return ['ci/build', 'lint'];
+        if (path === 'governance.requiredReviewCount') return 1;
+        return defaultValue;
+      });
+
+      const octokit = createMockOctokit();
+      octokit.getBranchProtection.mockResolvedValue({
+        branch: 'main',
+        requiredReviews: 1,
+        requiredStatusChecks: ['ci/build'],
+        enforceAdmins: true,
+      });
+
+      const context = createContext({
+        name: 'branch_protection_rule.edited',
+        repo: { owner: 'test-org', repo: 'test-repo' },
+        octokit,
+      });
+
+      const result = await handler.handle(context);
+      expect(result.actionTaken).toBe(true);
+      expect(result.summary).toContain('Corrected branch protection gaps');
+      expect(result.metadata).toMatchObject({ missingChecks: ['lint'], requiredReviews: 1 });
+    });
+
+    it('corrects when review count is below requirement', async () => {
+      mocks.config.get.mockImplementation((path: string, defaultValue: unknown) => {
+        if (path === 'governance.requiredStatusChecks') return ['ci/build'];
+        if (path === 'governance.requiredReviewCount') return 2;
+        return defaultValue;
+      });
+
+      const octokit = createMockOctokit();
+      octokit.getBranchProtection.mockResolvedValue({
+        branch: 'main',
+        requiredReviews: 1,
+        requiredStatusChecks: ['ci/build'],
+        enforceAdmins: true,
+      });
+
+      const context = createContext({
+        name: 'branch_protection_rule.edited',
+        repo: { owner: 'test-org', repo: 'test-repo' },
+        octokit,
+      });
+
+      const result = await handler.handle(context);
+      expect(result.actionTaken).toBe(true);
+      expect(result.summary).toContain('Corrected branch protection gaps');
+    });
+
+    it('returns NO_ACTION when protection already meets policy', async () => {
+      mocks.config.get.mockImplementation((path: string, defaultValue: unknown) => {
+        if (path === 'governance.requiredStatusChecks') return ['ci/build'];
+        if (path === 'governance.requiredReviewCount') return 1;
+        return defaultValue;
+      });
+
+      const octokit = createMockOctokit();
+      octokit.getBranchProtection.mockResolvedValue({
+        branch: 'main',
+        requiredReviews: 1,
+        requiredStatusChecks: ['ci/build'],
+        enforceAdmins: true,
+      });
+
+      const context = createContext({
+        name: 'branch_protection_rule.edited',
+        repo: { owner: 'test-org', repo: 'test-repo' },
+        octokit,
+      });
+
+      const result = await handler.handle(context);
+      expect(result.actionTaken).toBe(false);
+    });
+  });
 });

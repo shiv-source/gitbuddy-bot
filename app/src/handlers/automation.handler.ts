@@ -8,6 +8,7 @@
  */
 
 import { BaseHandler } from './base-handler.js';
+import { injectable } from 'inversify';
 import type { EventContext, HandlerResult } from '../core/types.js';
 import { NO_ACTION } from '../core/types.js';
 import type { LabelRule } from '../core/types.js';
@@ -29,6 +30,7 @@ interface IssuePayload {
   };
 }
 
+@injectable()
 export class AutomationHandler extends BaseHandler {
   readonly name = 'automation';
   readonly events = [

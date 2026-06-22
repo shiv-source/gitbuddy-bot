@@ -27,8 +27,11 @@
     "node": ">=24"
   },
   "dependencies": {
-    "probot": "^14.3.2",
+    "inversify": "^8.1.1",
     "octokit": "^5.0.5",
+    "probot": "^14.3.2",
+    "reflect-metadata": "^0.2.2",
+    "winston": "^3.19.0",
     "yaml": "^2.9.0"
   },
   "devDependencies": {

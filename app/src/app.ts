@@ -4,32 +4,37 @@
  * Owns handler registration, middleware setup, and lifecycle.
  * The single place where all event → handler wiring happens.
  *
- * Creates an OctokitClient per-event from Probot's installation-scoped
- * context.octokit — each webhook delivery gets its own authenticated client.
- *
  * S in SOLID: this class has ONE responsibility — wiring.
+ *
+ * Dependencies are injected via InversifyJS:
+ *   - Probot: bound as constant in index.ts (runtime value)
+ *   - Handlers: @multiInject — all 7 discovered automatically
+ *   - Middleware: @multiInject — all 3 discovered, sorted by priority
+ *   - OctokitClientFactory: creates per-event IGitHubClient wrappers
  */
 
+import { injectable, inject, multiInject } from 'inversify';
+import { TYPES } from './di/types.js';
 import type { Probot } from 'probot';
-import type { IEventHandler, ILogger } from './core/interfaces.js';
-import { OctokitClient } from './infrastructure/github/octokit-client.js';
+import type { IEventHandler, ILogger, IOctokitClientFactory, IMiddleware } from './core/interfaces.js';
 import { ContextEnricher } from './middleware/context-enricher.js';
 import { RateLimiter } from './middleware/rate-limiter.js';
 import { ErrorHandler } from './middleware/error-handler.js';
 
+@injectable()
 export class GitBuddyBotApp {
-  private enricher: ContextEnricher;
-  private rateLimiter: RateLimiter;
-  private errorHandler: ErrorHandler;
-
   constructor(
-    private readonly probot: Probot,
-    private readonly handlers: IEventHandler[],
-    logger: ILogger,
+    @inject(TYPES.Probot) private readonly probot: Probot,
+    @multiInject(TYPES.Handler) private readonly handlers: IEventHandler[],
+    @inject(TYPES.Logger) private readonly logger: ILogger,
+    @multiInject(TYPES.Middleware) private readonly middleware: IMiddleware[],
+    @inject(TYPES.OctokitClientFactory) private readonly octokitFactory: IOctokitClientFactory,
+    @inject(TYPES.ContextEnricher) private readonly enricher: ContextEnricher,
+    @inject(TYPES.RateLimiter) private readonly rateLimiter: RateLimiter,
+    @inject(TYPES.ErrorHandler) private readonly errorHandler: ErrorHandler,
   ) {
-    this.enricher = new ContextEnricher(logger);
-    this.rateLimiter = new RateLimiter(logger);
-    this.errorHandler = new ErrorHandler(logger, { reportToIssue: true });
+    // Sort middleware by priority once (lowest runs first)
+    this.middleware.sort((a, b) => a.priority - b.priority);
   }
 
   /** Wire all handlers to their events. Call once during bootstrap. */
@@ -38,8 +43,8 @@ export class GitBuddyBotApp {
       for (const event of handler.events) {
         // eslint-disable-next-line @typescript-eslint/no-explicit-any
         this.probot.on(event as any, async (ctx: { octokit: unknown; name: string; id: string; payload: unknown }) => {
-          // 1. Create per-event authenticated GitHub client
-          const octokit = new OctokitClient(ctx.octokit);
+          // 1. Create per-event authenticated GitHub client via factory
+          const octokit = this.octokitFactory.create(ctx.octokit);
 
           // 2. Enrich: normalize context + inject the client
           const context = { ...this.enricher.enrich(ctx), octokit };
@@ -55,12 +60,15 @@ export class GitBuddyBotApp {
 
     const registeredEvents = this.handlers.flatMap((h) => h.events);
     const uniqueEvents = [...new Set(registeredEvents)];
-    console.log(`🤖 GitBuddy Bot registered ${this.handlers.length} handlers for ${uniqueEvents.length} events`);
+    this.logger.info('GitBuddy Bot registered handlers', {
+      handlerCount: this.handlers.length,
+      eventCount: uniqueEvents.length,
+    });
   }
 
   /** Start the app: register handlers and begin processing webhooks. */
   async start(): Promise<void> {
     this.registerAll();
-    console.log('🤖 GitBuddy Bot started');
+    this.logger.info('GitBuddy Bot started');
   }
 }

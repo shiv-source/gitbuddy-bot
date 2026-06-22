@@ -45,6 +45,7 @@ gitbuddy-bot/
 ├── app/
 │   ├── src/
 │   │   ├── core/                 # Interfaces, types, error hierarchy (zero framework deps)
+│   │   ├── di/                   # InversifyJS container + Symbol tokens
 │   │   ├── handlers/             # 7 domain handlers extending BaseHandler
 │   │   ├── commands/             # Slash commands + CommandRouter
 │   │   ├── services/             # Pure business logic (stateless, no framework deps)
@@ -77,11 +78,22 @@ gitbuddy-bot/
 └── package.json                  # Root workspace scripts + engines
 ```
 
-### Dependency Inversion (the backbone)
+### Dependency Injection (InversifyJS)
 
 Every domain concept depends on **interfaces** (`app/src/core/interfaces.ts`), never concrete implementations. The interfaces and types in `app/src/core/` have **zero framework imports** — no Probot, no Octokit. This is the D in SOLID.
 
-The **composition root** (`app/src/index.ts`) is the single file that picks concrete implementations and wires them together. If you need to swap a logger, cache backend, or config source, `index.ts` is the only file that changes.
+The project uses **InversifyJS** as its IoC container (`app/src/di/container.ts`). All bindings are declared there using `@injectable()` / `@inject()` decorators and Symbol tokens (`app/src/di/types.ts`).
+
+The **composition root** (`app/src/index.ts`) is now ~12 lines: it binds the two runtime-provided values (`Probot`, `ProbotLog`) that aren't known at import time, then calls `container.get(GitBuddyBotApp)` to resolve the full dependency graph. To swap a logger, cache backend, or config source, change the binding in `container.ts` — `index.ts` never changes.
+
+### DI Conventions
+
+- **Symbol tokens**: all in `src/di/types.ts` using `Symbol.for(...)`. Group tokens (`Middleware`, `Handler`, `Command`) are used with `@multiInject` for auto-discovery.
+- **Container bindings**: all in `src/di/container.ts`. Adding a new handler or command = one new class with `@injectable()` + one `container.bind(...)` line. `@multiInject` picks it up automatically.
+- **Runtime values**: only `Probot` and `ProbotLog` are bound in `index.ts` as constants. Everything else is bound in `container.ts`.
+- **Optional dependencies**: use `@optional() @inject(...)` for deps that should degrade gracefully (e.g., `ICache` in `RateLimiter`).
+- **Per-event Octokit**: `OctokitClientFactory` (bound in container, injected into `GitBuddyBotApp`) creates `IGitHubClient` per webhook delivery. `new OctokitClient()` is only called inside the factory.
+- **No `new` for injectable classes**: outside of `container.ts` and `OctokitClientFactory`, injectable classes are never constructed with `new`.
 
 ### Request lifecycle (middleware chain)
 
@@ -122,13 +134,14 @@ Services live in `app/src/services/` and depend only on core interfaces (`IGitHu
 All in `app/src/infrastructure/`, each implementing a core interface via the Adapter pattern:
 
 - `OctokitClient` — wraps Probot's Octokit, implements `IGitHubClient`, handles retry with exponential backoff and rate-limit detection
+- `OctokitClientFactory` — per-event factory for `IGitHubClient`. The ONLY place (besides container bindings) where `new OctokitClient()` is called. Created once as a singleton, injected into `GitBuddyBotApp`.
 - `YamlConfigProvider` — reads `.github/gitbuddy.yml` (with `.yaml` and `gitbuddy.yml` fallbacks), implements `IConfigProvider`
-- `MemoryCache` — in-memory TTL cache, implements `ICache`
+- `MemoryCache` — in-memory TTL cache, implements `ICache`. Now actually injected into `RateLimiter` via `@optional()`.
 - `ProbotLogger` — adapts Probot's pino logger to `ILogger`
 
 ### Slash commands (Command pattern)
 
-Commands in `app/src/commands/` implement `ICommand` and are registered into `CommandRouter` in `index.ts`. Each command receives a `CommandContext` with the per-event `IGitHubClient`. Adding a command means: one new file + one `commandRouter.register(...)` line.
+Commands in `app/src/commands/` implement `ICommand` with `@injectable()`. They are auto-registered into `CommandRouter` via `@multiInject(TYPES.Command)` — no manual `register()` calls needed. Each command receives a `CommandContext` with the per-event `IGitHubClient`. Adding a command means: one new file with `@injectable()` + one `container.bind(ICommand).to(...)` line in `container.ts`.
 
 ### Error hierarchy
 

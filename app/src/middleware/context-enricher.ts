@@ -6,14 +6,20 @@
  * handler receives a consistent EventContext regardless of event type.
  */
 
+import { injectable, inject } from 'inversify';
+import { TYPES } from '../di/types.js';
 import type { EventContext, RepoRef } from '../core/types.js';
-import type { ILogger } from '../core/interfaces.js';
+import type { ILogger, IMiddleware } from '../core/interfaces.js';
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 type ProbotContext = any;
 
-export class ContextEnricher {
-  constructor(private readonly logger: ILogger) {}
+@injectable()
+export class ContextEnricher implements IMiddleware {
+  readonly name = 'context-enricher';
+  readonly priority = 100;
+
+  constructor(@inject(TYPES.Logger) private readonly logger: ILogger) {}
 
   /** Returns context WITHOUT octokit — app.ts adds the per-event client. */
   enrich(ctx: ProbotContext): Omit<EventContext, 'octokit'> {

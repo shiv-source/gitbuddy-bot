@@ -6,8 +6,10 @@
  *   /label -bug                    (removes "bug" label)
  */
 
+import { injectable } from 'inversify';
 import type { ICommand, CommandContext, CommandResult } from '../core/interfaces.js';
 
+@injectable()
 export class LabelCommand implements ICommand {
   readonly name = 'label';
   readonly description = 'Add or remove labels. `/label bug` or `/label -bug`';

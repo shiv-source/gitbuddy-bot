@@ -7,6 +7,7 @@
  */
 
 import { BaseHandler } from './base-handler.js';
+import { injectable } from 'inversify';
 import type { EventContext, HandlerResult } from '../core/types.js';
 import { NO_ACTION } from '../core/types.js';
 import type { IntegrationConfig } from '../core/types.js';
@@ -25,6 +26,7 @@ interface DeploymentStatusPayload {
   deployment_status?: { state: string };
 }
 
+@injectable()
 export class SyncHandler extends BaseHandler {
   readonly name = 'sync';
   readonly events = [

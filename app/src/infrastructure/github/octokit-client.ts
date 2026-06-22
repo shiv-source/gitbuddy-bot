@@ -10,6 +10,7 @@
  * Handles retry with exponential backoff and rate-limit detection.
  */
 
+import { injectable } from 'inversify';
 import type {
   IGitHubClient,
   RepoInfo,
@@ -28,6 +29,7 @@ type ProbotOctokit = any;
 const MAX_RETRIES = 3;
 const BASE_DELAY_MS = 1000;
 
+@injectable()
 export class OctokitClient implements IGitHubClient {
   constructor(private readonly octokit: ProbotOctokit) {}
 
@@ -143,7 +145,12 @@ export class OctokitClient implements IGitHubClient {
         enforceAdmins: data.enforce_admins?.enabled ?? false,
       };
     } catch (error: unknown) {
-      if ((error as { status?: number })?.status === 404) return null;
+      if (
+        (error as { status?: number })?.status === 404 ||
+        error instanceof NotFoundError
+      ) {
+        return null;
+      }
       throw error;
     }
   }
@@ -303,7 +310,7 @@ export class OctokitClient implements IGitHubClient {
       }
     }
 
-    throw new GitHubApiError('Max retries exceeded');
+    /* istanbul ignore next */ throw new GitHubApiError('Max retries exceeded');
   }
 
   private wrapError(error: unknown): Error {

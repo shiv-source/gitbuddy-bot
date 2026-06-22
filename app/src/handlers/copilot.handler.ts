@@ -9,6 +9,7 @@
  */
 
 import { BaseHandler } from './base-handler.js';
+import { injectable } from 'inversify';
 import type { EventContext, HandlerResult } from '../core/types.js';
 import { NO_ACTION } from '../core/types.js';
 
@@ -28,6 +29,7 @@ interface PullRequestPayload {
   };
 }
 
+@injectable()
 export class CopilotHandler extends BaseHandler {
   readonly name = 'copilot';
   readonly events = [

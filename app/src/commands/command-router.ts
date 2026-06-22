@@ -7,14 +7,24 @@
  * Zero changes to existing commands or handlers.
  */
 
-import type { ICommand, ILogger, IGitHubClient, CommandContext } from '../core/interfaces.js';
+import { injectable, inject, multiInject } from 'inversify';
+import { TYPES } from '../di/types.js';
+import type { ICommand, ILogger, IGitHubClient, CommandContext, ICommandRouter } from '../core/interfaces.js';
 
 const COMMAND_PREFIX = '/';
 
-export class CommandRouter {
+@injectable()
+export class CommandRouter implements ICommandRouter {
   private commands = new Map<string, ICommand>();
 
-  constructor(private readonly logger: ILogger) {}
+  constructor(
+    @inject(TYPES.Logger) private readonly logger: ILogger,
+    @multiInject(TYPES.Command) commands: ICommand[],
+  ) {
+    for (const cmd of commands) {
+      this.register(cmd);
+    }
+  }
 
   /** Register a command. Call during app bootstrap. */
   register(command: ICommand): void {

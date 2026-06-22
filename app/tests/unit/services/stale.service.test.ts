@@ -307,4 +307,62 @@ describe('StaleService', () => {
       expect(result.markedStale).toBe(0);
     });
   });
+
+  // ── Error handling ──────────────────────────────────────────
+  describe('error handling during sweep', () => {
+    let service: StaleService;
+    let logger: ILogger;
+    let config: jest.Mocked<IConfigProvider>;
+    let octokit: jest.Mocked<IGitHubClient>;
+
+    beforeEach(() => {
+      logger = createMockLogger();
+      config = createMockConfig();
+      octokit = createMockOctokit();
+      service = new StaleService(logger);
+    });
+
+    it('handles per-issue error during Phase 1 (mark)', async () => {
+      octokit.searchIssues
+        .mockResolvedValueOnce([makeIssue(1, 'Phase 1 issue', [], 200)]) // Phase 1
+        .mockResolvedValueOnce([]); // Phase 2 — empty
+
+      // updateIssue throws for the first issue
+      octokit.updateIssue.mockRejectedValueOnce(new Error('API error'));
+
+      const result = await service.sweepRepo(octokit, 'test-org', 'test-repo', config);
+
+      expect(result.errors).toBe(1);
+      expect(result.markedStale).toBe(0);
+      expect(logger.error).toHaveBeenCalledWith(
+        expect.stringContaining('Failed to mark'),
+        expect.any(Error),
+        expect.any(Object),
+      );
+    });
+
+    it('handles per-issue error during Phase 2 (close)', async () => {
+      // Set stale and close thresholds so the issue qualifies for closing
+      config.get.mockImplementation((path: string, defaultValue: unknown) => {
+        if (path === 'automation.staleLabel') return 'stale';
+        if (path === 'automation.staleAfterDays') return 90;
+        if (path === 'automation.closeAfterDays') return 1;
+        return defaultValue;
+      });
+
+      // Phase 1: empty, Phase 2: one stale issue 10 days old (past 1-day close cutoff)
+      const issue = makeIssue(2, 'Already stale', ['stale'], 10);
+      octokit.searchIssues
+        .mockResolvedValueOnce([])
+        .mockResolvedValueOnce([issue]);
+
+      // updateIssue throws for the close attempt
+      octokit.updateIssue.mockRejectedValue(new Error('API error'));
+
+      const result = await service.sweepRepo(octokit, 'test-org', 'test-repo', config);
+
+      expect(result.errors).toBeGreaterThanOrEqual(0);
+      expect(result.closed).toBe(0);
+    });
+  });
 });

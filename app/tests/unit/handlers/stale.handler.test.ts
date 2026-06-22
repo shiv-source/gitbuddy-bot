@@ -7,7 +7,7 @@
 
 import { jest, describe, it, beforeEach, expect } from '@jest/globals';
 import { StaleHandler } from '../../../src/handlers/stale.handler.js';
-import type { ILogger, IGitHubClient, IConfigProvider } from '../../../src/core/interfaces.js';
+import type { ILogger, IGitHubClient, IConfigProvider, IStaleService, StaleSweepResult } from '../../../src/core/interfaces.js';
 import type { EventContext } from '../../../src/core/types.js';
 
 function createMockOctokit(): jest.Mocked<IGitHubClient> {
@@ -47,6 +47,23 @@ function createMockConfig(): jest.Mocked<IConfigProvider> {
   } as unknown as jest.Mocked<IConfigProvider>;
 }
 
+function createMockStaleService(): jest.Mocked<IStaleService> {
+  return {
+    sweepRepo: jest.fn<(...args: unknown[]) => Promise<StaleSweepResult>>().mockResolvedValue({
+      markedStale: 0,
+      closed: 0,
+      reposSwept: 0,
+      errors: 0,
+    }),
+    sweepOrg: jest.fn<(...args: unknown[]) => Promise<StaleSweepResult>>().mockResolvedValue({
+      markedStale: 0,
+      closed: 0,
+      reposSwept: 0,
+      errors: 0,
+    }),
+  };
+}
+
 function createContext(overrides: Partial<EventContext> = {}): EventContext {
   return {
     name: 'workflow_run.completed',
@@ -70,10 +87,12 @@ function createContext(overrides: Partial<EventContext> = {}): EventContext {
 describe('StaleHandler', () => {
   let handler: StaleHandler;
   let logger: ILogger;
+  let staleService: jest.Mocked<IStaleService>;
 
   beforeEach(() => {
     logger = createMockLogger();
-    handler = new StaleHandler(logger, createMockConfig());
+    staleService = createMockStaleService();
+    handler = new StaleHandler(logger, createMockConfig(), staleService);
   });
 
   it('has the correct handler metadata', () => {
@@ -89,8 +108,6 @@ describe('StaleHandler', () => {
 
   it('triggers on workflow_run.completed with matching name "stale-sweep"', async () => {
     const octokit = createMockOctokit();
-    // StaleHandler calls sweepOrg when triggered from .github repo
-    octokit.searchRepos.mockResolvedValue([]);
 
     const context = createContext({
       name: 'workflow_run.completed',
@@ -105,16 +122,18 @@ describe('StaleHandler', () => {
       octokit,
     });
 
-    // Mock searchIssues: 2 calls from sweepOrg → sweepRepo (but no repos to sweep)
-    // searchRepos returns empty, so no sweepRepo calls
-
     const result = await handler.handle(context);
-    expect(result.actionTaken).toBe(false); // no repos to sweep
+    // Handler delegates to staleService.sweepOrg when triggered from .github repo
+    expect(staleService.sweepOrg).toHaveBeenCalledWith(
+      context.octokit,
+      'test-org',
+      expect.anything(),
+    );
+    expect(result.actionTaken).toBe(false); // mock returns empty results
   });
 
   it('triggers on workflow named "Mark Stale" (case-insensitive match)', async () => {
     const octokit = createMockOctokit();
-    octokit.searchRepos.mockResolvedValue([]);
 
     const context = createContext({
       payload: {
@@ -129,9 +148,13 @@ describe('StaleHandler', () => {
     });
 
     const result = await handler.handle(context);
-    // searchRepos should have been called (sweepOrg was triggered)
-    expect(octokit.searchRepos).toHaveBeenCalled();
-    // Even with 0 repos, no action was taken
+    // sweepOrg should have been called (triggered from .github repo)
+    expect(staleService.sweepOrg).toHaveBeenCalledWith(
+      context.octokit,
+      'test-org',
+      expect.anything(),
+    );
+    // Even with 0 repos in mock result, no action was taken
     expect(result.actionTaken).toBe(false);
   });
 
@@ -178,11 +201,6 @@ describe('StaleHandler', () => {
   it('sweeps only the specific repo when triggered from a non-.github repo', async () => {
     const octokit = createMockOctokit();
 
-    // Non-.github repo: handler calls sweepRepo (not sweepOrg)
-    // sweepRepo makes 2 searchIssues calls, return empty
-    octokit.searchIssues.mockResolvedValueOnce([]); // Phase 1
-    octokit.searchIssues.mockResolvedValueOnce([]); // Phase 2
-
     const context = createContext({
       repo: { owner: 'test-org', repo: 'service-api' },
       payload: {
@@ -197,9 +215,70 @@ describe('StaleHandler', () => {
     });
 
     const result = await handler.handle(context);
-    // Should have called sweepRepo, not sweepOrg → no searchRepos call
-    expect(octokit.searchRepos).not.toHaveBeenCalled();
-    // Should have made the two phase queries for the repo
-    expect(octokit.searchIssues).toHaveBeenCalledTimes(2);
+    // Should have called sweepRepo (not sweepOrg) for non-.github repo
+    expect(staleService.sweepOrg).not.toHaveBeenCalled();
+    expect(staleService.sweepRepo).toHaveBeenCalledWith(
+      context.octokit,
+      'test-org',
+      'service-api',
+      expect.anything(),
+    );
+  });
+
+  it('reports actions taken when stale service marks issues', async () => {
+    staleService.sweepOrg.mockResolvedValue({
+      markedStale: 3, closed: 2, reposSwept: 5, errors: 1,
+    });
+
+    const context = createContext({
+      repo: { owner: 'test-org', repo: '.github' },
+      payload: {
+        workflow_run: { id: 333, name: 'stale-sweep', conclusion: 'success', head_branch: 'main' },
+      },
+      octokit: createMockOctokit(),
+    });
+
+    const result = await handler.handle(context);
+    expect(result.actionTaken).toBe(true);
+    expect(result.summary).toContain('3 marked stale');
+    expect(result.summary).toContain('2 closed');
+    expect(result.summary).toContain('1 errors');
+  });
+
+  it('reports no actions needed when sweep returns zero results', async () => {
+    staleService.sweepRepo.mockResolvedValue({
+      markedStale: 0, closed: 0, reposSwept: 1, errors: 0,
+    });
+
+    const context = createContext({
+      repo: { owner: 'test-org', repo: 'service-api' },
+      payload: {
+        workflow_run: { id: 444, name: 'stale-sweep', conclusion: 'success', head_branch: 'main' },
+      },
+      octokit: createMockOctokit(),
+    });
+
+    const result = await handler.handle(context);
+    expect(result.summary).toContain('no actions needed');
+  });
+
+  it('falls back to owner when context.org is undefined', async () => {
+    staleService.sweepRepo.mockResolvedValue({
+      markedStale: 0, closed: 0, reposSwept: 1, errors: 0,
+    });
+
+    const context = createContext({
+      repo: { owner: 'test-org', repo: 'service-api' },
+      org: undefined,
+      payload: {
+        workflow_run: { id: 555, name: 'stale-sweep', conclusion: 'success', head_branch: 'main' },
+      },
+      octokit: createMockOctokit(),
+    });
+
+    const result = await handler.handle(context);
+    expect(staleService.sweepRepo).toHaveBeenCalledWith(
+      context.octokit, 'test-org', 'service-api', expect.anything(),
+    );
   });
 });

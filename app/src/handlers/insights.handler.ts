@@ -7,6 +7,7 @@
  */
 
 import { BaseHandler } from './base-handler.js';
+import { injectable } from 'inversify';
 import type { EventContext, HandlerResult } from '../core/types.js';
 import { NO_ACTION } from '../core/types.js';
 
@@ -28,6 +29,7 @@ interface PullRequestClosedPayload {
   };
 }
 
+@injectable()
 export class InsightsHandler extends BaseHandler {
   readonly name = 'insights';
   readonly events = [
