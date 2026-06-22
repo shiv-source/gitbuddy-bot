@@ -21,21 +21,13 @@
  * Users must manually remove the stale label to fully un-stale an issue.
  */
 
-import type { IGitHubClient, IConfigProvider, ILogger } from '../core/interfaces.js';
+import { injectable, inject } from 'inversify';
+import { TYPES } from '../di/types.js';
+import type { IGitHubClient, IConfigProvider, ILogger, IStaleService, StaleSweepResult } from '../core/interfaces.js';
 
-export interface StaleSweepResult {
-  /** Issues marked stale during this sweep */
-  markedStale: number;
-  /** Issues closed during this sweep */
-  closed: number;
-  /** Repos that were swept */
-  reposSwept: number;
-  /** Issues that failed processing */
-  errors: number;
-}
-
-export class StaleService {
-  constructor(private readonly logger: ILogger) {}
+@injectable()
+export class StaleService implements IStaleService {
+  constructor(@inject(TYPES.Logger) private readonly logger: ILogger) {}
 
   /**
    * Sweep a single repo for stale issues.

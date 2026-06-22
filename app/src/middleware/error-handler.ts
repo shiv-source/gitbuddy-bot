@@ -7,7 +7,9 @@
  * or silently log. Unknown errors are always logged at ERROR level.
  */
 
-import type { ILogger } from '../core/interfaces.js';
+import { injectable, inject } from 'inversify';
+import { TYPES } from '../di/types.js';
+import type { ILogger, IMiddleware } from '../core/interfaces.js';
 import type { EventContext } from '../core/types.js';
 import { AppError } from '../core/errors.js';
 
@@ -16,9 +18,13 @@ export interface ErrorHandlerOptions {
   reportToIssue: boolean;
 }
 
-export class ErrorHandler {
+@injectable()
+export class ErrorHandler implements IMiddleware {
+  readonly name = 'error-handler';
+  readonly priority = 300;
+
   constructor(
-    private readonly logger: ILogger,
+    @inject(TYPES.Logger) private readonly logger: ILogger,
     private readonly options: ErrorHandlerOptions = { reportToIssue: false },
   ) {}
 

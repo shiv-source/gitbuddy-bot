@@ -377,4 +377,141 @@ describe('AutomationHandler', () => {
     const result = await handler.handle(context);
     expect(result.actionTaken).toBe(false);
   });
+
+  it('returns NO_ACTION when issue has no number', async () => {
+    const context = createIssueContext({
+      payload: { action: 'opened', issue: { title: 'no number', body: '', user: { login: 'a' } } },
+    });
+    const result = await handler.handle(context);
+    expect(result.actionTaken).toBe(false);
+  });
+
+  it('handles PR with all team members being the author', async () => {
+    const config = createMockConfig({
+      'automation.defaultIssueLabels': ['needs-review'],
+      'automation.reviewerTeam': 'platform-team',
+    });
+    handler = new AutomationHandler(logger, config);
+
+    const octokit = createMockOctokit();
+    octokit.getTeamMembers.mockResolvedValue([{ login: 'dev-user' }]);
+
+    const context = createPRContext({
+      octokit,
+      payload: {
+        action: 'opened',
+        pull_request: { number: 99, title: 'feat: x', body: '', user: { login: 'dev-user' } },
+      },
+    });
+
+    const result = await handler.handle(context);
+    // Labels applied but no reviewers (all team members are the author)
+    expect(octokit.addLabels).toHaveBeenCalled();
+    expect(octokit.requestReviewers).not.toHaveBeenCalled();
+    expect(result.actionTaken).toBe(true);
+  });
+
+  it('handles PR with empty team members list', async () => {
+    const config = createMockConfig({
+      'automation.defaultIssueLabels': ['needs-review'],
+      'automation.reviewerTeam': 'empty-team',
+    });
+    handler = new AutomationHandler(logger, config);
+
+    const octokit = createMockOctokit();
+    octokit.getTeamMembers.mockResolvedValue([]);
+
+    const context = createPRContext({ octokit });
+
+    const result = await handler.handle(context);
+    expect(octokit.addLabels).toHaveBeenCalled();
+    expect(result.actionTaken).toBe(true);
+  });
+
+  it('returns NO_ACTION when PR has no number', async () => {
+    const context = createPRContext({
+      payload: { action: 'opened', pull_request: { title: 'no number', body: '', user: { login: 'a' } } },
+    });
+    const result = await handler.handle(context);
+    expect(result.actionTaken).toBe(false);
+  });
+
+  it('skips reviewer assignment when org is undefined (no org in context)', async () => {
+    const config = createMockConfig({
+      'automation.defaultIssueLabels': ['needs-review'],
+      'automation.reviewerTeam': 'platform-team',
+    });
+    handler = new AutomationHandler(logger, config);
+
+    const octokit = createMockOctokit();
+    const context = createPRContext({ octokit, org: undefined });
+
+    const result = await handler.handle(context);
+    expect(octokit.addLabels).toHaveBeenCalled();
+    expect(octokit.requestReviewers).not.toHaveBeenCalled();
+    expect(result.actionTaken).toBe(true);
+  });
+
+  it('handles issue with missing title (?? fallback)', async () => {
+    const config = createMockConfig({ 'automation.defaultIssueLabels': ['triage'] });
+    handler = new AutomationHandler(logger, config);
+    const octokit = createMockOctokit();
+    const context = createIssueContext({
+      octokit,
+      payload: { action: 'opened', issue: { number: 99 } },
+    });
+    const result = await handler.handle(context);
+    expect(result.actionTaken).toBe(true);
+  });
+
+  it('handles PR where issue fields are the fallback for pull_request fields', async () => {
+    const config = createMockConfig({
+      'automation.defaultIssueLabels': ['triage'],
+      'automation.reviewerTeam': 'team',
+    });
+    handler = new AutomationHandler(logger, config);
+    const octokit = createMockOctokit();
+    octokit.getTeamMembers.mockResolvedValue([{ login: 'reviewer' }]);
+    const context = createPRContext({
+      octokit,
+      payload: {
+        action: 'opened',
+        pull_request: { number: 99 },
+        issue: { number: 99, title: 'Issue title', body: 'Issue body', user: { login: 'alt-author' } },
+      },
+    });
+    const result = await handler.handle(context);
+    expect(result.actionTaken).toBe(true);
+  });
+
+  it('returns NO_ACTION on PR with no labels and no reviewer team', async () => {
+    const config = createMockConfig({
+      'automation.defaultIssueLabels': [],
+      'automation.labelRules': [],
+      'automation.reviewerTeam': '',
+    });
+    handler = new AutomationHandler(logger, config);
+    const octokit = createMockOctokit();
+    const context = createPRContext({ octokit });
+    const result = await handler.handle(context);
+    expect(result.actionTaken).toBe(false);
+  });
+
+  it('handles PR with no title or body (?? fallbacks)', async () => {
+    const config = createMockConfig({
+      'automation.defaultIssueLabels': ['triage'],
+    });
+    handler = new AutomationHandler(logger, config);
+    const octokit = createMockOctokit();
+    const context = createPRContext({
+      octokit,
+      payload: {
+        action: 'opened',
+        pull_request: { number: 99 },
+      },
+    });
+    const result = await handler.handle(context);
+    expect(result.actionTaken).toBe(true);
+    expect(octokit.addLabels).toHaveBeenCalledWith('test-org', 'test-repo', 99, ['triage']);
+  });
 });

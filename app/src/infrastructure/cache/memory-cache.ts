@@ -4,6 +4,7 @@
  * Strategy pattern: swap for RedisCache, DiskCache, etc. without touching consumers.
  */
 
+import { injectable } from 'inversify';
 import type { ICache } from '../../core/interfaces.js';
 
 interface CacheEntry<T> {
@@ -11,6 +12,7 @@ interface CacheEntry<T> {
   expiresAt: number; // epoch ms
 }
 
+@injectable()
 export class MemoryCache implements ICache {
   private store = new Map<string, CacheEntry<unknown>>();
 

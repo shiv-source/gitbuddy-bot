@@ -11,9 +11,11 @@
  */
 
 import { BaseHandler } from './base-handler.js';
+import { injectable, inject } from 'inversify';
+import { TYPES } from '../di/types.js';
 import type { EventContext, HandlerResult } from '../core/types.js';
+import type { ILogger, IConfigProvider, IStaleService, StaleSweepResult } from '../core/interfaces.js';
 import { NO_ACTION } from '../core/types.js';
-import { StaleService, type StaleSweepResult } from '../services/stale.service.js';
 
 interface WorkflowRunPayload {
   workflow_run?: {
@@ -27,13 +29,20 @@ interface WorkflowRunPayload {
 /** Workflow names that trigger the stale sweep. Case-insensitive match. */
 const STALE_SWEEP_PATTERNS = [/stale[-_\s]?sweep/i, /mark[-_\s]?stale/i];
 
+@injectable()
 export class StaleHandler extends BaseHandler {
   readonly name = 'stale';
   readonly events = [
     'workflow_run.completed',
   ];
 
-  private readonly staleService = new StaleService(this.logger);
+  constructor(
+    @inject(TYPES.Logger) logger: ILogger,
+    @inject(TYPES.ConfigProvider) config: IConfigProvider,
+    @inject(TYPES.StaleService) private readonly staleService: IStaleService,
+  ) {
+    super(logger, config);
+  }
 
   protected async process(context: EventContext): Promise<HandlerResult> {
     switch (context.name) {

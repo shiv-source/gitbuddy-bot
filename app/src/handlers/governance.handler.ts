@@ -8,6 +8,7 @@
  */
 
 import { BaseHandler } from './base-handler.js';
+import { injectable } from 'inversify';
 import type { EventContext, HandlerResult } from '../core/types.js';
 import { NO_ACTION } from '../core/types.js';
 import { ValidationError } from '../core/errors.js';
@@ -21,6 +22,7 @@ interface BranchProtectionPayload {
   rule?: { name: string; required_approving_review_count?: number };
 }
 
+@injectable()
 export class GovernanceHandler extends BaseHandler {
   readonly name = 'governance';
   readonly events = [

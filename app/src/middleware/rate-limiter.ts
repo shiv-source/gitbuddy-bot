@@ -7,7 +7,9 @@
  * than risking a 429 that poisons the whole app.
  */
 
-import type { ILogger } from '../core/interfaces.js';
+import { injectable, inject, optional } from 'inversify';
+import { TYPES } from '../di/types.js';
+import type { ILogger, ICache, IMiddleware } from '../core/interfaces.js';
 
 interface RateLimitBucket {
   current: number;
@@ -15,13 +17,21 @@ interface RateLimitBucket {
   resetAt: number; // epoch ms
 }
 
-export class RateLimiter {
+@injectable()
+export class RateLimiter implements IMiddleware {
+  readonly name = 'rate-limiter';
+  readonly priority = 200;
   private buckets = new Map<string, RateLimitBucket>();
 
   constructor(
-    private readonly logger: ILogger,
+    @inject(TYPES.Logger) private readonly logger: ILogger,
+    @optional() @inject(TYPES.Cache) private readonly cache?: ICache,
     private readonly defaultMaxConcurrent: number = 10,
-  ) {}
+  ) {
+    if (cache) {
+      this.logger.debug('RateLimiter initialized with cache backend');
+    }
+  }
 
   /**
    * Try to acquire a slot for the given event type.
@@ -40,6 +50,7 @@ export class RateLimiter {
       this.logger.warn(`Rate limit hit for "${eventType}"`, {
         current: bucket.current,
         max: bucket.max,
+        cacheBackend: !!this.cache,
       });
       return false;
     }

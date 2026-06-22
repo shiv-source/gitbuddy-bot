@@ -2,8 +2,10 @@
  * /shipit command — merges a PR after all checks pass.
  */
 
+import { injectable } from 'inversify';
 import type { ICommand, CommandContext, CommandResult } from '../core/interfaces.js';
 
+@injectable()
 export class ShipitCommand implements ICommand {
   readonly name = 'shipit';
   readonly description = 'Merge the PR after all checks pass';

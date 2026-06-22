@@ -8,6 +8,7 @@
 import * as fs from 'node:fs';
 import * as path from 'node:path';
 import YAML from 'yaml';
+import { injectable } from 'inversify';
 import type { IConfigProvider } from '../../core/interfaces.js';
 import type { GitBuddyConfig } from '../../core/types.js';
 import { ConfigNotFoundError, ConfigError } from '../../core/errors.js';
@@ -19,6 +20,7 @@ const FALLBACK_PATHS = [
   'gitbuddy.yaml',
 ];
 
+@injectable()
 export class YamlConfigProvider implements IConfigProvider {
   private config: GitBuddyConfig;
   private configPath: string | null = null;

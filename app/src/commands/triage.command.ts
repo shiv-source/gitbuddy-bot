@@ -4,13 +4,16 @@
  * Usage: /triage
  */
 
+import { injectable, inject } from 'inversify';
+import { TYPES } from '../di/types.js';
 import type { ICommand, IConfigProvider, CommandContext, CommandResult } from '../core/interfaces.js';
 
+@injectable()
 export class TriageCommand implements ICommand {
   readonly name = 'triage';
   readonly description = 'Triage the issue with default labels and assignee';
 
-  constructor(private readonly config: IConfigProvider) {}
+  constructor(@inject(TYPES.ConfigProvider) private readonly config: IConfigProvider) {}
 
   async execute(context: CommandContext): Promise<CommandResult> {
     const defaultLabels = this.config.get<string[]>('automation.defaultIssueLabels', ['triage']);

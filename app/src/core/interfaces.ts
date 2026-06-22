@@ -160,3 +160,68 @@ export interface CommandResult {
   message: string;
   success: boolean;
 }
+
+// ── Middleware ──────────────────────────────────────────────────
+// Lightweight marker interface for pipeline discovery and ordering.
+// Each middleware class implements this plus its own domain-specific API.
+
+export interface IMiddleware {
+  /** Human-readable middleware name (e.g. "context-enricher") */
+  readonly name: string;
+  /**
+   * Execution order — lower numbers run first.
+   *   ContextEnricher: 100
+   *   RateLimiter:     200
+   *   ErrorHandler:    300
+   */
+  readonly priority: number;
+}
+
+// ── Command Router ──────────────────────────────────────────────
+
+export interface ICommandRouter {
+  register(command: ICommand): void;
+  execute(
+    body: string,
+    baseContext: Omit<CommandContext, 'octokit'>,
+    octokit: IGitHubClient,
+  ): Promise<string | null>;
+  listCommands(): Array<{ name: string; description: string }>;
+}
+
+// ── Stale Service ───────────────────────────────────────────────
+
+export interface StaleSweepResult {
+  /** Issues marked stale during this sweep */
+  markedStale: number;
+  /** Issues closed during this sweep */
+  closed: number;
+  /** Repos that were swept */
+  reposSwept: number;
+  /** Issues that failed processing */
+  errors: number;
+}
+
+export interface IStaleService {
+  sweepRepo(
+    octokit: IGitHubClient,
+    owner: string,
+    repo: string,
+    config: IConfigProvider,
+  ): Promise<StaleSweepResult>;
+
+  sweepOrg(
+    octokit: IGitHubClient,
+    org: string,
+    config: IConfigProvider,
+  ): Promise<StaleSweepResult>;
+}
+
+// ── Octokit Factory ─────────────────────────────────────────────
+// Per-event IGitHubClient factory. Probot provides an installation-
+// scoped Octokit on each webhook delivery; this factory wraps it
+// in our domain adapter.
+
+export interface IOctokitClientFactory {
+  create(octokit: unknown): IGitHubClient;
+}

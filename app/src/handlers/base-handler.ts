@@ -14,17 +14,20 @@
  * Octokit on each webhook delivery, not a single shared client.
  */
 
+import { injectable, inject } from 'inversify';
+import { TYPES } from '../di/types.js';
 import type { IEventHandler, ILogger, IConfigProvider } from '../core/interfaces.js';
 import type { EventContext, HandlerResult } from '../core/types.js';
 import { HandlerError } from '../core/errors.js';
 
+@injectable()
 export abstract class BaseHandler<TPayload = unknown> implements IEventHandler<TPayload> {
   abstract readonly name: string;
   abstract readonly events: string[];
 
   constructor(
-    protected readonly logger: ILogger,
-    protected readonly config: IConfigProvider,
+    @inject(TYPES.Logger) protected readonly logger: ILogger,
+    @inject(TYPES.ConfigProvider) protected readonly config: IConfigProvider,
   ) {}
 
   // ── Template Method ─────────────────────────────────────────
