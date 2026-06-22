@@ -41,8 +41,28 @@ const config: Config = {
     ],
   ],
 
+  plugins: [
+    [
+      '@easyops-cn/docusaurus-search-local',
+      {
+        hashed: true,
+        language: ['en'],
+        highlightSearchTermsOnTargetPage: true,
+        explicitSearchResultPath: true,
+      },
+    ],
+  ],
+
   themeConfig: {
     image: 'img/gitbuddy-social-card.png',
+    announcementBar: {
+      id: 'under-development',
+      content:
+        '🚧 GitBuddy Bot is under active development. <a href="/docs/roadmap">See the roadmap</a> for upcoming features.',
+      backgroundColor: '#1a1a2e',
+      textColor: '#00d4aa',
+      isCloseable: true,
+    },
     colorMode: {
       respectPrefersColorScheme: true,
     },
@@ -81,6 +101,14 @@ const config: Config = {
             {
               label: 'Introduction',
               to: '/docs/introduction',
+            },
+            {
+              label: "What's New",
+              to: '/docs/whats-new',
+            },
+            {
+              label: 'Roadmap',
+              to: '/docs/roadmap',
             },
             {
               label: 'Quick Start',

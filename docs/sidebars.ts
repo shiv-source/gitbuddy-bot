@@ -67,6 +67,8 @@ const sidebars: SidebarsConfig = {
         'contributing/adding-a-handler',
       ],
     },
+    'roadmap',
+    'whats-new',
   ],
   apiSidebar: [
     {
